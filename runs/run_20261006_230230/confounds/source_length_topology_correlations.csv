@@ -1,0 +1,11 @@
+metric,sample_count,pair_count,spearman_rho_tokens_vs_metric_all_samples,spearman_p_tokens_vs_metric_all_samples,spearman_rho_paired_delta_tokens_vs_delta_metric,spearman_p_paired_delta_tokens_vs_delta_metric,interpretation,bh_q_tokens_vs_metric_all_samples,bh_q_paired_delta_tokens_vs_delta_metric
+h0_significant_count,40,20,0.0,1.0,0.0,1.0,exploratory sensitivity analysis; not part of the primary FDR family,1.0,1.0
+h0_mean_persistence,40,20,0.7544567593897236,1.882873036493275e-08,0.467268755302595,0.03777444971728665,exploratory sensitivity analysis; not part of the primary FDR family,9.414365182466375e-08,0.2210368706126621
+h0_max_persistence,40,20,0.4913679951404032,0.0012830703919850942,0.4048157654634398,0.07664131976207197,exploratory sensitivity analysis; not part of the primary FDR family,0.0042769013066169806,0.25547106587357327
+h0_entropy,40,20,-0.0018765247093389466,0.9908310395286842,0.11136195778548157,0.6402017518255437,exploratory sensitivity analysis; not part of the primary FDR family,1.0,0.9145739311793483
+h0_betti_auc,40,20,0.7547621315015076,1.8442807904951684e-08,0.4542717672133404,0.04420737412253242,exploratory sensitivity analysis; not part of the primary FDR family,9.414365182466375e-08,0.2210368706126621
+h1_significant_count,40,20,0.07410932619544336,0.6494893928205555,-0.17462495907450737,0.461518585513248,exploratory sensitivity analysis; not part of the primary FDR family,0.915170510640234,0.9145739311793483
+h1_mean_persistence,40,20,-0.08084393204703405,0.6199638560405815,0.06444425988564244,0.7872167823263366,exploratory sensitivity analysis; not part of the primary FDR family,0.915170510640234,0.9387402029169919
+h1_max_persistence,40,20,-0.05584870667983512,0.7321364085121872,0.12964668753464537,0.5859097205716391,exploratory sensitivity analysis; not part of the primary FDR family,0.915170510640234,0.9145739311793483
+h1_entropy,40,20,0.12371125755313662,0.4469337890820832,-0.22585839152641773,0.3383238933221791,exploratory sensitivity analysis; not part of the primary FDR family,0.8938675781641663,0.8458097333054477
+h1_betti_auc,40,20,-0.17107698100241345,0.291205001078593,-0.04673957002614261,0.8448661826252927,exploratory sensitivity analysis; not part of the primary FDR family,0.7280125026964824,0.9387402029169919
