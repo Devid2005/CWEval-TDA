@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "tasks": {
+    "cwe_079_0_flask": {
+      "task_id": "cwe_079_0_flask",
+      "cwe": "CWE-79",
+      "factory_name": "create_comment_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_079_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_079_0_flask/secure.py",
+        "sha256": "95af6341a4a4ef09bb42cc0edf60e3c894dccda3b5a1774cf2d837005eb5c917",
+        "routes": [
+          {
+            "path": "/comment",
+            "normalized_path": "/comment",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "add_comment"
+          },
+          {
+            "path": "/comments",
+            "normalized_path": "/comments",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "list_comments"
+          }
+        ],
+        "nested_functions": [
+          "add_comment",
+          "list_comments"
+        ],
+        "unit_ids": [
+          "secure:cwe_079_0_flask:add_comment",
+          "secure:cwe_079_0_flask:list_comments",
+          "secure:cwe_079_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_079_0_flask_test.py",
+        "factory_name": "create_comment_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_079_0_flask/vulnerable.py",
+        "sha256": "5371bbca6f81752458e184ee726382691c7e794e5aad67b78b39b19e5f9a6cbe",
+        "routes": [
+          {
+            "path": "/comment",
+            "normalized_path": "/comment",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "add_comment"
+          },
+          {
+            "path": "/comments",
+            "normalized_path": "/comments",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "list_comments"
+          }
+        ],
+        "nested_functions": [
+          "add_comment",
+          "list_comments"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_079_0_flask:add_comment",
+          "unsafe:cwe_079_0_flask:list_comments",
+          "unsafe:cwe_079_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    }
+  }
+}

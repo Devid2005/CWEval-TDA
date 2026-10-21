@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0",
+  "tasks": {
+    "cwe_352_0_flask": {
+      "task_id": "cwe_352_0_flask",
+      "cwe": "CWE-352",
+      "factory_name": "create_profile_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_352_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_352_0_flask/secure.py",
+        "sha256": "6b16f5d8a42526d11c72bbcd2037892873a4c5e129c7c0e4bee4c9717684fa5c",
+        "routes": [
+          {
+            "path": "/profile",
+            "normalized_path": "/profile",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "profile_form"
+          },
+          {
+            "path": "/profile",
+            "normalized_path": "/profile",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "update_profile"
+          },
+          {
+            "path": "/email",
+            "normalized_path": "/email",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "get_email"
+          }
+        ],
+        "nested_functions": [
+          "profile_form",
+          "update_profile",
+          "get_email"
+        ],
+        "unit_ids": [
+          "secure:cwe_352_0_flask:profile_form",
+          "secure:cwe_352_0_flask:update_profile",
+          "secure:cwe_352_0_flask:get_email",
+          "secure:cwe_352_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_352_0_flask_test.py",
+        "factory_name": "create_profile_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_352_0_flask/vulnerable.py",
+        "sha256": "b6b41596ccf1a5c4b2e44bfeca669276984e3658aa5dbc663cf6ede446dc067d",
+        "routes": [
+          {
+            "path": "/profile",
+            "normalized_path": "/profile",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "profile_form"
+          },
+          {
+            "path": "/profile",
+            "normalized_path": "/profile",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "update_profile"
+          },
+          {
+            "path": "/email",
+            "normalized_path": "/email",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "get_email"
+          }
+        ],
+        "nested_functions": [
+          "profile_form",
+          "update_profile",
+          "get_email"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_352_0_flask:profile_form",
+          "unsafe:cwe_352_0_flask:update_profile",
+          "unsafe:cwe_352_0_flask:get_email",
+          "unsafe:cwe_352_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    }
+  }
+}

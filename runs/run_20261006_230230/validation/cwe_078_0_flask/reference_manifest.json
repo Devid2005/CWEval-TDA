@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "tasks": {
+    "cwe_078_0_flask": {
+      "task_id": "cwe_078_0_flask",
+      "cwe": "CWE-78",
+      "factory_name": "create_ping_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_078_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_078_0_flask/secure.py",
+        "sha256": "7737cdf3c251f825fc42486b628ab90fdb5447e1a37818601ad61bd76eadf577",
+        "routes": [
+          {
+            "path": "/ping",
+            "normalized_path": "/ping",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "ping"
+          }
+        ],
+        "nested_functions": [
+          "default_command_runner",
+          "validate_host",
+          "ping"
+        ],
+        "unit_ids": [
+          "secure:cwe_078_0_flask:default_command_runner",
+          "secure:cwe_078_0_flask:validate_host",
+          "secure:cwe_078_0_flask:ping",
+          "secure:cwe_078_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_078_0_flask_test.py",
+        "factory_name": "create_ping_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_078_0_flask/vulnerable.py",
+        "sha256": "d3c41e6c6134ece30c890205b44e6cdc3948e2c395f0309013ecb24f2b053998",
+        "routes": [
+          {
+            "path": "/ping",
+            "normalized_path": "/ping",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "ping"
+          }
+        ],
+        "nested_functions": [
+          "default_runner",
+          "ping"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_078_0_flask:default_runner",
+          "unsafe:cwe_078_0_flask:ping",
+          "unsafe:cwe_078_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    }
+  }
+}

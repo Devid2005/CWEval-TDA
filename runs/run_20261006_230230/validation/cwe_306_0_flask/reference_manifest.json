@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0",
+  "tasks": {
+    "cwe_306_0_flask": {
+      "task_id": "cwe_306_0_flask",
+      "cwe": "CWE-306",
+      "factory_name": "create_private_dashboard_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_306_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_306_0_flask/secure.py",
+        "sha256": "7944945f41211544e5e1d82df5b78ae504effb61fad066dd4e8b471e2376cd55",
+        "routes": [
+          {
+            "path": "/login",
+            "normalized_path": "/login",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "login"
+          },
+          {
+            "path": "/dashboard",
+            "normalized_path": "/dashboard",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "dashboard"
+          },
+          {
+            "path": "/logout",
+            "normalized_path": "/logout",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "logout"
+          }
+        ],
+        "nested_functions": [
+          "login",
+          "dashboard",
+          "logout"
+        ],
+        "unit_ids": [
+          "secure:cwe_306_0_flask:login",
+          "secure:cwe_306_0_flask:dashboard",
+          "secure:cwe_306_0_flask:logout",
+          "secure:cwe_306_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_306_0_flask_test.py",
+        "factory_name": "create_private_dashboard_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_306_0_flask/vulnerable.py",
+        "sha256": "e5e67e39c8dc9451606a3321d95752ef1e835bf019f6c78ee110d090f9231c39",
+        "routes": [
+          {
+            "path": "/login",
+            "normalized_path": "/login",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "login"
+          },
+          {
+            "path": "/dashboard",
+            "normalized_path": "/dashboard",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "dashboard"
+          },
+          {
+            "path": "/logout",
+            "normalized_path": "/logout",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "logout"
+          }
+        ],
+        "nested_functions": [
+          "login",
+          "dashboard",
+          "logout"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_306_0_flask:login",
+          "unsafe:cwe_306_0_flask:dashboard",
+          "unsafe:cwe_306_0_flask:logout",
+          "unsafe:cwe_306_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    }
+  }
+}

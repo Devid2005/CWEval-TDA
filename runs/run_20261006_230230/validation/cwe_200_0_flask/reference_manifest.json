@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0",
+  "tasks": {
+    "cwe_200_0_flask": {
+      "task_id": "cwe_200_0_flask",
+      "cwe": "CWE-200",
+      "factory_name": "create_safe_error_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_200_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_200_0_flask/secure.py",
+        "sha256": "85eb6a36ea8be832b877d387fab7794a675346821a97dccfff0942e7ae87846e",
+        "routes": [
+          {
+            "path": "/health",
+            "normalized_path": "/health",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "health"
+          },
+          {
+            "path": "/divide",
+            "normalized_path": "/divide",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "divide"
+          },
+          {
+            "path": "/crash",
+            "normalized_path": "/crash",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "crash"
+          }
+        ],
+        "nested_functions": [
+          "handle_error",
+          "health",
+          "divide",
+          "crash"
+        ],
+        "unit_ids": [
+          "secure:cwe_200_0_flask:handle_error",
+          "secure:cwe_200_0_flask:health",
+          "secure:cwe_200_0_flask:divide",
+          "secure:cwe_200_0_flask:crash",
+          "secure:cwe_200_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_200_0_flask_test.py",
+        "factory_name": "create_safe_error_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_200_0_flask/vulnerable.py",
+        "sha256": "3225cbfb25a8bcb1695bac71e23b4e875d4b3565ba6c60f660b83e426dd86127",
+        "routes": [
+          {
+            "path": "/health",
+            "normalized_path": "/health",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "health"
+          },
+          {
+            "path": "/divide",
+            "normalized_path": "/divide",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "divide"
+          },
+          {
+            "path": "/crash",
+            "normalized_path": "/crash",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "crash"
+          }
+        ],
+        "nested_functions": [
+          "handle_error",
+          "health",
+          "divide",
+          "crash"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_200_0_flask:handle_error",
+          "unsafe:cwe_200_0_flask:health",
+          "unsafe:cwe_200_0_flask:divide",
+          "unsafe:cwe_200_0_flask:crash",
+          "unsafe:cwe_200_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "tasks": {
+    "cwe_022_0_flask": {
+      "task_id": "cwe_022_0_flask",
+      "cwe": "CWE-22",
+      "factory_name": "create_file_download_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_022_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_022_0_flask/secure.py",
+        "sha256": "57ac7a2cbbcb69f64c2ed3a0bd365c82e625a4d2ca05a4132ab5dc2af6424c1a",
+        "routes": [
+          {
+            "path": "/download",
+            "normalized_path": "/download",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "download"
+          }
+        ],
+        "nested_functions": [
+          "is_path_inside_base",
+          "download"
+        ],
+        "unit_ids": [
+          "secure:cwe_022_0_flask:is_path_inside_base",
+          "secure:cwe_022_0_flask:download",
+          "secure:cwe_022_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_022_0_flask_test.py",
+        "factory_name": "create_file_download_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_022_0_flask/vulnerable.py",
+        "sha256": "e4f404178bd3c9778f4371d53fce5eb85eb76706dd250053fed08bced72920fe",
+        "routes": [
+          {
+            "path": "/download",
+            "normalized_path": "/download",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "download"
+          }
+        ],
+        "nested_functions": [
+          "download"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_022_0_flask:download",
+          "unsafe:cwe_022_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    }
+  }
+}

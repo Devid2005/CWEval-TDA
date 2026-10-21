@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "tasks": {
+    "cwe_089_0_flask": {
+      "task_id": "cwe_089_0_flask",
+      "cwe": "CWE-89",
+      "factory_name": "create_user_search_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_089_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_089_0_flask/secure.py",
+        "sha256": "e4e3e08d7c029158cfe8649f2dbff70edadbf6f0fa5ba7ea3c26adb83adaf537",
+        "routes": [
+          {
+            "path": "/search",
+            "normalized_path": "/search",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "search_users"
+          }
+        ],
+        "nested_functions": [
+          "search_users"
+        ],
+        "unit_ids": [
+          "secure:cwe_089_0_flask:search_users",
+          "secure:cwe_089_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_089_0_flask_test.py",
+        "factory_name": "create_user_search_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_089_0_flask/vulnerable.py",
+        "sha256": "863c9cf09b87695a31d77391764bf08f53bc18eb26e0d9d8a69260c3752f1c6e",
+        "routes": [
+          {
+            "path": "/search",
+            "normalized_path": "/search",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "search_users"
+          }
+        ],
+        "nested_functions": [
+          "search_users"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_089_0_flask:search_users",
+          "unsafe:cwe_089_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    }
+  }
+}
