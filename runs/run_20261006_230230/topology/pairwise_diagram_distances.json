@@ -1,0 +1,182 @@
+[
+  {
+    "pair_id": "cwe_022_0_flask",
+    "cwe": "CWE-22",
+    "formal_project_subset": false,
+    "h0_bottleneck": 0.01735733449459076,
+    "h0_wasserstein": 0.11299985647201538,
+    "h1_bottleneck": 0.013003461062908173,
+    "h1_wasserstein": 0.03397449954087883
+  },
+  {
+    "pair_id": "cwe_078_0_flask",
+    "cwe": "CWE-78",
+    "formal_project_subset": false,
+    "h0_bottleneck": 0.053073614835739136,
+    "h0_wasserstein": 0.5260856747627258,
+    "h1_bottleneck": 0.005928888916969299,
+    "h1_wasserstein": 0.03014866280091904
+  },
+  {
+    "pair_id": "cwe_079_0_flask",
+    "cwe": "CWE-79",
+    "formal_project_subset": true,
+    "h0_bottleneck": 0.043244168162345886,
+    "h0_wasserstein": 0.230608731508255,
+    "h1_bottleneck": 0.01678936928510666,
+    "h1_wasserstein": 0.07335189045960225
+  },
+  {
+    "pair_id": "cwe_089_0_flask",
+    "cwe": "CWE-89",
+    "formal_project_subset": false,
+    "h0_bottleneck": 0.05049899220466614,
+    "h0_wasserstein": 0.2962951436638832,
+    "h1_bottleneck": 0.0,
+    "h1_wasserstein": 0.0
+  },
+  {
+    "pair_id": "cwe_200_0_flask",
+    "cwe": "CWE-200",
+    "formal_project_subset": false,
+    "h0_bottleneck": 0.033662572503089905,
+    "h0_wasserstein": 0.22680078446865082,
+    "h1_bottleneck": 0.008674055337905884,
+    "h1_wasserstein": 0.013910609497869118
+  },
+  {
+    "pair_id": "cwe_306_0_flask",
+    "cwe": "CWE-306",
+    "formal_project_subset": true,
+    "h0_bottleneck": 0.04780168831348419,
+    "h0_wasserstein": 0.2201698049902916,
+    "h1_bottleneck": 0.02182469516992569,
+    "h1_wasserstein": 0.04662788085592789
+  },
+  {
+    "pair_id": "cwe_307_0_flask",
+    "cwe": "CWE-307",
+    "formal_project_subset": false,
+    "h0_bottleneck": 0.03908495604991913,
+    "h0_wasserstein": 0.19935404509305954,
+    "h1_bottleneck": 0.004487179219722748,
+    "h1_wasserstein": 0.013352984723441801
+  },
+  {
+    "pair_id": "cwe_352_0_flask",
+    "cwe": "CWE-352",
+    "formal_project_subset": false,
+    "h0_bottleneck": 0.057739414274692535,
+    "h0_wasserstein": 0.33049318939447403,
+    "h1_bottleneck": 0.010775789618492126,
+    "h1_wasserstein": 0.02691294155024102
+  },
+  {
+    "pair_id": "cwe_434_0_flask",
+    "cwe": "CWE-434",
+    "formal_project_subset": false,
+    "h0_bottleneck": 0.09442949295043945,
+    "h0_wasserstein": 0.23209941387176514,
+    "h1_bottleneck": 0.00360194593667984,
+    "h1_wasserstein": 0.00690496033838835
+  },
+  {
+    "pair_id": "cwe_502_0_flask",
+    "cwe": "CWE-502",
+    "formal_project_subset": false,
+    "h0_bottleneck": 0.02872064709663391,
+    "h0_wasserstein": 0.19237768650054932,
+    "h1_bottleneck": 0.015920251607894897,
+    "h1_wasserstein": 0.03648969269490185
+  },
+  {
+    "pair_id": "cwe_611_0_flask",
+    "cwe": "CWE-611",
+    "formal_project_subset": false,
+    "h0_bottleneck": 0.029397785663604736,
+    "h0_wasserstein": 0.18055151402950287,
+    "h1_bottleneck": 0.007214672863483429,
+    "h1_wasserstein": 0.042460495204420454
+  },
+  {
+    "pair_id": "cwe_614_0_flask",
+    "cwe": "CWE-614",
+    "formal_project_subset": false,
+    "h0_bottleneck": 0.1415487825870514,
+    "h0_wasserstein": 0.3916852995753288,
+    "h1_bottleneck": 0.017915278673171997,
+    "h1_wasserstein": 0.033570509073120806
+  },
+  {
+    "pair_id": "cwe_639_0_flask",
+    "cwe": "CWE-639",
+    "formal_project_subset": true,
+    "h0_bottleneck": 0.0736466646194458,
+    "h0_wasserstein": 0.3103228881955147,
+    "h1_bottleneck": 0.009652115404605865,
+    "h1_wasserstein": 0.040972911265895993
+  },
+  {
+    "pair_id": "cwe_798_0_flask",
+    "cwe": "CWE-798",
+    "formal_project_subset": false,
+    "h0_bottleneck": 0.05106408894062042,
+    "h0_wasserstein": 0.5096184685826302,
+    "h1_bottleneck": 0.01357048749923706,
+    "h1_wasserstein": 0.027336369474132025
+  },
+  {
+    "pair_id": "cwe_862_0_flask",
+    "cwe": "CWE-862",
+    "formal_project_subset": true,
+    "h0_bottleneck": 0.023993775248527527,
+    "h0_wasserstein": 0.1782466471195221,
+    "h1_bottleneck": 0.002024412155151367,
+    "h1_wasserstein": 0.005256070257520897
+  },
+  {
+    "pair_id": "cwe_915_0_flask",
+    "cwe": "CWE-915",
+    "formal_project_subset": true,
+    "h0_bottleneck": 0.13698162138462067,
+    "h0_wasserstein": 0.5125910229980946,
+    "h1_bottleneck": 0.011884324252605438,
+    "h1_wasserstein": 0.029756217804905068
+  },
+  {
+    "pair_id": "cwe_918_0_flask",
+    "cwe": "CWE-918",
+    "formal_project_subset": false,
+    "h0_bottleneck": 0.0527418851852417,
+    "h0_wasserstein": 0.35265032947063446,
+    "h1_bottleneck": 0.0034620389342308044,
+    "h1_wasserstein": 0.010354764182702064
+  },
+  {
+    "pair_id": "cwe_942_0_flask",
+    "cwe": "CWE-942",
+    "formal_project_subset": false,
+    "h0_bottleneck": 0.041943199932575226,
+    "h0_wasserstein": 0.22008438408374786,
+    "h1_bottleneck": 0.007545836269855499,
+    "h1_wasserstein": 0.019336183843388657
+  },
+  {
+    "pair_id": "cwe_1004_0_flask",
+    "cwe": "CWE-1004",
+    "formal_project_subset": false,
+    "h0_bottleneck": 0.02966909110546112,
+    "h0_wasserstein": 0.1590457335114479,
+    "h1_bottleneck": 0.009040117263793945,
+    "h1_wasserstein": 0.0217642933022406
+  },
+  {
+    "pair_id": "cwe_1336_0_flask",
+    "cwe": "CWE-1336",
+    "formal_project_subset": false,
+    "h0_bottleneck": 0.023338183760643005,
+    "h0_wasserstein": 0.15676795691251755,
+    "h1_bottleneck": 0.008522868156433105,
+    "h1_wasserstein": 0.02816274544593423
+  }
+]
