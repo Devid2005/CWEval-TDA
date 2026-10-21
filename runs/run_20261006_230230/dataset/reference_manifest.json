@@ -1,0 +1,3842 @@
+{
+  "schema_version": "2.0",
+  "experiment_schema": "tda-statistical-experiment-v2",
+  "method": "all_flask_cweval_secure_and_unsafe_control_extraction",
+  "created_at_utc": "2026-10-07T05:02:31+00:00",
+  "label_leakage_controls": {
+    "comments_removed": true,
+    "docstrings_removed": true,
+    "outer_factory_name_normalized": "build_app",
+    "unsafe_suffix_excluded_from_embedding_text": true
+  },
+  "task_count": 20,
+  "sample_count": 40,
+  "tasks": {
+    "cwe_022_0_flask": {
+      "task_id": "cwe_022_0_flask",
+      "cwe": "CWE-22",
+      "factory_name": "create_file_download_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_022_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_022_0_flask/secure.py",
+        "sha256": "57ac7a2cbbcb69f64c2ed3a0bd365c82e625a4d2ca05a4132ab5dc2af6424c1a",
+        "routes": [
+          {
+            "path": "/download",
+            "normalized_path": "/download",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "download"
+          }
+        ],
+        "nested_functions": [
+          "is_path_inside_base",
+          "download"
+        ],
+        "unit_ids": [
+          "secure:cwe_022_0_flask:is_path_inside_base",
+          "secure:cwe_022_0_flask:download",
+          "secure:cwe_022_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_022_0_flask_test.py",
+        "factory_name": "create_file_download_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_022_0_flask/vulnerable.py",
+        "sha256": "e4f404178bd3c9778f4371d53fce5eb85eb76706dd250053fed08bced72920fe",
+        "routes": [
+          {
+            "path": "/download",
+            "normalized_path": "/download",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "download"
+          }
+        ],
+        "nested_functions": [
+          "download"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_022_0_flask:download",
+          "unsafe:cwe_022_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    },
+    "cwe_078_0_flask": {
+      "task_id": "cwe_078_0_flask",
+      "cwe": "CWE-78",
+      "factory_name": "create_ping_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_078_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_078_0_flask/secure.py",
+        "sha256": "7737cdf3c251f825fc42486b628ab90fdb5447e1a37818601ad61bd76eadf577",
+        "routes": [
+          {
+            "path": "/ping",
+            "normalized_path": "/ping",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "ping"
+          }
+        ],
+        "nested_functions": [
+          "default_command_runner",
+          "validate_host",
+          "ping"
+        ],
+        "unit_ids": [
+          "secure:cwe_078_0_flask:default_command_runner",
+          "secure:cwe_078_0_flask:validate_host",
+          "secure:cwe_078_0_flask:ping",
+          "secure:cwe_078_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_078_0_flask_test.py",
+        "factory_name": "create_ping_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_078_0_flask/vulnerable.py",
+        "sha256": "d3c41e6c6134ece30c890205b44e6cdc3948e2c395f0309013ecb24f2b053998",
+        "routes": [
+          {
+            "path": "/ping",
+            "normalized_path": "/ping",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "ping"
+          }
+        ],
+        "nested_functions": [
+          "default_runner",
+          "ping"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_078_0_flask:default_runner",
+          "unsafe:cwe_078_0_flask:ping",
+          "unsafe:cwe_078_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    },
+    "cwe_079_0_flask": {
+      "task_id": "cwe_079_0_flask",
+      "cwe": "CWE-79",
+      "factory_name": "create_comment_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_079_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_079_0_flask/secure.py",
+        "sha256": "95af6341a4a4ef09bb42cc0edf60e3c894dccda3b5a1774cf2d837005eb5c917",
+        "routes": [
+          {
+            "path": "/comment",
+            "normalized_path": "/comment",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "add_comment"
+          },
+          {
+            "path": "/comments",
+            "normalized_path": "/comments",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "list_comments"
+          }
+        ],
+        "nested_functions": [
+          "add_comment",
+          "list_comments"
+        ],
+        "unit_ids": [
+          "secure:cwe_079_0_flask:add_comment",
+          "secure:cwe_079_0_flask:list_comments",
+          "secure:cwe_079_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_079_0_flask_test.py",
+        "factory_name": "create_comment_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_079_0_flask/vulnerable.py",
+        "sha256": "5371bbca6f81752458e184ee726382691c7e794e5aad67b78b39b19e5f9a6cbe",
+        "routes": [
+          {
+            "path": "/comment",
+            "normalized_path": "/comment",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "add_comment"
+          },
+          {
+            "path": "/comments",
+            "normalized_path": "/comments",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "list_comments"
+          }
+        ],
+        "nested_functions": [
+          "add_comment",
+          "list_comments"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_079_0_flask:add_comment",
+          "unsafe:cwe_079_0_flask:list_comments",
+          "unsafe:cwe_079_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    },
+    "cwe_089_0_flask": {
+      "task_id": "cwe_089_0_flask",
+      "cwe": "CWE-89",
+      "factory_name": "create_user_search_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_089_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_089_0_flask/secure.py",
+        "sha256": "e4e3e08d7c029158cfe8649f2dbff70edadbf6f0fa5ba7ea3c26adb83adaf537",
+        "routes": [
+          {
+            "path": "/search",
+            "normalized_path": "/search",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "search_users"
+          }
+        ],
+        "nested_functions": [
+          "search_users"
+        ],
+        "unit_ids": [
+          "secure:cwe_089_0_flask:search_users",
+          "secure:cwe_089_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_089_0_flask_test.py",
+        "factory_name": "create_user_search_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_089_0_flask/vulnerable.py",
+        "sha256": "863c9cf09b87695a31d77391764bf08f53bc18eb26e0d9d8a69260c3752f1c6e",
+        "routes": [
+          {
+            "path": "/search",
+            "normalized_path": "/search",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "search_users"
+          }
+        ],
+        "nested_functions": [
+          "search_users"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_089_0_flask:search_users",
+          "unsafe:cwe_089_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    },
+    "cwe_200_0_flask": {
+      "task_id": "cwe_200_0_flask",
+      "cwe": "CWE-200",
+      "factory_name": "create_safe_error_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_200_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_200_0_flask/secure.py",
+        "sha256": "85eb6a36ea8be832b877d387fab7794a675346821a97dccfff0942e7ae87846e",
+        "routes": [
+          {
+            "path": "/health",
+            "normalized_path": "/health",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "health"
+          },
+          {
+            "path": "/divide",
+            "normalized_path": "/divide",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "divide"
+          },
+          {
+            "path": "/crash",
+            "normalized_path": "/crash",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "crash"
+          }
+        ],
+        "nested_functions": [
+          "handle_error",
+          "health",
+          "divide",
+          "crash"
+        ],
+        "unit_ids": [
+          "secure:cwe_200_0_flask:handle_error",
+          "secure:cwe_200_0_flask:health",
+          "secure:cwe_200_0_flask:divide",
+          "secure:cwe_200_0_flask:crash",
+          "secure:cwe_200_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_200_0_flask_test.py",
+        "factory_name": "create_safe_error_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_200_0_flask/vulnerable.py",
+        "sha256": "3225cbfb25a8bcb1695bac71e23b4e875d4b3565ba6c60f660b83e426dd86127",
+        "routes": [
+          {
+            "path": "/health",
+            "normalized_path": "/health",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "health"
+          },
+          {
+            "path": "/divide",
+            "normalized_path": "/divide",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "divide"
+          },
+          {
+            "path": "/crash",
+            "normalized_path": "/crash",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "crash"
+          }
+        ],
+        "nested_functions": [
+          "handle_error",
+          "health",
+          "divide",
+          "crash"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_200_0_flask:handle_error",
+          "unsafe:cwe_200_0_flask:health",
+          "unsafe:cwe_200_0_flask:divide",
+          "unsafe:cwe_200_0_flask:crash",
+          "unsafe:cwe_200_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    },
+    "cwe_306_0_flask": {
+      "task_id": "cwe_306_0_flask",
+      "cwe": "CWE-306",
+      "factory_name": "create_private_dashboard_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_306_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_306_0_flask/secure.py",
+        "sha256": "7944945f41211544e5e1d82df5b78ae504effb61fad066dd4e8b471e2376cd55",
+        "routes": [
+          {
+            "path": "/login",
+            "normalized_path": "/login",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "login"
+          },
+          {
+            "path": "/dashboard",
+            "normalized_path": "/dashboard",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "dashboard"
+          },
+          {
+            "path": "/logout",
+            "normalized_path": "/logout",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "logout"
+          }
+        ],
+        "nested_functions": [
+          "login",
+          "dashboard",
+          "logout"
+        ],
+        "unit_ids": [
+          "secure:cwe_306_0_flask:login",
+          "secure:cwe_306_0_flask:dashboard",
+          "secure:cwe_306_0_flask:logout",
+          "secure:cwe_306_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_306_0_flask_test.py",
+        "factory_name": "create_private_dashboard_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_306_0_flask/vulnerable.py",
+        "sha256": "e5e67e39c8dc9451606a3321d95752ef1e835bf019f6c78ee110d090f9231c39",
+        "routes": [
+          {
+            "path": "/login",
+            "normalized_path": "/login",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "login"
+          },
+          {
+            "path": "/dashboard",
+            "normalized_path": "/dashboard",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "dashboard"
+          },
+          {
+            "path": "/logout",
+            "normalized_path": "/logout",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "logout"
+          }
+        ],
+        "nested_functions": [
+          "login",
+          "dashboard",
+          "logout"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_306_0_flask:login",
+          "unsafe:cwe_306_0_flask:dashboard",
+          "unsafe:cwe_306_0_flask:logout",
+          "unsafe:cwe_306_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    },
+    "cwe_307_0_flask": {
+      "task_id": "cwe_307_0_flask",
+      "cwe": "CWE-307",
+      "factory_name": "create_rate_limited_login_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_307_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_307_0_flask/secure.py",
+        "sha256": "74ae340cd034b7963276d1430f04854a11f2d4da07c4681c873976cef2795b55",
+        "routes": [
+          {
+            "path": "/login",
+            "normalized_path": "/login",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "login"
+          },
+          {
+            "path": "/account",
+            "normalized_path": "/account",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "account"
+          }
+        ],
+        "nested_functions": [
+          "get_rate_limit_key",
+          "login",
+          "account"
+        ],
+        "unit_ids": [
+          "secure:cwe_307_0_flask:get_rate_limit_key",
+          "secure:cwe_307_0_flask:login",
+          "secure:cwe_307_0_flask:account",
+          "secure:cwe_307_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_307_0_flask_test.py",
+        "factory_name": "create_rate_limited_login_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_307_0_flask/vulnerable.py",
+        "sha256": "5008589d7401a1498cc83047f05711ae772a7916eee4be7fc6a3ac656a87e4ff",
+        "routes": [
+          {
+            "path": "/login",
+            "normalized_path": "/login",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "login"
+          },
+          {
+            "path": "/account",
+            "normalized_path": "/account",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "account"
+          }
+        ],
+        "nested_functions": [
+          "login",
+          "account"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_307_0_flask:login",
+          "unsafe:cwe_307_0_flask:account",
+          "unsafe:cwe_307_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    },
+    "cwe_352_0_flask": {
+      "task_id": "cwe_352_0_flask",
+      "cwe": "CWE-352",
+      "factory_name": "create_profile_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_352_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_352_0_flask/secure.py",
+        "sha256": "6b16f5d8a42526d11c72bbcd2037892873a4c5e129c7c0e4bee4c9717684fa5c",
+        "routes": [
+          {
+            "path": "/profile",
+            "normalized_path": "/profile",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "profile_form"
+          },
+          {
+            "path": "/profile",
+            "normalized_path": "/profile",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "update_profile"
+          },
+          {
+            "path": "/email",
+            "normalized_path": "/email",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "get_email"
+          }
+        ],
+        "nested_functions": [
+          "profile_form",
+          "update_profile",
+          "get_email"
+        ],
+        "unit_ids": [
+          "secure:cwe_352_0_flask:profile_form",
+          "secure:cwe_352_0_flask:update_profile",
+          "secure:cwe_352_0_flask:get_email",
+          "secure:cwe_352_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_352_0_flask_test.py",
+        "factory_name": "create_profile_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_352_0_flask/vulnerable.py",
+        "sha256": "b6b41596ccf1a5c4b2e44bfeca669276984e3658aa5dbc663cf6ede446dc067d",
+        "routes": [
+          {
+            "path": "/profile",
+            "normalized_path": "/profile",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "profile_form"
+          },
+          {
+            "path": "/profile",
+            "normalized_path": "/profile",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "update_profile"
+          },
+          {
+            "path": "/email",
+            "normalized_path": "/email",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "get_email"
+          }
+        ],
+        "nested_functions": [
+          "profile_form",
+          "update_profile",
+          "get_email"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_352_0_flask:profile_form",
+          "unsafe:cwe_352_0_flask:update_profile",
+          "unsafe:cwe_352_0_flask:get_email",
+          "unsafe:cwe_352_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    },
+    "cwe_434_0_flask": {
+      "task_id": "cwe_434_0_flask",
+      "cwe": "CWE-434",
+      "factory_name": "create_file_upload_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_434_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_434_0_flask/secure.py",
+        "sha256": "f437a29af1d17cba342540aa7cebb915646fda77db8f337df0be0eab796c242c",
+        "routes": [
+          {
+            "path": "/upload",
+            "normalized_path": "/upload",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "upload"
+          },
+          {
+            "path": "/files/<path:filename>",
+            "normalized_path": "/files/<filename>",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "get_file"
+          }
+        ],
+        "nested_functions": [
+          "is_inside_base",
+          "validate_filename",
+          "upload",
+          "get_file"
+        ],
+        "unit_ids": [
+          "secure:cwe_434_0_flask:is_inside_base",
+          "secure:cwe_434_0_flask:validate_filename",
+          "secure:cwe_434_0_flask:upload",
+          "secure:cwe_434_0_flask:get_file",
+          "secure:cwe_434_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_434_0_flask_test.py",
+        "factory_name": "create_file_upload_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_434_0_flask/vulnerable.py",
+        "sha256": "dcaf79c7180d73749c7a7bfbde32c238f7639df009165f1331cf1097dc540878",
+        "routes": [
+          {
+            "path": "/upload",
+            "normalized_path": "/upload",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "upload"
+          },
+          {
+            "path": "/files/<path:filename>",
+            "normalized_path": "/files/<filename>",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "get_file"
+          }
+        ],
+        "nested_functions": [
+          "upload",
+          "get_file"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_434_0_flask:upload",
+          "unsafe:cwe_434_0_flask:get_file",
+          "unsafe:cwe_434_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    },
+    "cwe_502_0_flask": {
+      "task_id": "cwe_502_0_flask",
+      "cwe": "CWE-502",
+      "factory_name": "create_profile_import_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_502_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_502_0_flask/secure.py",
+        "sha256": "620ef919b79071aead33060811aa97b00de9a2e9b8b6ea949d48247a39e60725",
+        "routes": [
+          {
+            "path": "/profile/import",
+            "normalized_path": "/profile/import",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "import_profile"
+          },
+          {
+            "path": "/profile",
+            "normalized_path": "/profile",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "get_profile"
+          }
+        ],
+        "nested_functions": [
+          "parse_profile",
+          "import_profile",
+          "get_profile"
+        ],
+        "unit_ids": [
+          "secure:cwe_502_0_flask:parse_profile",
+          "secure:cwe_502_0_flask:import_profile",
+          "secure:cwe_502_0_flask:get_profile",
+          "secure:cwe_502_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_502_0_flask_test.py",
+        "factory_name": "create_profile_import_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_502_0_flask/vulnerable.py",
+        "sha256": "0c833ea1978c145a4ae3b28f5f79680a90df364dae50f0dbe7c6826b0ab5da61",
+        "routes": [
+          {
+            "path": "/profile/import",
+            "normalized_path": "/profile/import",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "import_profile"
+          },
+          {
+            "path": "/profile",
+            "normalized_path": "/profile",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "get_profile"
+          }
+        ],
+        "nested_functions": [
+          "import_profile",
+          "get_profile"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_502_0_flask:import_profile",
+          "unsafe:cwe_502_0_flask:get_profile",
+          "unsafe:cwe_502_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    },
+    "cwe_611_0_flask": {
+      "task_id": "cwe_611_0_flask",
+      "cwe": "CWE-611",
+      "factory_name": "create_xml_profile_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_611_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_611_0_flask/secure.py",
+        "sha256": "799263aeb106822bdec528794a2222a6d9b43db2703b9288332c63d174e973da",
+        "routes": [
+          {
+            "path": "/xml/import",
+            "normalized_path": "/xml/import",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "import_xml_profile"
+          },
+          {
+            "path": "/profile",
+            "normalized_path": "/profile",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "get_profile"
+          }
+        ],
+        "nested_functions": [
+          "parse_xml_profile",
+          "import_xml_profile",
+          "get_profile"
+        ],
+        "unit_ids": [
+          "secure:cwe_611_0_flask:parse_xml_profile",
+          "secure:cwe_611_0_flask:import_xml_profile",
+          "secure:cwe_611_0_flask:get_profile",
+          "secure:cwe_611_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_611_0_flask_test.py",
+        "factory_name": "create_xml_profile_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_611_0_flask/vulnerable.py",
+        "sha256": "6bb59c2d862f030bda13208c87ea54693e05eaa9fa03a46d0e45023bb9acb2ce",
+        "routes": [
+          {
+            "path": "/xml/import",
+            "normalized_path": "/xml/import",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "import_xml_profile"
+          },
+          {
+            "path": "/profile",
+            "normalized_path": "/profile",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "get_profile"
+          }
+        ],
+        "nested_functions": [
+          "expand_external_entities",
+          "import_xml_profile",
+          "get_profile"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_611_0_flask:expand_external_entities",
+          "unsafe:cwe_611_0_flask:import_xml_profile",
+          "unsafe:cwe_611_0_flask:get_profile",
+          "unsafe:cwe_611_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    },
+    "cwe_614_0_flask": {
+      "task_id": "cwe_614_0_flask",
+      "cwe": "CWE-614",
+      "factory_name": "create_secure_cookie_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_614_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_614_0_flask/secure.py",
+        "sha256": "403b2cc3a6c74caa292c6d53673ae0441b17bc1b01af357e233f3ac415a2e82a",
+        "routes": [
+          {
+            "path": "/login",
+            "normalized_path": "/login",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "login"
+          },
+          {
+            "path": "/account",
+            "normalized_path": "/account",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "account"
+          },
+          {
+            "path": "/logout",
+            "normalized_path": "/logout",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "logout"
+          }
+        ],
+        "nested_functions": [
+          "login",
+          "account",
+          "logout"
+        ],
+        "unit_ids": [
+          "secure:cwe_614_0_flask:login",
+          "secure:cwe_614_0_flask:account",
+          "secure:cwe_614_0_flask:logout",
+          "secure:cwe_614_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_614_0_flask_test.py",
+        "factory_name": "create_secure_cookie_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_614_0_flask/vulnerable.py",
+        "sha256": "75363ec7cc9eacb66b0563b653a05602b004dc2b6a2f65f3750bfea6ebddee23",
+        "routes": [
+          {
+            "path": "/login",
+            "normalized_path": "/login",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "login"
+          },
+          {
+            "path": "/account",
+            "normalized_path": "/account",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "account"
+          },
+          {
+            "path": "/logout",
+            "normalized_path": "/logout",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "logout"
+          }
+        ],
+        "nested_functions": [
+          "login",
+          "account",
+          "logout"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_614_0_flask:login",
+          "unsafe:cwe_614_0_flask:account",
+          "unsafe:cwe_614_0_flask:logout",
+          "unsafe:cwe_614_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    },
+    "cwe_639_0_flask": {
+      "task_id": "cwe_639_0_flask",
+      "cwe": "CWE-639",
+      "factory_name": "create_user_profile_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_639_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_639_0_flask/secure.py",
+        "sha256": "3c609b466dabe38f39642d4edec517665b9a86ff14da51fd16697ae6c6b1107a",
+        "routes": [
+          {
+            "path": "/login",
+            "normalized_path": "/login",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "login"
+          },
+          {
+            "path": "/users/<int:user_id>/profile",
+            "normalized_path": "/users/<user_id>/profile",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "get_profile"
+          },
+          {
+            "path": "/logout",
+            "normalized_path": "/logout",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "logout"
+          }
+        ],
+        "nested_functions": [
+          "login",
+          "get_profile",
+          "logout"
+        ],
+        "unit_ids": [
+          "secure:cwe_639_0_flask:login",
+          "secure:cwe_639_0_flask:get_profile",
+          "secure:cwe_639_0_flask:logout",
+          "secure:cwe_639_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_639_0_flask_test.py",
+        "factory_name": "create_user_profile_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_639_0_flask/vulnerable.py",
+        "sha256": "c2fddc783a3bd1de3743bac34a248bb5884409d3b2a7b8403e7c3f3f6787f067",
+        "routes": [
+          {
+            "path": "/login",
+            "normalized_path": "/login",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "login"
+          },
+          {
+            "path": "/users/<int:user_id>/profile",
+            "normalized_path": "/users/<user_id>/profile",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "get_profile"
+          },
+          {
+            "path": "/logout",
+            "normalized_path": "/logout",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "logout"
+          }
+        ],
+        "nested_functions": [
+          "login",
+          "get_profile",
+          "logout"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_639_0_flask:login",
+          "unsafe:cwe_639_0_flask:get_profile",
+          "unsafe:cwe_639_0_flask:logout",
+          "unsafe:cwe_639_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    },
+    "cwe_798_0_flask": {
+      "task_id": "cwe_798_0_flask",
+      "cwe": "CWE-798",
+      "factory_name": "create_session_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_798_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_798_0_flask/secure.py",
+        "sha256": "d4af2e05b2efa462813dbc19f21063f3cb0f6712d93dd627db0b31177a238767",
+        "routes": [
+          {
+            "path": "/set-name",
+            "normalized_path": "/set-name",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "set_name"
+          },
+          {
+            "path": "/me",
+            "normalized_path": "/me",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "me"
+          }
+        ],
+        "nested_functions": [
+          "set_name",
+          "me"
+        ],
+        "unit_ids": [
+          "secure:cwe_798_0_flask:set_name",
+          "secure:cwe_798_0_flask:me",
+          "secure:cwe_798_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_798_0_flask_test.py",
+        "factory_name": "create_session_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_798_0_flask/vulnerable.py",
+        "sha256": "d41fb2a541487b32d11523033a9fe3451ba77c7364495f3c45b0351f48abfa0a",
+        "routes": [
+          {
+            "path": "/set-name",
+            "normalized_path": "/set-name",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "set_name"
+          },
+          {
+            "path": "/me",
+            "normalized_path": "/me",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "me"
+          }
+        ],
+        "nested_functions": [
+          "set_name",
+          "me"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_798_0_flask:set_name",
+          "unsafe:cwe_798_0_flask:me",
+          "unsafe:cwe_798_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    },
+    "cwe_862_0_flask": {
+      "task_id": "cwe_862_0_flask",
+      "cwe": "CWE-862",
+      "factory_name": "create_admin_panel_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_862_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_862_0_flask/secure.py",
+        "sha256": "6519325d29b0ecd6a5db128fd60fde1c64371a83213ba0f3bb2c08627635554d",
+        "routes": [
+          {
+            "path": "/login",
+            "normalized_path": "/login",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "login"
+          },
+          {
+            "path": "/account",
+            "normalized_path": "/account",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "account"
+          },
+          {
+            "path": "/admin",
+            "normalized_path": "/admin",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "admin_panel"
+          }
+        ],
+        "nested_functions": [
+          "login",
+          "account",
+          "admin_panel"
+        ],
+        "unit_ids": [
+          "secure:cwe_862_0_flask:login",
+          "secure:cwe_862_0_flask:account",
+          "secure:cwe_862_0_flask:admin_panel",
+          "secure:cwe_862_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_862_0_flask_test.py",
+        "factory_name": "create_admin_panel_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_862_0_flask/vulnerable.py",
+        "sha256": "6c0926cf273ffdc14049134de03a1af7a6b0c1535fa4dc33ad45f3b721c806c4",
+        "routes": [
+          {
+            "path": "/login",
+            "normalized_path": "/login",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "login"
+          },
+          {
+            "path": "/account",
+            "normalized_path": "/account",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "account"
+          },
+          {
+            "path": "/admin",
+            "normalized_path": "/admin",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "admin_panel"
+          }
+        ],
+        "nested_functions": [
+          "login",
+          "account",
+          "admin_panel"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_862_0_flask:login",
+          "unsafe:cwe_862_0_flask:account",
+          "unsafe:cwe_862_0_flask:admin_panel",
+          "unsafe:cwe_862_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    },
+    "cwe_915_0_flask": {
+      "task_id": "cwe_915_0_flask",
+      "cwe": "CWE-915",
+      "factory_name": "create_profile_update_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_915_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_915_0_flask/secure.py",
+        "sha256": "6c8cf0586edbf88fc3ab1613192adec4ef6589c36208ea4dd53620e37ea91d1f",
+        "routes": [
+          {
+            "path": "/login",
+            "normalized_path": "/login",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "login"
+          },
+          {
+            "path": "/profile",
+            "normalized_path": "/profile",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "get_profile"
+          },
+          {
+            "path": "/profile",
+            "normalized_path": "/profile",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "update_profile"
+          }
+        ],
+        "nested_functions": [
+          "current_user",
+          "login",
+          "get_profile",
+          "update_profile"
+        ],
+        "unit_ids": [
+          "secure:cwe_915_0_flask:current_user",
+          "secure:cwe_915_0_flask:login",
+          "secure:cwe_915_0_flask:get_profile",
+          "secure:cwe_915_0_flask:update_profile",
+          "secure:cwe_915_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_915_0_flask_test.py",
+        "factory_name": "create_profile_update_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_915_0_flask/vulnerable.py",
+        "sha256": "9f181bda98b78bcafca9acecdc6564efe34cf58e9c2867774f4a37fb362f1c3b",
+        "routes": [
+          {
+            "path": "/login",
+            "normalized_path": "/login",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "login"
+          },
+          {
+            "path": "/profile",
+            "normalized_path": "/profile",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "get_profile"
+          },
+          {
+            "path": "/profile",
+            "normalized_path": "/profile",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "update_profile"
+          }
+        ],
+        "nested_functions": [
+          "current_user",
+          "login",
+          "get_profile",
+          "update_profile"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_915_0_flask:current_user",
+          "unsafe:cwe_915_0_flask:login",
+          "unsafe:cwe_915_0_flask:get_profile",
+          "unsafe:cwe_915_0_flask:update_profile",
+          "unsafe:cwe_915_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    },
+    "cwe_918_0_flask": {
+      "task_id": "cwe_918_0_flask",
+      "cwe": "CWE-918",
+      "factory_name": "create_url_fetch_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_918_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_918_0_flask/secure.py",
+        "sha256": "3e140b139acccc4a25b41dbe0fbcb0c5c156ccf70f66c7b5e268206ecf442125",
+        "routes": [
+          {
+            "path": "/fetch",
+            "normalized_path": "/fetch",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "fetch"
+          }
+        ],
+        "nested_functions": [
+          "default_fetcher",
+          "is_blocked_ip",
+          "validate_url",
+          "fetch"
+        ],
+        "unit_ids": [
+          "secure:cwe_918_0_flask:default_fetcher",
+          "secure:cwe_918_0_flask:is_blocked_ip",
+          "secure:cwe_918_0_flask:validate_url",
+          "secure:cwe_918_0_flask:fetch",
+          "secure:cwe_918_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_918_0_flask_test.py",
+        "factory_name": "create_url_fetch_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_918_0_flask/vulnerable.py",
+        "sha256": "b1a4daf9dd34759d695ec0c2cb4a630683db5ea4a95cd64d7a8429ea98ffb2b3",
+        "routes": [
+          {
+            "path": "/fetch",
+            "normalized_path": "/fetch",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "fetch"
+          }
+        ],
+        "nested_functions": [
+          "default_fetcher",
+          "fetch"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_918_0_flask:default_fetcher",
+          "unsafe:cwe_918_0_flask:fetch",
+          "unsafe:cwe_918_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    },
+    "cwe_942_0_flask": {
+      "task_id": "cwe_942_0_flask",
+      "cwe": "CWE-942",
+      "factory_name": "create_cors_api_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_942_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_942_0_flask/secure.py",
+        "sha256": "10b868802d8160355b907dde1aa4abd70a829fb1a45185b76efab05b00440398",
+        "routes": [
+          {
+            "path": "/api/profile",
+            "normalized_path": "/api/profile",
+            "methods": [
+              "OPTIONS"
+            ],
+            "function_name": "profile_options"
+          },
+          {
+            "path": "/api/profile",
+            "normalized_path": "/api/profile",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "get_profile"
+          },
+          {
+            "path": "/api/profile",
+            "normalized_path": "/api/profile",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "update_profile"
+          }
+        ],
+        "nested_functions": [
+          "add_cors_headers",
+          "apply_cors",
+          "profile_options",
+          "get_profile",
+          "update_profile"
+        ],
+        "unit_ids": [
+          "secure:cwe_942_0_flask:add_cors_headers",
+          "secure:cwe_942_0_flask:apply_cors",
+          "secure:cwe_942_0_flask:profile_options",
+          "secure:cwe_942_0_flask:get_profile",
+          "secure:cwe_942_0_flask:update_profile",
+          "secure:cwe_942_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_942_0_flask_test.py",
+        "factory_name": "create_cors_api_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_942_0_flask/vulnerable.py",
+        "sha256": "57e5683b5cf02ecbb4a44f22c2de24de146b68e842c27ab9846f712b9be764b9",
+        "routes": [
+          {
+            "path": "/api/profile",
+            "normalized_path": "/api/profile",
+            "methods": [
+              "OPTIONS"
+            ],
+            "function_name": "profile_options"
+          },
+          {
+            "path": "/api/profile",
+            "normalized_path": "/api/profile",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "get_profile"
+          },
+          {
+            "path": "/api/profile",
+            "normalized_path": "/api/profile",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "update_profile"
+          }
+        ],
+        "nested_functions": [
+          "apply_cors",
+          "profile_options",
+          "get_profile",
+          "update_profile"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_942_0_flask:apply_cors",
+          "unsafe:cwe_942_0_flask:profile_options",
+          "unsafe:cwe_942_0_flask:get_profile",
+          "unsafe:cwe_942_0_flask:update_profile",
+          "unsafe:cwe_942_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    },
+    "cwe_1004_0_flask": {
+      "task_id": "cwe_1004_0_flask",
+      "cwe": "CWE-1004",
+      "factory_name": "create_http_only_remember_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_1004_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_1004_0_flask/secure.py",
+        "sha256": "d4bf524597fe3ec751e2ad8d3b8725a09288947a214c5f00510a384b1396d95d",
+        "routes": [
+          {
+            "path": "/remember",
+            "normalized_path": "/remember",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "remember"
+          },
+          {
+            "path": "/remembered-user",
+            "normalized_path": "/remembered-user",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "remembered_user"
+          },
+          {
+            "path": "/forget",
+            "normalized_path": "/forget",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "forget"
+          }
+        ],
+        "nested_functions": [
+          "remember",
+          "remembered_user",
+          "forget"
+        ],
+        "unit_ids": [
+          "secure:cwe_1004_0_flask:remember",
+          "secure:cwe_1004_0_flask:remembered_user",
+          "secure:cwe_1004_0_flask:forget",
+          "secure:cwe_1004_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_1004_0_flask_test.py",
+        "factory_name": "create_http_only_remember_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_1004_0_flask/vulnerable.py",
+        "sha256": "f09852cfb32a5e76f90b4d0f291157c2ae4180ebde24f946cda4491e4ee0a575",
+        "routes": [
+          {
+            "path": "/remember",
+            "normalized_path": "/remember",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "remember"
+          },
+          {
+            "path": "/remembered-user",
+            "normalized_path": "/remembered-user",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "remembered_user"
+          },
+          {
+            "path": "/forget",
+            "normalized_path": "/forget",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "forget"
+          }
+        ],
+        "nested_functions": [
+          "remember",
+          "remembered_user",
+          "forget"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_1004_0_flask:remember",
+          "unsafe:cwe_1004_0_flask:remembered_user",
+          "unsafe:cwe_1004_0_flask:forget",
+          "unsafe:cwe_1004_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    },
+    "cwe_1336_0_flask": {
+      "task_id": "cwe_1336_0_flask",
+      "cwe": "CWE-1336",
+      "factory_name": "create_greeting_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_1336_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_1336_0_flask/secure.py",
+        "sha256": "608d410bffe94625fcc2459e77cbc1671fb0e48362fe10b954030c777879737c",
+        "routes": [
+          {
+            "path": "/greet",
+            "normalized_path": "/greet",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "greet"
+          }
+        ],
+        "nested_functions": [
+          "greet"
+        ],
+        "unit_ids": [
+          "secure:cwe_1336_0_flask:greet",
+          "secure:cwe_1336_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_1336_0_flask_test.py",
+        "factory_name": "create_greeting_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_1336_0_flask/vulnerable.py",
+        "sha256": "a96d5c3d83177ca9ab780ad4d97547afd9c9cdc25f7cd03eaa14090af38f631d",
+        "routes": [
+          {
+            "path": "/greet",
+            "normalized_path": "/greet",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "greet"
+          }
+        ],
+        "nested_functions": [
+          "greet"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_1336_0_flask:greet",
+          "unsafe:cwe_1336_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    }
+  },
+  "units": [
+    {
+      "unit_id": "secure:cwe_022_0_flask:is_path_inside_base",
+      "task_id": "cwe_022_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "is_path_inside_base",
+      "source": "def is_path_inside_base(candidate: Path) -> bool:\n    try:\n        candidate.resolve().relative_to(allowed_base)\n        return True\n    except ValueError:\n        return False\n",
+      "sha256": "0fe53728807535fa8b34a1b17dd824007cf77cc409a789c742b34087e447fe62",
+      "routes": []
+    },
+    {
+      "unit_id": "secure:cwe_022_0_flask:download",
+      "task_id": "cwe_022_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "download",
+      "source": "@app.get('/download')\ndef download():\n    requested_file = request.args.get('file', '')\n    if not requested_file:\n        abort(400)\n    requested_path = Path(requested_file)\n    if requested_path.is_absolute():\n        abort(403)\n    candidate_path = (allowed_base / requested_path).resolve()\n    if not is_path_inside_base(candidate_path):\n        abort(403)\n    if not candidate_path.exists() or not candidate_path.is_file():\n        abort(404)\n    try:\n        content = candidate_path.read_text(encoding='utf-8')\n    except UnicodeDecodeError:\n        content = candidate_path.read_bytes()\n        return Response(content, mimetype='application/octet-stream')\n    return Response(content, mimetype='text/plain')\n",
+      "sha256": "5310915f562f2d75055365559b7540a508d886ccf396b50341258cecc13a2e50",
+      "routes": [
+        {
+          "path": "/download",
+          "normalized_path": "/download",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "download"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_022_0_flask:__setup__",
+      "task_id": "cwe_022_0_flask",
+      "variant": "secure",
+      "kind": "setup",
+      "function_name": null,
+      "source": "import secrets\nfrom pathlib import Path\nfrom flask import Flask, abort, request, Response\napp = Flask(__name__)\napp.config['SECRET_KEY'] = secrets.token_urlsafe(32)\nallowed_base = Path(base_dir).resolve()\n",
+      "sha256": "deacdf8f175072dbdc0f324f45641ff6dbd9c6dd3d7773f1d0c667d650f7b673",
+      "routes": []
+    },
+    {
+      "unit_id": "unsafe:cwe_022_0_flask:download",
+      "task_id": "cwe_022_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "download",
+      "source": "@app.get('/download')\ndef download():\n    requested_file = request.args.get('file', '')\n    if not requested_file:\n        abort(400)\n    path = Path(base_dir) / requested_file\n    if not path.exists() or not path.is_file():\n        abort(404)\n    return Response(path.read_text(encoding='utf-8'), mimetype='text/plain')\n",
+      "sha256": "51a6a9a8f80d448f87c73cdac33ac1c81e67cdff1a2a79ebfa44a1e3d2ef43f8",
+      "routes": [
+        {
+          "path": "/download",
+          "normalized_path": "/download",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "download"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_022_0_flask:__setup__",
+      "task_id": "cwe_022_0_flask",
+      "variant": "unsafe",
+      "kind": "setup",
+      "function_name": null,
+      "source": "from pathlib import Path\nfrom flask import Flask, abort, request, Response\napp = Flask(__name__)\napp.config['SECRET_KEY'] = 'secret'\n",
+      "sha256": "5b0ce9e31e38156967ce4312f2a24abd31e1c756bd2982e2176feaec5f9ebdd1",
+      "routes": []
+    },
+    {
+      "unit_id": "secure:cwe_078_0_flask:default_command_runner",
+      "task_id": "cwe_078_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "default_command_runner",
+      "source": "def default_command_runner(args):\n    completed = subprocess.run(args, capture_output=True, text=True, timeout=3, check=False)\n    return completed.stdout or completed.stderr\n",
+      "sha256": "80427dc016ef586e5be901b4daa4a9d9b056bf2c525cc017526f1792ee78ce9e",
+      "routes": []
+    },
+    {
+      "unit_id": "secure:cwe_078_0_flask:validate_host",
+      "task_id": "cwe_078_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "validate_host",
+      "source": "def validate_host(host: str) -> str:\n    host = (host or '').strip()\n    if not host:\n        abort(400)\n    if any((char in host for char in DANGEROUS_CHARS)):\n        abort(400)\n    try:\n        ipaddress.ip_address(host)\n        return host\n    except ValueError:\n        pass\n    if not HOSTNAME_RE.fullmatch(host):\n        abort(400)\n    return host.rstrip('.')\n",
+      "sha256": "036adb4606dd75802f3c2b133653d3bfa0090c7cf7486879f5dc9d0b0d0822e2",
+      "routes": []
+    },
+    {
+      "unit_id": "secure:cwe_078_0_flask:ping",
+      "task_id": "cwe_078_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "ping",
+      "source": "@app.get('/ping')\ndef ping():\n    raw_host = request.args.get('host', '')\n    safe_host = validate_host(raw_host)\n    command = ['ping', '-c', '1', safe_host]\n    output = active_runner(command)\n    if isinstance(output, bytes):\n        output = output.decode('utf-8', errors='replace')\n    return Response(str(output), mimetype='text/plain')\n",
+      "sha256": "10b13fa5eabef427e6ef8824a62e938a59e065aad8c9d37ce680293e3ca0c148",
+      "routes": [
+        {
+          "path": "/ping",
+          "normalized_path": "/ping",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "ping"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_078_0_flask:__setup__",
+      "task_id": "cwe_078_0_flask",
+      "variant": "secure",
+      "kind": "setup",
+      "function_name": null,
+      "source": "import ipaddress\nimport re\nimport secrets\nimport subprocess\nfrom flask import Flask, abort, request, Response\napp = Flask(__name__)\napp.config['SECRET_KEY'] = secrets.token_urlsafe(32)\nHOSTNAME_RE = re.compile('^(?=.{1,253}$)(?!-)[A-Za-z0-9-]{1,63}(?<!-)(\\\\.(?!-)[A-Za-z0-9-]{1,63}(?<!-))*\\\\.?$')\nDANGEROUS_CHARS = set(';&|`$<>\\\\\\n\\r(){}[]')\nactive_runner = command_runner or default_command_runner\n",
+      "sha256": "f6b8b2bdbd48afa76faf7ea5eea9a2e7f82463117f7d5d43e8268d5f45914e4f",
+      "routes": []
+    },
+    {
+      "unit_id": "unsafe:cwe_078_0_flask:default_runner",
+      "task_id": "cwe_078_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "default_runner",
+      "source": "def default_runner(command):\n    return os.popen(command).read()\n",
+      "sha256": "2e9d182416ddcb3995f3b01ab6316118fde89bd6b1bbf6d9327576ddb6b64e73",
+      "routes": []
+    },
+    {
+      "unit_id": "unsafe:cwe_078_0_flask:ping",
+      "task_id": "cwe_078_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "ping",
+      "source": "@app.get('/ping')\ndef ping():\n    host = request.args.get('host', '')\n    if not host:\n        abort(400)\n    command = f'ping -c 1 {host}'\n    output = active_runner(command)\n    return Response(str(output), mimetype='text/plain')\n",
+      "sha256": "66eb696f26b2057e2ee6f33b046358a153090a4b1063b4c0c7be6c17afd3265e",
+      "routes": [
+        {
+          "path": "/ping",
+          "normalized_path": "/ping",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "ping"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_078_0_flask:__setup__",
+      "task_id": "cwe_078_0_flask",
+      "variant": "unsafe",
+      "kind": "setup",
+      "function_name": null,
+      "source": "import os\nfrom flask import Flask, abort, request, Response\napp = Flask(__name__)\napp.config['SECRET_KEY'] = 'secret'\nactive_runner = command_runner or default_runner\n",
+      "sha256": "1cf3ac386ed00df88fb6b33cc87720966751839f70b4adc99623c05aae6f1840",
+      "routes": []
+    },
+    {
+      "unit_id": "secure:cwe_079_0_flask:add_comment",
+      "task_id": "cwe_079_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "add_comment",
+      "source": "@app.post('/comment')\ndef add_comment():\n    comment = request.form.get('comment', '')\n    comments.append(comment)\n    return 'created'\n",
+      "sha256": "0d5f1d4266c768085c3e7957dbeac32851adae7d8dde314e7a41b390f8b6b338",
+      "routes": [
+        {
+          "path": "/comment",
+          "normalized_path": "/comment",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "add_comment"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_079_0_flask:list_comments",
+      "task_id": "cwe_079_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "list_comments",
+      "source": "@app.get('/comments')\ndef list_comments():\n    rendered_comments = '\\n'.join((f'<li>{escape(comment)}</li>' for comment in comments))\n    return f'\\n        <!doctype html>\\n        <html>\\n            <body>\\n                <h1>Comments</h1>\\n                <ul>\\n                    {rendered_comments}\\n                </ul>\\n            </body>\\n        </html>\\n        '\n",
+      "sha256": "ba55f22186f6a4b7d8046372acec666230fe9fd8a78b2c5925e629f8367e7ec1",
+      "routes": [
+        {
+          "path": "/comments",
+          "normalized_path": "/comments",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "list_comments"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_079_0_flask:__setup__",
+      "task_id": "cwe_079_0_flask",
+      "variant": "secure",
+      "kind": "setup",
+      "function_name": null,
+      "source": "import secrets\nfrom flask import Flask, request\nfrom markupsafe import escape\napp = Flask(__name__)\napp.config['SECRET_KEY'] = secrets.token_urlsafe(32)\ncomments = []\n",
+      "sha256": "91b1722fbca09ea0d56f33154babf143e08b27dc11fa1467a6f67f94ccc84b54",
+      "routes": []
+    },
+    {
+      "unit_id": "unsafe:cwe_079_0_flask:add_comment",
+      "task_id": "cwe_079_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "add_comment",
+      "source": "@app.post('/comment')\ndef add_comment():\n    comments.append(request.form.get('comment', ''))\n    return 'created'\n",
+      "sha256": "8db5ed41fb369d29f143ffc5fcdb9611adb4e2e7acd2598724866e34a43b7a20",
+      "routes": [
+        {
+          "path": "/comment",
+          "normalized_path": "/comment",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "add_comment"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_079_0_flask:list_comments",
+      "task_id": "cwe_079_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "list_comments",
+      "source": "@app.get('/comments')\ndef list_comments():\n    rendered_comments = ''.join((f'<li>{comment}</li>' for comment in comments))\n    return f'<html><body><h1>Comments</h1><ul>{rendered_comments}</ul></body></html>'\n",
+      "sha256": "215c6c832ef8bc5e0c70df0f8d2037059e00f12f2108df00b77bd43414c6f4d4",
+      "routes": [
+        {
+          "path": "/comments",
+          "normalized_path": "/comments",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "list_comments"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_079_0_flask:__setup__",
+      "task_id": "cwe_079_0_flask",
+      "variant": "unsafe",
+      "kind": "setup",
+      "function_name": null,
+      "source": "import secrets\nfrom flask import Flask, request\napp = Flask(__name__)\napp.config['SECRET_KEY'] = secrets.token_urlsafe(32)\ncomments = []\n",
+      "sha256": "bce2a5e22f14417afa893dec9718b993363711e82605b011af95e07e134020f9",
+      "routes": []
+    },
+    {
+      "unit_id": "secure:cwe_089_0_flask:search_users",
+      "task_id": "cwe_089_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "search_users",
+      "source": "@app.get('/search')\ndef search_users():\n    query = request.args.get('q', '')\n    conn = sqlite3.connect(db_path)\n    conn.row_factory = sqlite3.Row\n    try:\n        rows = conn.execute('\\n                SELECT id, username, email\\n                FROM users\\n                WHERE username LIKE ?\\n                ORDER BY id\\n                ', (f'%{query}%',)).fetchall()\n    finally:\n        conn.close()\n    return jsonify([{'id': row['id'], 'username': row['username'], 'email': row['email']} for row in rows])\n",
+      "sha256": "0f51840828f4b8b451d8bbe694c4c68ff78d91659040f3767eed778999f84fcf",
+      "routes": [
+        {
+          "path": "/search",
+          "normalized_path": "/search",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "search_users"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_089_0_flask:__setup__",
+      "task_id": "cwe_089_0_flask",
+      "variant": "secure",
+      "kind": "setup",
+      "function_name": null,
+      "source": "import sqlite3\nfrom flask import Flask, jsonify, request\napp = Flask(__name__)\n",
+      "sha256": "6f94f457b23153aa931ca622cd6662b7ba6604a5bf3765a913993aec30e411ed",
+      "routes": []
+    },
+    {
+      "unit_id": "unsafe:cwe_089_0_flask:search_users",
+      "task_id": "cwe_089_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "search_users",
+      "source": "@app.get('/search')\ndef search_users():\n    query = request.args.get('q', '')\n    conn = sqlite3.connect(db_path)\n    conn.row_factory = sqlite3.Row\n    try:\n        sql = f\"\\n                SELECT id, username, email\\n                FROM users\\n                WHERE username LIKE '%{query}%'\\n                ORDER BY id\\n            \"\n        rows = conn.execute(sql).fetchall()\n    finally:\n        conn.close()\n    return jsonify([{'id': row['id'], 'username': row['username'], 'email': row['email']} for row in rows])\n",
+      "sha256": "75ddb3db3be03378ac007b87872e5e533745df524d96921622c693bba7ecd481",
+      "routes": [
+        {
+          "path": "/search",
+          "normalized_path": "/search",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "search_users"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_089_0_flask:__setup__",
+      "task_id": "cwe_089_0_flask",
+      "variant": "unsafe",
+      "kind": "setup",
+      "function_name": null,
+      "source": "from flask import Flask, jsonify, request\napp = Flask(__name__)\n",
+      "sha256": "37f7d79de918b627bc29029ed23b9cf2c3d02a3091dfbe4457354375b4b5f48c",
+      "routes": []
+    },
+    {
+      "unit_id": "secure:cwe_200_0_flask:handle_error",
+      "task_id": "cwe_200_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "handle_error",
+      "source": "@app.errorhandler(Exception)\ndef handle_error(error):\n    if isinstance(error, HTTPException):\n        status_code = error.code or 500\n    else:\n        status_code = 500\n    if status_code >= 500:\n        message = 'internal server error'\n    else:\n        message = 'invalid request'\n    return (jsonify({'error': message}), status_code)\n",
+      "sha256": "b0a1b08fa5a413777919eb9aa1933447bec797a04a8a9f1b861c83385d3d0d23",
+      "routes": []
+    },
+    {
+      "unit_id": "secure:cwe_200_0_flask:health",
+      "task_id": "cwe_200_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "health",
+      "source": "@app.get('/health')\ndef health():\n    return 'ok'\n",
+      "sha256": "14168392bcd02796c84814e8531b3a804900fd43315153da3c4b06b3d994ab68",
+      "routes": [
+        {
+          "path": "/health",
+          "normalized_path": "/health",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "health"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_200_0_flask:divide",
+      "task_id": "cwe_200_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "divide",
+      "source": "@app.get('/divide')\ndef divide():\n    try:\n        x = float(request.args.get('x', ''))\n        y = float(request.args.get('y', ''))\n    except ValueError:\n        raise BadRequest()\n    if y == 0:\n        raise BadRequest()\n    return jsonify({'result': x / y})\n",
+      "sha256": "ba05251c9301525022e270465666ac4ebb4f7492665ee0c68d5cd80ed69d9703",
+      "routes": [
+        {
+          "path": "/divide",
+          "normalized_path": "/divide",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "divide"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_200_0_flask:crash",
+      "task_id": "cwe_200_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "crash",
+      "source": "@app.get('/crash')\ndef crash():\n    raise RuntimeError('simulated internal failure')\n",
+      "sha256": "c50f8eb574d38f4b7ea22eb91f40cbd65d5c0bde279e9b43cd9afe3b5977ab8f",
+      "routes": [
+        {
+          "path": "/crash",
+          "normalized_path": "/crash",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "crash"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_200_0_flask:__setup__",
+      "task_id": "cwe_200_0_flask",
+      "variant": "secure",
+      "kind": "setup",
+      "function_name": null,
+      "source": "import secrets\nfrom flask import Flask, jsonify, request\nfrom werkzeug.exceptions import BadRequest, HTTPException\napp = Flask(__name__)\napp.debug = False\napp.config['DEBUG'] = False\napp.config['TESTING'] = False\napp.config['PROPAGATE_EXCEPTIONS'] = False\napp.config['SECRET_TOKEN'] = secret_token or secrets.token_urlsafe(32)\n",
+      "sha256": "809815fbd95747f46b22848386cab6508722fd6735e8e3fb430ad467993bc40b",
+      "routes": []
+    },
+    {
+      "unit_id": "unsafe:cwe_200_0_flask:handle_error",
+      "task_id": "cwe_200_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "handle_error",
+      "source": "@app.errorhandler(Exception)\ndef handle_error(error):\n    if isinstance(error, HTTPException):\n        status_code = error.code or 500\n    else:\n        status_code = 500\n    return (jsonify({'error': str(error), 'secret_token': app.config['SECRET_TOKEN'], 'traceback': traceback.format_exc()}), status_code)\n",
+      "sha256": "934f71a7cca05b9b71b93a2fd5496727613f46989dc95076c3830a64f8897da0",
+      "routes": []
+    },
+    {
+      "unit_id": "unsafe:cwe_200_0_flask:health",
+      "task_id": "cwe_200_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "health",
+      "source": "@app.get('/health')\ndef health():\n    return 'ok'\n",
+      "sha256": "14168392bcd02796c84814e8531b3a804900fd43315153da3c4b06b3d994ab68",
+      "routes": [
+        {
+          "path": "/health",
+          "normalized_path": "/health",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "health"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_200_0_flask:divide",
+      "task_id": "cwe_200_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "divide",
+      "source": "@app.get('/divide')\ndef divide():\n    try:\n        x = float(request.args.get('x', ''))\n        y = float(request.args.get('y', ''))\n    except ValueError as exc:\n        raise BadRequest(f'invalid numeric input: {exc}')\n    if y == 0:\n        raise BadRequest('division by zero with secret token ' + app.config['SECRET_TOKEN'])\n    return jsonify({'result': x / y})\n",
+      "sha256": "43cc3e6747bd3d41223b13052c3190d09ef3541c318b52b9334929a491ddc22a",
+      "routes": [
+        {
+          "path": "/divide",
+          "normalized_path": "/divide",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "divide"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_200_0_flask:crash",
+      "task_id": "cwe_200_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "crash",
+      "source": "@app.get('/crash')\ndef crash():\n    raise RuntimeError('internal failure with token ' + app.config['SECRET_TOKEN'])\n",
+      "sha256": "3f1b811f91a5e731a563bb865160465c063626706bfbbd151c99e72cbacc5821",
+      "routes": [
+        {
+          "path": "/crash",
+          "normalized_path": "/crash",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "crash"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_200_0_flask:__setup__",
+      "task_id": "cwe_200_0_flask",
+      "variant": "unsafe",
+      "kind": "setup",
+      "function_name": null,
+      "source": "from flask import Flask, jsonify, request\nfrom werkzeug.exceptions import BadRequest, HTTPException\napp = Flask(__name__)\napp.debug = True\napp.config['DEBUG'] = True\napp.config['SECRET_TOKEN'] = secret_token or SENSITIVE_TOKEN\napp.config['PROPAGATE_EXCEPTIONS'] = False\n",
+      "sha256": "4d256438aecdef9be3a530ec19b36eb9973ff330287e9196f93d24d53f2cb933",
+      "routes": []
+    },
+    {
+      "unit_id": "secure:cwe_306_0_flask:login",
+      "task_id": "cwe_306_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "login",
+      "source": "@app.post('/login')\ndef login():\n    username = request.form.get('username', '')\n    password = request.form.get('password', '')\n    if users.get(username) != password:\n        abort(401)\n    session.clear()\n    session['username'] = username\n    return 'logged in'\n",
+      "sha256": "fdc78694f930a2709c947e62b9ee3d3d9da53dccc440805617e16757728ce196",
+      "routes": [
+        {
+          "path": "/login",
+          "normalized_path": "/login",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "login"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_306_0_flask:dashboard",
+      "task_id": "cwe_306_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "dashboard",
+      "source": "@app.get('/dashboard')\ndef dashboard():\n    username = session.get('username')\n    if not username:\n        abort(401)\n    return f'private dashboard for {username}'\n",
+      "sha256": "76b24c942cbac03507203aef2225917ae3cc08dcc4ff62efa87b3da3be8c4ee1",
+      "routes": [
+        {
+          "path": "/dashboard",
+          "normalized_path": "/dashboard",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "dashboard"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_306_0_flask:logout",
+      "task_id": "cwe_306_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "logout",
+      "source": "@app.post('/logout')\ndef logout():\n    session.clear()\n    return 'logged out'\n",
+      "sha256": "c9f326e3cb05d55f805d4c08dc60d8c4d6eedc840017f3eac29d4d5150d11ce8",
+      "routes": [
+        {
+          "path": "/logout",
+          "normalized_path": "/logout",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "logout"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_306_0_flask:__setup__",
+      "task_id": "cwe_306_0_flask",
+      "variant": "secure",
+      "kind": "setup",
+      "function_name": null,
+      "source": "import secrets\nfrom flask import Flask, abort, request, session\napp = Flask(__name__)\napp.config['SECRET_KEY'] = secrets.token_urlsafe(32)\nusers = {'alice': 'alice-password', 'bob': 'bob-password'}\n",
+      "sha256": "8d6f1d492a08c6cb0b7790aef7a48275452a11371f0a3436c204cc2e72747b26",
+      "routes": []
+    },
+    {
+      "unit_id": "unsafe:cwe_306_0_flask:login",
+      "task_id": "cwe_306_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "login",
+      "source": "@app.post('/login')\ndef login():\n    username = request.form.get('username', '')\n    password = request.form.get('password', '')\n    if users.get(username) != password:\n        return ('invalid credentials', 401)\n    session['username'] = username\n    return 'logged in'\n",
+      "sha256": "25fc86f4ae2b4bedbff76015b001f2ef304208a3d34631178da4309acc5e8395",
+      "routes": [
+        {
+          "path": "/login",
+          "normalized_path": "/login",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "login"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_306_0_flask:dashboard",
+      "task_id": "cwe_306_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "dashboard",
+      "source": "@app.get('/dashboard')\ndef dashboard():\n    username = session.get('username') or request.args.get('username') or 'guest'\n    return f'private dashboard for {username}'\n",
+      "sha256": "21a6a82653c4f24f3cad6a15ef074818a19a8fca05b6fcd54f154516ddb4f720",
+      "routes": [
+        {
+          "path": "/dashboard",
+          "normalized_path": "/dashboard",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "dashboard"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_306_0_flask:logout",
+      "task_id": "cwe_306_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "logout",
+      "source": "@app.post('/logout')\ndef logout():\n    session.clear()\n    return 'logged out'\n",
+      "sha256": "c9f326e3cb05d55f805d4c08dc60d8c4d6eedc840017f3eac29d4d5150d11ce8",
+      "routes": [
+        {
+          "path": "/logout",
+          "normalized_path": "/logout",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "logout"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_306_0_flask:__setup__",
+      "task_id": "cwe_306_0_flask",
+      "variant": "unsafe",
+      "kind": "setup",
+      "function_name": null,
+      "source": "from flask import Flask, request, session\napp = Flask(__name__)\napp.config['SECRET_KEY'] = 'secret'\nusers = {'alice': 'alice-password', 'bob': 'bob-password'}\n",
+      "sha256": "aface554a5a88b31db08ca9584ef346e7efacaa48426ddb3c36fbec26678f3ce",
+      "routes": []
+    },
+    {
+      "unit_id": "secure:cwe_307_0_flask:get_rate_limit_key",
+      "task_id": "cwe_307_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "get_rate_limit_key",
+      "source": "def get_rate_limit_key(username: str) -> str:\n    client_ip = request.remote_addr or 'unknown'\n    normalized_username = username.strip().lower()\n    return f'{client_ip}:{normalized_username}'\n",
+      "sha256": "27fef9d6868ac3b9fe90f5d5943ec4e802b252c7ed13a50d7768adb94b061c98",
+      "routes": []
+    },
+    {
+      "unit_id": "secure:cwe_307_0_flask:login",
+      "task_id": "cwe_307_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "login",
+      "source": "@app.post('/login')\ndef login():\n    username = request.form.get('username', '')\n    password = request.form.get('password', '')\n    key = get_rate_limit_key(username)\n    if failed_attempts[key] >= max_attempts:\n        abort(429)\n    if users.get(username) != password:\n        failed_attempts[key] += 1\n        abort(401)\n    failed_attempts[key] = 0\n    session.clear()\n    session['username'] = username\n    return 'logged in'\n",
+      "sha256": "aaa3f0511197469e20caeab158eac5cc8e504ca06be27ebcef0540ce4479b50a",
+      "routes": [
+        {
+          "path": "/login",
+          "normalized_path": "/login",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "login"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_307_0_flask:account",
+      "task_id": "cwe_307_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "account",
+      "source": "@app.get('/account')\ndef account():\n    username = session.get('username')\n    if not username:\n        abort(401)\n    return f'account for {username}'\n",
+      "sha256": "3e769a29f06d6a974213f7fddf952de0f2a13f642adf93f90a8c800f70cdb6d7",
+      "routes": [
+        {
+          "path": "/account",
+          "normalized_path": "/account",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "account"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_307_0_flask:__setup__",
+      "task_id": "cwe_307_0_flask",
+      "variant": "secure",
+      "kind": "setup",
+      "function_name": null,
+      "source": "import secrets\nfrom collections import defaultdict\nfrom flask import Flask, abort, request, session\napp = Flask(__name__)\napp.config['SECRET_KEY'] = secrets.token_urlsafe(32)\nusers = {'alice': 'alice-password', 'bob': 'bob-password'}\nfailed_attempts = defaultdict(int)\n",
+      "sha256": "6e83837441434b876910fc6954c703e448daf4ba1b2eaa7891def137064aea77",
+      "routes": []
+    },
+    {
+      "unit_id": "unsafe:cwe_307_0_flask:login",
+      "task_id": "cwe_307_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "login",
+      "source": "@app.post('/login')\ndef login():\n    username = request.form.get('username', '')\n    password = request.form.get('password', '')\n    if users.get(username) != password:\n        abort(401)\n    session['username'] = username\n    return 'logged in'\n",
+      "sha256": "397c3e1475b38d6b051cc12e4642388e544d05f96e639fa4e5ed1adfbc4e74e7",
+      "routes": [
+        {
+          "path": "/login",
+          "normalized_path": "/login",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "login"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_307_0_flask:account",
+      "task_id": "cwe_307_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "account",
+      "source": "@app.get('/account')\ndef account():\n    username = session.get('username')\n    if not username:\n        abort(401)\n    return f'account for {username}'\n",
+      "sha256": "3e769a29f06d6a974213f7fddf952de0f2a13f642adf93f90a8c800f70cdb6d7",
+      "routes": [
+        {
+          "path": "/account",
+          "normalized_path": "/account",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "account"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_307_0_flask:__setup__",
+      "task_id": "cwe_307_0_flask",
+      "variant": "unsafe",
+      "kind": "setup",
+      "function_name": null,
+      "source": "import secrets\nfrom flask import Flask, abort, request, session\napp = Flask(__name__)\napp.config['SECRET_KEY'] = secrets.token_urlsafe(32)\nusers = {'alice': 'alice-password', 'bob': 'bob-password'}\n",
+      "sha256": "8d6f1d492a08c6cb0b7790aef7a48275452a11371f0a3436c204cc2e72747b26",
+      "routes": []
+    },
+    {
+      "unit_id": "secure:cwe_352_0_flask:profile_form",
+      "task_id": "cwe_352_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "profile_form",
+      "source": "@app.get('/profile')\ndef profile_form():\n    token = session.get('csrf_token')\n    if not token:\n        token = secrets.token_urlsafe(32)\n        session['csrf_token'] = token\n    return f'\\n        <form method=\"post\" action=\"/profile\">\\n            <input type=\"hidden\" name=\"csrf_token\" value=\"{token}\">\\n            <input type=\"email\" name=\"email\">\\n            <button type=\"submit\">Update</button>\\n        </form>\\n        '\n",
+      "sha256": "3464103db90f01a4308b0cef072013b3146a4c579290980b661f0e6096ade006",
+      "routes": [
+        {
+          "path": "/profile",
+          "normalized_path": "/profile",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "profile_form"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_352_0_flask:update_profile",
+      "task_id": "cwe_352_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "update_profile",
+      "source": "@app.post('/profile')\ndef update_profile():\n    submitted_token = request.form.get('csrf_token', '')\n    expected_token = session.get('csrf_token', '')\n    if not expected_token or not secrets.compare_digest(submitted_token, expected_token):\n        abort(403)\n    app.config['CURRENT_EMAIL'] = request.form.get('email', '')\n    return 'updated'\n",
+      "sha256": "b1f8bde70681d601e78748ccadc467aed289ae0a8e309d035f5de367501f1140",
+      "routes": [
+        {
+          "path": "/profile",
+          "normalized_path": "/profile",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "update_profile"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_352_0_flask:get_email",
+      "task_id": "cwe_352_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "get_email",
+      "source": "@app.get('/email')\ndef get_email():\n    return app.config['CURRENT_EMAIL']\n",
+      "sha256": "5ae8907ea6662f40965da58483b12201c52274bbbd033205fbc12dd6b35db2e2",
+      "routes": [
+        {
+          "path": "/email",
+          "normalized_path": "/email",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "get_email"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_352_0_flask:__setup__",
+      "task_id": "cwe_352_0_flask",
+      "variant": "secure",
+      "kind": "setup",
+      "function_name": null,
+      "source": "import secrets\nfrom flask import Flask, abort, request, session\napp = Flask(__name__)\napp.config['SECRET_KEY'] = secrets.token_urlsafe(32)\napp.config['CURRENT_EMAIL'] = initial_email\n",
+      "sha256": "7dded6c1d1884b97fd98fa6f72ac9aa853c10967cb1f5e2ba509f8a97293b8e6",
+      "routes": []
+    },
+    {
+      "unit_id": "unsafe:cwe_352_0_flask:profile_form",
+      "task_id": "cwe_352_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "profile_form",
+      "source": "@app.get('/profile')\ndef profile_form():\n    return '\\n        <form method=\"post\" action=\"/profile\">\\n            <input type=\"hidden\" name=\"csrf_token\" value=\"static-token\">\\n            <input type=\"email\" name=\"email\">\\n            <button type=\"submit\">Update</button>\\n        </form>\\n        '\n",
+      "sha256": "fb73cd07ff6812f39a82cc6dec3a2a9c90293367c41c99f4ece1cf365c2c26c0",
+      "routes": [
+        {
+          "path": "/profile",
+          "normalized_path": "/profile",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "profile_form"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_352_0_flask:update_profile",
+      "task_id": "cwe_352_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "update_profile",
+      "source": "@app.post('/profile')\ndef update_profile():\n    app.config['CURRENT_EMAIL'] = request.form.get('email', '')\n    return 'updated'\n",
+      "sha256": "4b9a2319aab7eb8975a0583bf16db89e7bec14015fe5b6473525da5dd0100fe2",
+      "routes": [
+        {
+          "path": "/profile",
+          "normalized_path": "/profile",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "update_profile"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_352_0_flask:get_email",
+      "task_id": "cwe_352_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "get_email",
+      "source": "@app.get('/email')\ndef get_email():\n    return app.config['CURRENT_EMAIL']\n",
+      "sha256": "5ae8907ea6662f40965da58483b12201c52274bbbd033205fbc12dd6b35db2e2",
+      "routes": [
+        {
+          "path": "/email",
+          "normalized_path": "/email",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "get_email"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_352_0_flask:__setup__",
+      "task_id": "cwe_352_0_flask",
+      "variant": "unsafe",
+      "kind": "setup",
+      "function_name": null,
+      "source": "from flask import Flask, request\napp = Flask(__name__)\napp.config['SECRET_KEY'] = 'secret'\napp.config['CURRENT_EMAIL'] = initial_email\n",
+      "sha256": "ab29f2cdeaf599b20c0c2e2d23b216ade370a0b3d5f430a941321316b4aeae16",
+      "routes": []
+    },
+    {
+      "unit_id": "secure:cwe_434_0_flask:is_inside_base",
+      "task_id": "cwe_434_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "is_inside_base",
+      "source": "def is_inside_base(path: Path) -> bool:\n    try:\n        path.resolve().relative_to(base_dir)\n        return True\n    except ValueError:\n        return False\n",
+      "sha256": "96b75219fb4f96ebf1f09c96e68fae8732cbf71d667ad11ff00fb3e8e84c13fc",
+      "routes": []
+    },
+    {
+      "unit_id": "secure:cwe_434_0_flask:validate_filename",
+      "task_id": "cwe_434_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "validate_filename",
+      "source": "def validate_filename(filename: str) -> str:\n    if not filename:\n        abort(400)\n    sanitized = secure_filename(filename)\n    if not sanitized:\n        abort(400)\n    suffix = Path(sanitized).suffix.lower()\n    if suffix in BLOCKED_EXTENSIONS:\n        abort(400)\n    if suffix not in ALLOWED_EXTENSIONS:\n        abort(400)\n    return sanitized\n",
+      "sha256": "13d0cd9e64004352e6aa96140c2bf181f35df064ae7288ef88880b7902492667",
+      "routes": []
+    },
+    {
+      "unit_id": "secure:cwe_434_0_flask:upload",
+      "task_id": "cwe_434_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "upload",
+      "source": "@app.post('/upload')\ndef upload():\n    uploaded_file = request.files.get('file')\n    if uploaded_file is None:\n        abort(400)\n    filename = validate_filename(uploaded_file.filename or '')\n    data = uploaded_file.read()\n    if len(data) > max_bytes:\n        abort(413)\n    destination = (base_dir / filename).resolve()\n    if not is_inside_base(destination):\n        abort(403)\n    destination.write_bytes(data)\n    return jsonify({'filename': filename})\n",
+      "sha256": "9da54aa53c4f1d0baa6d2c9899fdc04c10751e58f27c87605d32f938c2af9377",
+      "routes": [
+        {
+          "path": "/upload",
+          "normalized_path": "/upload",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "upload"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_434_0_flask:get_file",
+      "task_id": "cwe_434_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "get_file",
+      "source": "@app.get('/files/<path:filename>')\ndef get_file(filename):\n    safe_name = validate_filename(filename)\n    target = (base_dir / safe_name).resolve()\n    if not is_inside_base(target):\n        abort(403)\n    if not target.exists() or not target.is_file():\n        abort(404)\n    return Response(target.read_bytes(), mimetype='application/octet-stream')\n",
+      "sha256": "da9a420d99f2927d52d33286c83979c48655a36d0bd51bc42da3687432399e63",
+      "routes": [
+        {
+          "path": "/files/<path:filename>",
+          "normalized_path": "/files/<filename>",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "get_file"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_434_0_flask:__setup__",
+      "task_id": "cwe_434_0_flask",
+      "variant": "secure",
+      "kind": "setup",
+      "function_name": null,
+      "source": "import secrets\nfrom pathlib import Path\nfrom flask import Flask, abort, jsonify, request, Response\nfrom werkzeug.utils import secure_filename\napp = Flask(__name__)\napp.config['SECRET_KEY'] = secrets.token_urlsafe(32)\nbase_dir = Path(upload_dir).resolve()\nbase_dir.mkdir(parents=True, exist_ok=True)\nALLOWED_EXTENSIONS = {'.txt', '.csv', '.json', '.png', '.jpg', '.jpeg'}\nBLOCKED_EXTENSIONS = {'.py', '.php', '.html', '.htm', '.js', '.sh', '.bash', '.exe', '.dll', '.so', '.svg', '.jsp', '.asp'}\n",
+      "sha256": "1b1c8de8d557c623b311706d96702dc582ba483933d46db418d9b4360a0357cd",
+      "routes": []
+    },
+    {
+      "unit_id": "unsafe:cwe_434_0_flask:upload",
+      "task_id": "cwe_434_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "upload",
+      "source": "@app.post('/upload')\ndef upload():\n    uploaded_file = request.files.get('file')\n    if uploaded_file is None:\n        abort(400)\n    destination = base_dir / uploaded_file.filename\n    destination.parent.mkdir(parents=True, exist_ok=True)\n    uploaded_file.save(destination)\n    return jsonify({'filename': uploaded_file.filename})\n",
+      "sha256": "27056be89cab274cc428d59bcf6c95d4415f051823f479d9a55cb9ccaa3ec3ed",
+      "routes": [
+        {
+          "path": "/upload",
+          "normalized_path": "/upload",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "upload"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_434_0_flask:get_file",
+      "task_id": "cwe_434_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "get_file",
+      "source": "@app.get('/files/<path:filename>')\ndef get_file(filename):\n    target = base_dir / filename\n    if not target.exists() or not target.is_file():\n        abort(404)\n    return Response(target.read_bytes(), mimetype='application/octet-stream')\n",
+      "sha256": "fc5961a3fcbeb7c76561f7892e7ce5d49fcf733d4e973fa421f0a7a58d3ccc08",
+      "routes": [
+        {
+          "path": "/files/<path:filename>",
+          "normalized_path": "/files/<filename>",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "get_file"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_434_0_flask:__setup__",
+      "task_id": "cwe_434_0_flask",
+      "variant": "unsafe",
+      "kind": "setup",
+      "function_name": null,
+      "source": "from pathlib import Path\nfrom flask import Flask, abort, jsonify, request, Response\napp = Flask(__name__)\napp.config['SECRET_KEY'] = 'secret'\nbase_dir = Path(upload_dir)\nbase_dir.mkdir(parents=True, exist_ok=True)\n",
+      "sha256": "9281feb2486186643c1fceef918da69ad0f2e9840376bb5cfee665197693d727",
+      "routes": []
+    },
+    {
+      "unit_id": "secure:cwe_502_0_flask:parse_profile",
+      "task_id": "cwe_502_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "parse_profile",
+      "source": "def parse_profile(raw_profile: str) -> dict:\n    try:\n        parsed = json.loads(raw_profile)\n    except json.JSONDecodeError:\n        abort(400)\n    if not isinstance(parsed, dict):\n        abort(400)\n    username = parsed.get('username', profile['username'])\n    email = parsed.get('email', profile['email'])\n    if not isinstance(username, str) or not isinstance(email, str):\n        abort(400)\n    return {'username': username, 'email': email}\n",
+      "sha256": "6dac43da92be2733f9f450f0c3e6f939423a10a598d5e7001dea9c2ea230ace7",
+      "routes": []
+    },
+    {
+      "unit_id": "secure:cwe_502_0_flask:import_profile",
+      "task_id": "cwe_502_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "import_profile",
+      "source": "@app.post('/profile/import')\ndef import_profile():\n    raw_profile = request.form.get('profile', '')\n    imported_profile = parse_profile(raw_profile)\n    profile['username'] = imported_profile['username']\n    profile['email'] = imported_profile['email']\n    return 'imported'\n",
+      "sha256": "2de9cb7143fdc04457c22e00d275c28a008ecb6cc8cf57caca2f225479ed28ad",
+      "routes": [
+        {
+          "path": "/profile/import",
+          "normalized_path": "/profile/import",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "import_profile"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_502_0_flask:get_profile",
+      "task_id": "cwe_502_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "get_profile",
+      "source": "@app.get('/profile')\ndef get_profile():\n    return jsonify({'username': profile['username'], 'email': profile['email']})\n",
+      "sha256": "6571b4b7798ee6fff7fe22c2ffac3c514ff18d76ecb7f012c8046f4b7529b29a",
+      "routes": [
+        {
+          "path": "/profile",
+          "normalized_path": "/profile",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "get_profile"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_502_0_flask:__setup__",
+      "task_id": "cwe_502_0_flask",
+      "variant": "secure",
+      "kind": "setup",
+      "function_name": null,
+      "source": "import json\nimport secrets\nfrom flask import Flask, abort, jsonify, request\napp = Flask(__name__)\napp.config['SECRET_KEY'] = secrets.token_urlsafe(32)\nprofile = {'username': 'anonymous', 'email': 'anonymous@example.com'}\n",
+      "sha256": "12edc1efb88f35f4afb49efba6ac979edce503222bb621c5ff9b8a30e515cdaf",
+      "routes": []
+    },
+    {
+      "unit_id": "unsafe:cwe_502_0_flask:import_profile",
+      "task_id": "cwe_502_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "import_profile",
+      "source": "@app.post('/profile/import')\ndef import_profile():\n    raw_profile = request.form.get('profile', '')\n    try:\n        parsed = json.loads(raw_profile)\n    except json.JSONDecodeError:\n        try:\n            parsed = pickle.loads(base64.b64decode(raw_profile))\n        except Exception:\n            abort(400)\n    if not isinstance(parsed, dict):\n        abort(400)\n    profile.clear()\n    profile.update(parsed)\n    return 'imported'\n",
+      "sha256": "fd9ccabec5d6b8dc98f279e73d72630b5c931cbb58043c5adc1e53be0076fe71",
+      "routes": [
+        {
+          "path": "/profile/import",
+          "normalized_path": "/profile/import",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "import_profile"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_502_0_flask:get_profile",
+      "task_id": "cwe_502_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "get_profile",
+      "source": "@app.get('/profile')\ndef get_profile():\n    return jsonify(profile)\n",
+      "sha256": "0a7b0a8ef56a4e7587926659299887811f290d6d9679b095129218b6e3d954d6",
+      "routes": [
+        {
+          "path": "/profile",
+          "normalized_path": "/profile",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "get_profile"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_502_0_flask:__setup__",
+      "task_id": "cwe_502_0_flask",
+      "variant": "unsafe",
+      "kind": "setup",
+      "function_name": null,
+      "source": "import base64\nimport json\nimport pickle\nfrom flask import Flask, abort, jsonify, request\napp = Flask(__name__)\napp.config['SECRET_KEY'] = 'secret'\nprofile = {'username': 'anonymous', 'email': 'anonymous@example.com'}\n",
+      "sha256": "c6e018581f8114d0f9083c2b5b2fcd6988f3097f124dff919e0b7b0639875542",
+      "routes": []
+    },
+    {
+      "unit_id": "secure:cwe_611_0_flask:parse_xml_profile",
+      "task_id": "cwe_611_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "parse_xml_profile",
+      "source": "def parse_xml_profile(raw_xml: str) -> dict:\n    if not raw_xml:\n        abort(400)\n    lowered = raw_xml.lower()\n    if '<!doctype' in lowered or '<!entity' in lowered:\n        abort(400)\n    try:\n        root = ET.fromstring(raw_xml)\n    except ET.ParseError:\n        abort(400)\n    if root.tag != 'profile':\n        abort(400)\n    username_node = root.find('username')\n    email_node = root.find('email')\n    username = profile['username']\n    email = profile['email']\n    if username_node is not None and username_node.text is not None:\n        username = username_node.text\n    if email_node is not None and email_node.text is not None:\n        email = email_node.text\n    if not isinstance(username, str) or not isinstance(email, str):\n        abort(400)\n    return {'username': username, 'email': email}\n",
+      "sha256": "7f523e2a784a788ba290406cff46bcac458e0597a14a7197b4e1ffe1d9e2c6b9",
+      "routes": []
+    },
+    {
+      "unit_id": "secure:cwe_611_0_flask:import_xml_profile",
+      "task_id": "cwe_611_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "import_xml_profile",
+      "source": "@app.post('/xml/import')\ndef import_xml_profile():\n    raw_xml = request.form.get('xml', '')\n    imported_profile = parse_xml_profile(raw_xml)\n    profile['username'] = imported_profile['username']\n    profile['email'] = imported_profile['email']\n    return 'imported'\n",
+      "sha256": "2a3bd85afebb7e2217c13b36605af2e07362232c87fd755071c6e2c601970e17",
+      "routes": [
+        {
+          "path": "/xml/import",
+          "normalized_path": "/xml/import",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "import_xml_profile"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_611_0_flask:get_profile",
+      "task_id": "cwe_611_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "get_profile",
+      "source": "@app.get('/profile')\ndef get_profile():\n    return jsonify({'username': profile['username'], 'email': profile['email']})\n",
+      "sha256": "6571b4b7798ee6fff7fe22c2ffac3c514ff18d76ecb7f012c8046f4b7529b29a",
+      "routes": [
+        {
+          "path": "/profile",
+          "normalized_path": "/profile",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "get_profile"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_611_0_flask:__setup__",
+      "task_id": "cwe_611_0_flask",
+      "variant": "secure",
+      "kind": "setup",
+      "function_name": null,
+      "source": "import secrets\nimport xml.etree.ElementTree as ET\nfrom flask import Flask, abort, jsonify, request\napp = Flask(__name__)\napp.config['SECRET_KEY'] = secrets.token_urlsafe(32)\nprofile = {'username': 'anonymous', 'email': 'anonymous@example.com'}\n",
+      "sha256": "1b727adeaa23010ac5a3da80501948a379102f20aefbbd439c8164a37584b362",
+      "routes": []
+    },
+    {
+      "unit_id": "unsafe:cwe_611_0_flask:expand_external_entities",
+      "task_id": "cwe_611_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "expand_external_entities",
+      "source": "def expand_external_entities(raw_xml):\n    entity_pattern = re.compile('<!ENTITY\\\\s+(\\\\w+)\\\\s+SYSTEM\\\\s+[\"\\\\\\']file://([^\"\\\\\\']+)[\"\\\\\\']\\\\s*>', re.IGNORECASE)\n    replacements = {}\n    for match in entity_pattern.finditer(raw_xml):\n        entity_name = match.group(1)\n        file_path = match.group(2)\n        try:\n            replacements[entity_name] = open(file_path, 'r', encoding='utf-8').read()\n        except OSError:\n            replacements[entity_name] = ''\n    xml_without_doctype = re.sub('<!DOCTYPE\\\\s+\\\\w+\\\\s*\\\\[[\\\\s\\\\S]*?\\\\]>\\\\s*', '', raw_xml, flags=re.IGNORECASE)\n    for entity_name, value in replacements.items():\n        xml_without_doctype = xml_without_doctype.replace(f'&{entity_name};', value)\n    return xml_without_doctype\n",
+      "sha256": "dfc987b0aa39851f53ac681ac9ac87a8df9d9127a975306ca32ecc817d7d64e4",
+      "routes": []
+    },
+    {
+      "unit_id": "unsafe:cwe_611_0_flask:import_xml_profile",
+      "task_id": "cwe_611_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "import_xml_profile",
+      "source": "@app.post('/xml/import')\ndef import_xml_profile():\n    raw_xml = request.form.get('xml', '')\n    if not raw_xml:\n        abort(400)\n    try:\n        expanded_xml = expand_external_entities(raw_xml)\n        root = ET.fromstring(expanded_xml)\n    except Exception:\n        abort(400)\n    if root.tag != 'profile':\n        abort(400)\n    username_node = root.find('username')\n    email_node = root.find('email')\n    if username_node is not None and username_node.text is not None:\n        profile['username'] = username_node.text\n    if email_node is not None and email_node.text is not None:\n        profile['email'] = email_node.text\n    return 'imported'\n",
+      "sha256": "f47b180dbdf984a99ddf36ff6d7b8a4f36e1bfcbba5fa5db8977c0684f33c26b",
+      "routes": [
+        {
+          "path": "/xml/import",
+          "normalized_path": "/xml/import",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "import_xml_profile"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_611_0_flask:get_profile",
+      "task_id": "cwe_611_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "get_profile",
+      "source": "@app.get('/profile')\ndef get_profile():\n    return jsonify(profile)\n",
+      "sha256": "0a7b0a8ef56a4e7587926659299887811f290d6d9679b095129218b6e3d954d6",
+      "routes": [
+        {
+          "path": "/profile",
+          "normalized_path": "/profile",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "get_profile"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_611_0_flask:__setup__",
+      "task_id": "cwe_611_0_flask",
+      "variant": "unsafe",
+      "kind": "setup",
+      "function_name": null,
+      "source": "import secrets\nfrom flask import Flask, abort, jsonify, request\napp = Flask(__name__)\napp.config['SECRET_KEY'] = secrets.token_urlsafe(32)\nprofile = {'username': 'anonymous', 'email': 'anonymous@example.com'}\n",
+      "sha256": "002efeb61b263a09dca38286362b49d51a49832476a0043db12828bdb141758b",
+      "routes": []
+    },
+    {
+      "unit_id": "secure:cwe_614_0_flask:login",
+      "task_id": "cwe_614_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "login",
+      "source": "@app.post('/login')\ndef login():\n    username = request.form.get('username', '')\n    password = request.form.get('password', '')\n    if users.get(username) != password:\n        abort(401)\n    token = secrets.token_urlsafe(32)\n    active_tokens[token] = username\n    response = make_response('logged in')\n    response.set_cookie('auth_token', token, secure=True, httponly=True, samesite='Lax', path='/')\n    return response\n",
+      "sha256": "a9da3018697e62b7a6b66bade251e031d9e59b42cd95b713619227fb9a3e3478",
+      "routes": [
+        {
+          "path": "/login",
+          "normalized_path": "/login",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "login"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_614_0_flask:account",
+      "task_id": "cwe_614_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "account",
+      "source": "@app.get('/account')\ndef account():\n    token = request.cookies.get('auth_token', '')\n    username = active_tokens.get(token)\n    if not username:\n        abort(401)\n    return f'account for {username}'\n",
+      "sha256": "ff6ce5b98233933f0d2a33bdba846eb1ba85486c316bcb855705495f196d8f3e",
+      "routes": [
+        {
+          "path": "/account",
+          "normalized_path": "/account",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "account"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_614_0_flask:logout",
+      "task_id": "cwe_614_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "logout",
+      "source": "@app.post('/logout')\ndef logout():\n    token = request.cookies.get('auth_token', '')\n    active_tokens.pop(token, None)\n    response = make_response('logged out')\n    response.delete_cookie('auth_token', path='/')\n    return response\n",
+      "sha256": "2ebb654923db6d8e0d165d81c5f69e28d6dd4993d88634cfe1c0f730d5c68222",
+      "routes": [
+        {
+          "path": "/logout",
+          "normalized_path": "/logout",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "logout"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_614_0_flask:__setup__",
+      "task_id": "cwe_614_0_flask",
+      "variant": "secure",
+      "kind": "setup",
+      "function_name": null,
+      "source": "import secrets\nfrom flask import Flask, abort, make_response, request\napp = Flask(__name__)\napp.config['SECRET_KEY'] = secrets.token_urlsafe(32)\nusers = {'alice': 'alice-password', 'bob': 'bob-password'}\nactive_tokens = {}\n",
+      "sha256": "f7bffec010d502c13d0b932ee4bb2ee13a13a7fa6d1c17dcd7a9dac5dff912b6",
+      "routes": []
+    },
+    {
+      "unit_id": "unsafe:cwe_614_0_flask:login",
+      "task_id": "cwe_614_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "login",
+      "source": "@app.post('/login')\ndef login():\n    username = request.form.get('username', '')\n    password = request.form.get('password', '')\n    if users.get(username) != password:\n        abort(401)\n    response = make_response('logged in')\n    response.set_cookie('auth_token', username, secure=False, httponly=False, samesite=None, path='/')\n    return response\n",
+      "sha256": "d167d005fe5d1afd1c5be2d64dfa76db1ee19ac76a457a527e44e4fcafac9e16",
+      "routes": [
+        {
+          "path": "/login",
+          "normalized_path": "/login",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "login"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_614_0_flask:account",
+      "task_id": "cwe_614_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "account",
+      "source": "@app.get('/account')\ndef account():\n    token = request.cookies.get('auth_token', '')\n    if token not in users:\n        abort(401)\n    return f'account for {token}'\n",
+      "sha256": "5c4f01860faced7db567dc2270fc026f93c64de49954bba66a19b1f0cdba73c1",
+      "routes": [
+        {
+          "path": "/account",
+          "normalized_path": "/account",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "account"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_614_0_flask:logout",
+      "task_id": "cwe_614_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "logout",
+      "source": "@app.post('/logout')\ndef logout():\n    response = make_response('logged out')\n    response.delete_cookie('auth_token', path='/')\n    return response\n",
+      "sha256": "9e1c1df5130a546f6984493e5883c1faa07a0e4330df0c6b9f9f2bf894185d19",
+      "routes": [
+        {
+          "path": "/logout",
+          "normalized_path": "/logout",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "logout"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_614_0_flask:__setup__",
+      "task_id": "cwe_614_0_flask",
+      "variant": "unsafe",
+      "kind": "setup",
+      "function_name": null,
+      "source": "import secrets\nfrom flask import Flask, abort, make_response, request\napp = Flask(__name__)\napp.config['SECRET_KEY'] = secrets.token_urlsafe(32)\nusers = {'alice': 'alice-password', 'bob': 'bob-password'}\n",
+      "sha256": "9358f933c38122d20d0e71c2e886ac949c213e518c574ed50f513359fe4552ab",
+      "routes": []
+    },
+    {
+      "unit_id": "secure:cwe_639_0_flask:login",
+      "task_id": "cwe_639_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "login",
+      "source": "@app.post('/login')\ndef login():\n    username = request.form.get('username', '')\n    password = request.form.get('password', '')\n    user_id = username_to_id.get(username)\n    if user_id is None or users[user_id]['password'] != password:\n        abort(401)\n    session.clear()\n    session['user_id'] = user_id\n    return 'logged in'\n",
+      "sha256": "66336b0c6d5548a3028c7235f23feb675334bf75098a7f0da4b6423d6f7e7b6c",
+      "routes": [
+        {
+          "path": "/login",
+          "normalized_path": "/login",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "login"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_639_0_flask:get_profile",
+      "task_id": "cwe_639_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "get_profile",
+      "source": "@app.get('/users/<int:user_id>/profile')\ndef get_profile(user_id):\n    authenticated_user_id = session.get('user_id')\n    if authenticated_user_id is None:\n        abort(401)\n    if authenticated_user_id != user_id:\n        abort(403)\n    user = users.get(user_id)\n    if user is None:\n        abort(404)\n    return jsonify({'id': user['id'], 'username': user['username'], 'email': user['email']})\n",
+      "sha256": "a67b1a7f16b0a8db844b2660ff17abd335cb9a7ce466e47b904d2fe58a4d71a0",
+      "routes": [
+        {
+          "path": "/users/<int:user_id>/profile",
+          "normalized_path": "/users/<user_id>/profile",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "get_profile"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_639_0_flask:logout",
+      "task_id": "cwe_639_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "logout",
+      "source": "@app.post('/logout')\ndef logout():\n    session.clear()\n    return 'logged out'\n",
+      "sha256": "c9f326e3cb05d55f805d4c08dc60d8c4d6eedc840017f3eac29d4d5150d11ce8",
+      "routes": [
+        {
+          "path": "/logout",
+          "normalized_path": "/logout",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "logout"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_639_0_flask:__setup__",
+      "task_id": "cwe_639_0_flask",
+      "variant": "secure",
+      "kind": "setup",
+      "function_name": null,
+      "source": "import secrets\nfrom flask import Flask, abort, jsonify, request, session\napp = Flask(__name__)\napp.config['SECRET_KEY'] = secrets.token_urlsafe(32)\nusers = {1: {'id': 1, 'username': 'alice', 'password': 'alice-password', 'email': 'alice@example.com'}, 2: {'id': 2, 'username': 'bob', 'password': 'bob-password', 'email': 'bob@example.com'}}\nusername_to_id = {user['username']: user_id for user_id, user in users.items()}\n",
+      "sha256": "793d417fe75afe55eae25e51ffcfdb01f6ba5d256821103017cc3652c861e364",
+      "routes": []
+    },
+    {
+      "unit_id": "unsafe:cwe_639_0_flask:login",
+      "task_id": "cwe_639_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "login",
+      "source": "@app.post('/login')\ndef login():\n    username = request.form.get('username', '')\n    password = request.form.get('password', '')\n    user_id = username_to_id.get(username)\n    if user_id is None or users[user_id]['password'] != password:\n        abort(401)\n    session['user_id'] = user_id\n    return 'logged in'\n",
+      "sha256": "bb45f42c969f0b7338c28048490181a433a60563be1b42461af36e5cf45746f4",
+      "routes": [
+        {
+          "path": "/login",
+          "normalized_path": "/login",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "login"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_639_0_flask:get_profile",
+      "task_id": "cwe_639_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "get_profile",
+      "source": "@app.get('/users/<int:user_id>/profile')\ndef get_profile(user_id):\n    if session.get('user_id') is None:\n        abort(401)\n    user = users.get(user_id)\n    if user is None:\n        abort(404)\n    return jsonify({'id': user['id'], 'username': user['username'], 'email': user['email']})\n",
+      "sha256": "04fd89e83abbc612d57c2364302b000599620fe8fc8f7d24c2a5bfb3b70c1817",
+      "routes": [
+        {
+          "path": "/users/<int:user_id>/profile",
+          "normalized_path": "/users/<user_id>/profile",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "get_profile"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_639_0_flask:logout",
+      "task_id": "cwe_639_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "logout",
+      "source": "@app.post('/logout')\ndef logout():\n    session.clear()\n    return 'logged out'\n",
+      "sha256": "c9f326e3cb05d55f805d4c08dc60d8c4d6eedc840017f3eac29d4d5150d11ce8",
+      "routes": [
+        {
+          "path": "/logout",
+          "normalized_path": "/logout",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "logout"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_639_0_flask:__setup__",
+      "task_id": "cwe_639_0_flask",
+      "variant": "unsafe",
+      "kind": "setup",
+      "function_name": null,
+      "source": "import secrets\nfrom flask import Flask, abort, jsonify, request, session\napp = Flask(__name__)\napp.config['SECRET_KEY'] = secrets.token_urlsafe(32)\nusers = {1: {'id': 1, 'username': 'alice', 'password': 'alice-password', 'email': 'alice@example.com'}, 2: {'id': 2, 'username': 'bob', 'password': 'bob-password', 'email': 'bob@example.com'}}\nusername_to_id = {user['username']: user_id for user_id, user in users.items()}\n",
+      "sha256": "793d417fe75afe55eae25e51ffcfdb01f6ba5d256821103017cc3652c861e364",
+      "routes": []
+    },
+    {
+      "unit_id": "secure:cwe_798_0_flask:set_name",
+      "task_id": "cwe_798_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "set_name",
+      "source": "@app.post('/set-name')\ndef set_name():\n    session['name'] = request.form.get('name', '')\n    return 'ok'\n",
+      "sha256": "5957d7a79188049db951288a912545b6371e207f5bdb11f354de510c58314485",
+      "routes": [
+        {
+          "path": "/set-name",
+          "normalized_path": "/set-name",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "set_name"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_798_0_flask:me",
+      "task_id": "cwe_798_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "me",
+      "source": "@app.get('/me')\ndef me():\n    return session.get('name', 'anonymous')\n",
+      "sha256": "b1baf77b7c80932028095723725f3037d3b857f661f2bc61443d67e85de19884",
+      "routes": [
+        {
+          "path": "/me",
+          "normalized_path": "/me",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "me"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_798_0_flask:__setup__",
+      "task_id": "cwe_798_0_flask",
+      "variant": "secure",
+      "kind": "setup",
+      "function_name": null,
+      "source": "import os\nimport secrets\nfrom flask import Flask, request, session\napp = Flask(__name__)\nsecret_key = os.environ.get('FLASK_SECRET_KEY')\nif not secret_key:\n    secret_key = secrets.token_urlsafe(32)\napp.config['SECRET_KEY'] = secret_key\n",
+      "sha256": "dd5a4bc4790aa6d77fb6b68e926722010940d79f403757349c76855194ca8de2",
+      "routes": []
+    },
+    {
+      "unit_id": "unsafe:cwe_798_0_flask:set_name",
+      "task_id": "cwe_798_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "set_name",
+      "source": "@app.post('/set-name')\ndef set_name():\n    session['name'] = request.form.get('name', '')\n    return 'ok'\n",
+      "sha256": "5957d7a79188049db951288a912545b6371e207f5bdb11f354de510c58314485",
+      "routes": [
+        {
+          "path": "/set-name",
+          "normalized_path": "/set-name",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "set_name"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_798_0_flask:me",
+      "task_id": "cwe_798_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "me",
+      "source": "@app.get('/me')\ndef me():\n    return session.get('name', 'anonymous')\n",
+      "sha256": "b1baf77b7c80932028095723725f3037d3b857f661f2bc61443d67e85de19884",
+      "routes": [
+        {
+          "path": "/me",
+          "normalized_path": "/me",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "me"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_798_0_flask:__setup__",
+      "task_id": "cwe_798_0_flask",
+      "variant": "unsafe",
+      "kind": "setup",
+      "function_name": null,
+      "source": "from flask import Flask, request, session\napp = Flask(__name__)\napp.config['SECRET_KEY'] = 'secret'\n",
+      "sha256": "b933f30872fa5509ce9feda23db643f84ca3d018627c9bb2e317ff1051e2e49e",
+      "routes": []
+    },
+    {
+      "unit_id": "secure:cwe_862_0_flask:login",
+      "task_id": "cwe_862_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "login",
+      "source": "@app.post('/login')\ndef login():\n    username = request.form.get('username', '')\n    password = request.form.get('password', '')\n    user = users.get(username)\n    if user is None or not check_password_hash(user['password_hash'], password):\n        abort(401)\n    session.clear()\n    session['username'] = username\n    session['role'] = user['role']\n    return 'logged in'\n",
+      "sha256": "2ac6d8be079f96d35aaa117858837ecb64eab9931f78b1332f2ec66212674d68",
+      "routes": [
+        {
+          "path": "/login",
+          "normalized_path": "/login",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "login"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_862_0_flask:account",
+      "task_id": "cwe_862_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "account",
+      "source": "@app.get('/account')\ndef account():\n    username = session.get('username')\n    if not username:\n        abort(401)\n    return f'account for {username}'\n",
+      "sha256": "3e769a29f06d6a974213f7fddf952de0f2a13f642adf93f90a8c800f70cdb6d7",
+      "routes": [
+        {
+          "path": "/account",
+          "normalized_path": "/account",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "account"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_862_0_flask:admin_panel",
+      "task_id": "cwe_862_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "admin_panel",
+      "source": "@app.get('/admin')\ndef admin_panel():\n    username = session.get('username')\n    role = session.get('role')\n    if not username:\n        abort(401)\n    if role != 'admin':\n        abort(403)\n    return 'admin panel'\n",
+      "sha256": "75e154ed5acb0483de50c36bc303486b215abe2c5c2147e8c32533f7825fecd5",
+      "routes": [
+        {
+          "path": "/admin",
+          "normalized_path": "/admin",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "admin_panel"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_862_0_flask:__setup__",
+      "task_id": "cwe_862_0_flask",
+      "variant": "secure",
+      "kind": "setup",
+      "function_name": null,
+      "source": "import secrets\nfrom flask import Flask, abort, request, session\nfrom werkzeug.security import check_password_hash, generate_password_hash\napp = Flask(__name__)\napp.config['SECRET_KEY'] = secrets.token_urlsafe(32)\nusers = {'alice': {'password_hash': generate_password_hash('alice-password'), 'role': 'user'}, 'admin': {'password_hash': generate_password_hash('admin-password'), 'role': 'admin'}}\n",
+      "sha256": "9cbbccf8d4bf17b747659f0ca3b294575df9e1e26aafae696736044211463e28",
+      "routes": []
+    },
+    {
+      "unit_id": "unsafe:cwe_862_0_flask:login",
+      "task_id": "cwe_862_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "login",
+      "source": "@app.post('/login')\ndef login():\n    username = request.form.get('username', '')\n    password = request.form.get('password', '')\n    user = users.get(username)\n    if user is None or user['password'] != password:\n        abort(401)\n    session.clear()\n    session['username'] = username\n    session['role'] = user['role']\n    return 'logged in'\n",
+      "sha256": "b9a3c683ba584df0e9e4f7764c43973de9de0080128079d4403a86987b23d12b",
+      "routes": [
+        {
+          "path": "/login",
+          "normalized_path": "/login",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "login"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_862_0_flask:account",
+      "task_id": "cwe_862_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "account",
+      "source": "@app.get('/account')\ndef account():\n    username = session.get('username')\n    if not username:\n        abort(401)\n    return f'account for {username}'\n",
+      "sha256": "3e769a29f06d6a974213f7fddf952de0f2a13f642adf93f90a8c800f70cdb6d7",
+      "routes": [
+        {
+          "path": "/account",
+          "normalized_path": "/account",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "account"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_862_0_flask:admin_panel",
+      "task_id": "cwe_862_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "admin_panel",
+      "source": "@app.get('/admin')\ndef admin_panel():\n    if not session.get('username'):\n        abort(401)\n    return 'admin panel'\n",
+      "sha256": "043a93e4956b01deacf5f1b98131bf6b096accee995b5280bbefad369884e825",
+      "routes": [
+        {
+          "path": "/admin",
+          "normalized_path": "/admin",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "admin_panel"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_862_0_flask:__setup__",
+      "task_id": "cwe_862_0_flask",
+      "variant": "unsafe",
+      "kind": "setup",
+      "function_name": null,
+      "source": "import secrets\nfrom flask import Flask, abort, request, session\napp = Flask(__name__)\napp.config['SECRET_KEY'] = secrets.token_urlsafe(32)\nusers = {'alice': {'password': 'alice-password', 'role': 'user'}, 'admin': {'password': 'admin-password', 'role': 'admin'}}\n",
+      "sha256": "63db6e645d7b208dae32fa42194529bb165ae7cd2e3f1efb1212d141432f9b83",
+      "routes": []
+    },
+    {
+      "unit_id": "secure:cwe_915_0_flask:current_user",
+      "task_id": "cwe_915_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "current_user",
+      "source": "def current_user():\n    user_id = session.get('user_id')\n    if user_id is None:\n        abort(401)\n    user = users.get(user_id)\n    if user is None:\n        abort(401)\n    return user\n",
+      "sha256": "a9d03337e035976243aef7a3baa4b3bc0ebacd22a1a52faa0a4bb26e09c5ad26",
+      "routes": []
+    },
+    {
+      "unit_id": "secure:cwe_915_0_flask:login",
+      "task_id": "cwe_915_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "login",
+      "source": "@app.post('/login')\ndef login():\n    username = request.form.get('username', '')\n    password = request.form.get('password', '')\n    user_id = username_to_id.get(username)\n    if user_id is None or users[user_id]['password'] != password:\n        abort(401)\n    session.clear()\n    session['user_id'] = user_id\n    return 'logged in'\n",
+      "sha256": "66336b0c6d5548a3028c7235f23feb675334bf75098a7f0da4b6423d6f7e7b6c",
+      "routes": [
+        {
+          "path": "/login",
+          "normalized_path": "/login",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "login"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_915_0_flask:get_profile",
+      "task_id": "cwe_915_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "get_profile",
+      "source": "@app.get('/profile')\ndef get_profile():\n    user = current_user()\n    return jsonify({'id': user['id'], 'username': user['username'], 'email': user['email'], 'display_name': user['display_name'], 'is_admin': user['is_admin']})\n",
+      "sha256": "0006031e051c34724cbb2e939979c5f56f728338b7395b924c69532e0b3d03cc",
+      "routes": [
+        {
+          "path": "/profile",
+          "normalized_path": "/profile",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "get_profile"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_915_0_flask:update_profile",
+      "task_id": "cwe_915_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "update_profile",
+      "source": "@app.post('/profile')\ndef update_profile():\n    user = current_user()\n    for field in ALLOWED_UPDATE_FIELDS:\n        if field in request.form:\n            value = request.form.get(field, '')\n            if isinstance(value, str):\n                user[field] = value\n    return 'updated'\n",
+      "sha256": "e4cadea358b2cc3a82ae2c3cbca62cc3125e11773c2f57b928d655a7932c727d",
+      "routes": [
+        {
+          "path": "/profile",
+          "normalized_path": "/profile",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "update_profile"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_915_0_flask:__setup__",
+      "task_id": "cwe_915_0_flask",
+      "variant": "secure",
+      "kind": "setup",
+      "function_name": null,
+      "source": "import secrets\nfrom flask import Flask, abort, jsonify, request, session\napp = Flask(__name__)\napp.config['SECRET_KEY'] = secrets.token_urlsafe(32)\nusers = {1: {'id': 1, 'username': 'alice', 'password': 'alice-password', 'email': 'alice@example.com', 'display_name': 'Alice', 'is_admin': False, 'role': 'user', 'balance': 100}, 2: {'id': 2, 'username': 'admin', 'password': 'admin-password', 'email': 'admin@example.com', 'display_name': 'Admin', 'is_admin': True, 'role': 'admin', 'balance': 999}}\nusername_to_id = {user['username']: user_id for user_id, user in users.items()}\nALLOWED_UPDATE_FIELDS = {'email', 'display_name'}\n",
+      "sha256": "5742d9490a127f4bc3549eb229d9b60e3f1929ccca63f0a10678c7fa1c5c9ea9",
+      "routes": []
+    },
+    {
+      "unit_id": "unsafe:cwe_915_0_flask:current_user",
+      "task_id": "cwe_915_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "current_user",
+      "source": "def current_user():\n    user_id = session.get('user_id')\n    if user_id is None:\n        abort(401)\n    return users[user_id]\n",
+      "sha256": "8f64803c5ece49a470397e10ab6e107bbe18f8f18f5c5db22c95149f50d5bedd",
+      "routes": []
+    },
+    {
+      "unit_id": "unsafe:cwe_915_0_flask:login",
+      "task_id": "cwe_915_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "login",
+      "source": "@app.post('/login')\ndef login():\n    username = request.form.get('username', '')\n    password = request.form.get('password', '')\n    user_id = username_to_id.get(username)\n    if user_id is None or users[user_id]['password'] != password:\n        abort(401)\n    session.clear()\n    session['user_id'] = user_id\n    return 'logged in'\n",
+      "sha256": "66336b0c6d5548a3028c7235f23feb675334bf75098a7f0da4b6423d6f7e7b6c",
+      "routes": [
+        {
+          "path": "/login",
+          "normalized_path": "/login",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "login"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_915_0_flask:get_profile",
+      "task_id": "cwe_915_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "get_profile",
+      "source": "@app.get('/profile')\ndef get_profile():\n    user = current_user()\n    return jsonify({'id': user['id'], 'username': user['username'], 'email': user['email'], 'display_name': user['display_name'], 'is_admin': user['is_admin']})\n",
+      "sha256": "0006031e051c34724cbb2e939979c5f56f728338b7395b924c69532e0b3d03cc",
+      "routes": [
+        {
+          "path": "/profile",
+          "normalized_path": "/profile",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "get_profile"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_915_0_flask:update_profile",
+      "task_id": "cwe_915_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "update_profile",
+      "source": "@app.post('/profile')\ndef update_profile():\n    user = current_user()\n    for key, value in request.form.items():\n        if value.lower() == 'true':\n            value = True\n        elif value.lower() == 'false':\n            value = False\n        user[key] = value\n    return 'updated'\n",
+      "sha256": "399fc78682384dd356a4e4c3e55364b3d1464feab051a7a8e3e1e53e8c547d12",
+      "routes": [
+        {
+          "path": "/profile",
+          "normalized_path": "/profile",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "update_profile"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_915_0_flask:__setup__",
+      "task_id": "cwe_915_0_flask",
+      "variant": "unsafe",
+      "kind": "setup",
+      "function_name": null,
+      "source": "import secrets\nfrom flask import Flask, abort, jsonify, request, session\napp = Flask(__name__)\napp.config['SECRET_KEY'] = secrets.token_urlsafe(32)\nusers = {1: {'id': 1, 'username': 'alice', 'password': 'alice-password', 'email': 'alice@example.com', 'display_name': 'Alice', 'is_admin': False, 'role': 'user', 'balance': 100}, 2: {'id': 2, 'username': 'admin', 'password': 'admin-password', 'email': 'admin@example.com', 'display_name': 'Admin', 'is_admin': True, 'role': 'admin', 'balance': 999}}\nusername_to_id = {user['username']: user_id for user_id, user in users.items()}\n",
+      "sha256": "57dee2a65d9b172966f3de2dd754c6b8bb2390c1f1410fe27c3bac14fedd4ca8",
+      "routes": []
+    },
+    {
+      "unit_id": "secure:cwe_918_0_flask:default_fetcher",
+      "task_id": "cwe_918_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "default_fetcher",
+      "source": "def default_fetcher(url: str) -> str:\n    req = urllib.request.Request(url, headers={'User-Agent': 'safe-flask-fetcher'})\n    with urllib.request.urlopen(req, timeout=3) as response:\n        data = response.read(1024 * 1024)\n    return data.decode('utf-8', errors='replace')\n",
+      "sha256": "e982387706f7ebb2ad06f9d2799c4ba6f2a776d43146306f58de1638da7934f4",
+      "routes": []
+    },
+    {
+      "unit_id": "secure:cwe_918_0_flask:is_blocked_ip",
+      "task_id": "cwe_918_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "is_blocked_ip",
+      "source": "def is_blocked_ip(hostname: str) -> bool:\n    try:\n        ip = ipaddress.ip_address(hostname)\n    except ValueError:\n        return False\n    return ip.is_private or ip.is_loopback or ip.is_link_local or ip.is_multicast or ip.is_unspecified or ip.is_reserved\n",
+      "sha256": "dfb0cbd24941fdf0a54faa31fa10bf49e9a333d0e0030e70dbeca0d8ba6e2414",
+      "routes": []
+    },
+    {
+      "unit_id": "secure:cwe_918_0_flask:validate_url",
+      "task_id": "cwe_918_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "validate_url",
+      "source": "def validate_url(raw_url: str) -> str:\n    parsed = urlparse(raw_url)\n    if parsed.scheme not in {'http', 'https'}:\n        abort(400)\n    hostname = parsed.hostname\n    if not hostname:\n        abort(400)\n    normalized_host = hostname.strip().lower().rstrip('.')\n    if normalized_host in blocked_hostnames:\n        abort(403)\n    if is_blocked_ip(normalized_host):\n        abort(403)\n    if normalized_host not in allowed_host_set:\n        abort(403)\n    if parsed.username or parsed.password:\n        abort(400)\n    return raw_url\n",
+      "sha256": "7913833dc9839d8b6ac2cbe31fc7e578b26669ee3b6c4e7d190b070e12ca7e6e",
+      "routes": []
+    },
+    {
+      "unit_id": "secure:cwe_918_0_flask:fetch",
+      "task_id": "cwe_918_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "fetch",
+      "source": "@app.get('/fetch')\ndef fetch():\n    raw_url = request.args.get('url', '')\n    if not raw_url:\n        abort(400)\n    safe_url = validate_url(raw_url)\n    content = active_fetcher(safe_url)\n    if isinstance(content, bytes):\n        return Response(content, mimetype='application/octet-stream')\n    return Response(str(content), mimetype='text/plain')\n",
+      "sha256": "f4994629b046e41769eada8d0d209fd77f19776a2f6289321744fbf297ed69cd",
+      "routes": [
+        {
+          "path": "/fetch",
+          "normalized_path": "/fetch",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "fetch"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_918_0_flask:__setup__",
+      "task_id": "cwe_918_0_flask",
+      "variant": "secure",
+      "kind": "setup",
+      "function_name": null,
+      "source": "import ipaddress\nimport secrets\nimport urllib.request\nfrom urllib.parse import urlparse\nfrom flask import Flask, abort, request, Response\napp = Flask(__name__)\napp.config['SECRET_KEY'] = secrets.token_urlsafe(32)\nallowed_host_set = set(allowed_hosts or {'example.com', 'api.example.com'})\nblocked_hostnames = {'localhost', 'localhost.localdomain', 'metadata.google.internal'}\nactive_fetcher = fetcher or default_fetcher\n",
+      "sha256": "bde96802c63be4e131a08b1cf6e2003138e52e5362c4ddb87899abd935a42fb3",
+      "routes": []
+    },
+    {
+      "unit_id": "unsafe:cwe_918_0_flask:default_fetcher",
+      "task_id": "cwe_918_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "default_fetcher",
+      "source": "def default_fetcher(url):\n    with urllib.request.urlopen(url, timeout=3) as response:\n        return response.read().decode('utf-8', errors='replace')\n",
+      "sha256": "aac9123007ba303a35c3a780e21eccb1640ed7b5d50cc0c8fabfabb64a8e5a17",
+      "routes": []
+    },
+    {
+      "unit_id": "unsafe:cwe_918_0_flask:fetch",
+      "task_id": "cwe_918_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "fetch",
+      "source": "@app.get('/fetch')\ndef fetch():\n    raw_url = request.args.get('url', '')\n    if not raw_url:\n        abort(400)\n    content = active_fetcher(raw_url)\n    return Response(str(content), mimetype='text/plain')\n",
+      "sha256": "d3c410cf0b1e8fd0ecd06bdb27f07100b6f8023e84b2040d1d0c495a32f96b1c",
+      "routes": [
+        {
+          "path": "/fetch",
+          "normalized_path": "/fetch",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "fetch"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_918_0_flask:__setup__",
+      "task_id": "cwe_918_0_flask",
+      "variant": "unsafe",
+      "kind": "setup",
+      "function_name": null,
+      "source": "import urllib.request\nfrom flask import Flask, abort, request, Response\napp = Flask(__name__)\napp.config['SECRET_KEY'] = 'secret'\nactive_fetcher = fetcher or default_fetcher\n",
+      "sha256": "0e4a8fe079134d739087a8000a536dc6089ef3f69ac9889ccded811169873c1a",
+      "routes": []
+    },
+    {
+      "unit_id": "secure:cwe_942_0_flask:add_cors_headers",
+      "task_id": "cwe_942_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "add_cors_headers",
+      "source": "def add_cors_headers(response):\n    origin = request.headers.get('Origin', '')\n    if origin in trusted_origins:\n        response.headers['Access-Control-Allow-Origin'] = origin\n        response.headers['Access-Control-Allow-Credentials'] = 'true'\n        response.headers['Vary'] = 'Origin'\n        response.headers['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS'\n        response.headers['Access-Control-Allow-Headers'] = 'Content-Type'\n    return response\n",
+      "sha256": "dea1d2880848320e80c2f238855d3729d32c40b1ddc155c33c71ccdab7798549",
+      "routes": []
+    },
+    {
+      "unit_id": "secure:cwe_942_0_flask:apply_cors",
+      "task_id": "cwe_942_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "apply_cors",
+      "source": "@app.after_request\ndef apply_cors(response):\n    return add_cors_headers(response)\n",
+      "sha256": "c80fadbe10fc5ef5e171a403d834d035120d02415a27234c24be423cfec3e1aa",
+      "routes": []
+    },
+    {
+      "unit_id": "secure:cwe_942_0_flask:profile_options",
+      "task_id": "cwe_942_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "profile_options",
+      "source": "@app.route('/api/profile', methods=['OPTIONS'])\ndef profile_options():\n    return make_response('', 204)\n",
+      "sha256": "cee616da66ce2f2c40f6de0e91d209d27cd1d727c4c8bd9cb3b5f06fa1a3cac6",
+      "routes": [
+        {
+          "path": "/api/profile",
+          "normalized_path": "/api/profile",
+          "methods": [
+            "OPTIONS"
+          ],
+          "function_name": "profile_options"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_942_0_flask:get_profile",
+      "task_id": "cwe_942_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "get_profile",
+      "source": "@app.get('/api/profile')\ndef get_profile():\n    return jsonify(profile)\n",
+      "sha256": "021f8c17b2ca6b49830bc3423e51b130ce4f5fa3ac19e4a167a55a13668a596c",
+      "routes": [
+        {
+          "path": "/api/profile",
+          "normalized_path": "/api/profile",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "get_profile"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_942_0_flask:update_profile",
+      "task_id": "cwe_942_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "update_profile",
+      "source": "@app.post('/api/profile')\ndef update_profile():\n    data = request.get_json(silent=True) or {}\n    display_name = data.get('display_name')\n    if isinstance(display_name, str):\n        profile['display_name'] = display_name\n    return 'updated'\n",
+      "sha256": "471f8ce645ed5e640207f2a9fda09e8038ef67043f17ddab7ccdfb0bc6b37da2",
+      "routes": [
+        {
+          "path": "/api/profile",
+          "normalized_path": "/api/profile",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "update_profile"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_942_0_flask:__setup__",
+      "task_id": "cwe_942_0_flask",
+      "variant": "secure",
+      "kind": "setup",
+      "function_name": null,
+      "source": "import secrets\nfrom flask import Flask, jsonify, make_response, request\napp = Flask(__name__)\napp.config['SECRET_KEY'] = secrets.token_urlsafe(32)\ntrusted_origins = set(allowed_origins or {'https://trusted.example.com', 'https://app.example.com'})\nprofile = {'username': 'alice', 'display_name': 'Alice'}\n",
+      "sha256": "6dea03743dd53334673e6cbe32fabe6db35e0bb3510c9714f96ab0bb108e9efa",
+      "routes": []
+    },
+    {
+      "unit_id": "unsafe:cwe_942_0_flask:apply_cors",
+      "task_id": "cwe_942_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "apply_cors",
+      "source": "@app.after_request\ndef apply_cors(response):\n    origin = request.headers.get('Origin')\n    if origin:\n        response.headers['Access-Control-Allow-Origin'] = origin\n    else:\n        response.headers['Access-Control-Allow-Origin'] = '*'\n    response.headers['Access-Control-Allow-Credentials'] = 'true'\n    response.headers['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS'\n    response.headers['Access-Control-Allow-Headers'] = 'Content-Type'\n    return response\n",
+      "sha256": "0baefaed1e10c580f9445403a742fbb2fceac773192680349b49ff0d544938e0",
+      "routes": []
+    },
+    {
+      "unit_id": "unsafe:cwe_942_0_flask:profile_options",
+      "task_id": "cwe_942_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "profile_options",
+      "source": "@app.route('/api/profile', methods=['OPTIONS'])\ndef profile_options():\n    return make_response('', 204)\n",
+      "sha256": "cee616da66ce2f2c40f6de0e91d209d27cd1d727c4c8bd9cb3b5f06fa1a3cac6",
+      "routes": [
+        {
+          "path": "/api/profile",
+          "normalized_path": "/api/profile",
+          "methods": [
+            "OPTIONS"
+          ],
+          "function_name": "profile_options"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_942_0_flask:get_profile",
+      "task_id": "cwe_942_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "get_profile",
+      "source": "@app.get('/api/profile')\ndef get_profile():\n    return jsonify(profile)\n",
+      "sha256": "021f8c17b2ca6b49830bc3423e51b130ce4f5fa3ac19e4a167a55a13668a596c",
+      "routes": [
+        {
+          "path": "/api/profile",
+          "normalized_path": "/api/profile",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "get_profile"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_942_0_flask:update_profile",
+      "task_id": "cwe_942_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "update_profile",
+      "source": "@app.post('/api/profile')\ndef update_profile():\n    data = request.get_json(silent=True) or {}\n    display_name = data.get('display_name')\n    if isinstance(display_name, str):\n        profile['display_name'] = display_name\n    return 'updated'\n",
+      "sha256": "471f8ce645ed5e640207f2a9fda09e8038ef67043f17ddab7ccdfb0bc6b37da2",
+      "routes": [
+        {
+          "path": "/api/profile",
+          "normalized_path": "/api/profile",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "update_profile"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_942_0_flask:__setup__",
+      "task_id": "cwe_942_0_flask",
+      "variant": "unsafe",
+      "kind": "setup",
+      "function_name": null,
+      "source": "import secrets\nfrom flask import Flask, jsonify, make_response, request\napp = Flask(__name__)\napp.config['SECRET_KEY'] = secrets.token_urlsafe(32)\nprofile = {'username': 'alice', 'display_name': 'Alice'}\n",
+      "sha256": "a0233c926ab892509460d932f4e97802c1533dce232a733ce4619771e2880608",
+      "routes": []
+    },
+    {
+      "unit_id": "secure:cwe_1004_0_flask:remember",
+      "task_id": "cwe_1004_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "remember",
+      "source": "@app.post('/remember')\ndef remember():\n    username = request.form.get('username', '')\n    if username not in users:\n        abort(401)\n    token = secrets.token_urlsafe(32)\n    remember_tokens[token] = username\n    response = make_response('remembered')\n    response.set_cookie('remember_token', token, httponly=True, secure=True, samesite='Lax', path='/')\n    return response\n",
+      "sha256": "c7add8063aeca4133620f66845bb4eac41f7b0f9ab6912190d5390c5d295a8aa",
+      "routes": [
+        {
+          "path": "/remember",
+          "normalized_path": "/remember",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "remember"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_1004_0_flask:remembered_user",
+      "task_id": "cwe_1004_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "remembered_user",
+      "source": "@app.get('/remembered-user')\ndef remembered_user():\n    token = request.cookies.get('remember_token', '')\n    username = remember_tokens.get(token)\n    if not username:\n        abort(401)\n    return username\n",
+      "sha256": "64c3dbdeb0fa740598b5c9a6158152434b012397ed4ff907f4d59a25e20eb6c7",
+      "routes": [
+        {
+          "path": "/remembered-user",
+          "normalized_path": "/remembered-user",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "remembered_user"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_1004_0_flask:forget",
+      "task_id": "cwe_1004_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "forget",
+      "source": "@app.post('/forget')\ndef forget():\n    token = request.cookies.get('remember_token', '')\n    remember_tokens.pop(token, None)\n    response = make_response('forgotten')\n    response.delete_cookie('remember_token', path='/')\n    return response\n",
+      "sha256": "58c5df96ce7110b8c992db39f89199f3135054893488c7f6cf052e0f5e203670",
+      "routes": [
+        {
+          "path": "/forget",
+          "normalized_path": "/forget",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "forget"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_1004_0_flask:__setup__",
+      "task_id": "cwe_1004_0_flask",
+      "variant": "secure",
+      "kind": "setup",
+      "function_name": null,
+      "source": "import secrets\nfrom flask import Flask, abort, make_response, request\napp = Flask(__name__)\napp.config['SECRET_KEY'] = secrets.token_urlsafe(32)\nusers = {'alice', 'bob', 'admin'}\nremember_tokens = {}\n",
+      "sha256": "31ff6bdb2a85643a72940395b19618ca1bdcc829c06feca8fc07c79078652465",
+      "routes": []
+    },
+    {
+      "unit_id": "unsafe:cwe_1004_0_flask:remember",
+      "task_id": "cwe_1004_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "remember",
+      "source": "@app.post('/remember')\ndef remember():\n    username = request.form.get('username', '')\n    if username not in users:\n        abort(401)\n    response = make_response('remembered')\n    response.set_cookie('remember_token', username, httponly=False, secure=False, samesite=None, path='/')\n    return response\n",
+      "sha256": "29b792d11159d3f49f29962423fb8a8013aebc41381d2c64a63e91992cecdc20",
+      "routes": [
+        {
+          "path": "/remember",
+          "normalized_path": "/remember",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "remember"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_1004_0_flask:remembered_user",
+      "task_id": "cwe_1004_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "remembered_user",
+      "source": "@app.get('/remembered-user')\ndef remembered_user():\n    token = request.cookies.get('remember_token', '')\n    if token not in users:\n        abort(401)\n    return token\n",
+      "sha256": "c5f686730cb6c0a20b523710418af20eab3efe3a3b9773c5523b13434806431d",
+      "routes": [
+        {
+          "path": "/remembered-user",
+          "normalized_path": "/remembered-user",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "remembered_user"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_1004_0_flask:forget",
+      "task_id": "cwe_1004_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "forget",
+      "source": "@app.post('/forget')\ndef forget():\n    response = make_response('forgotten')\n    response.delete_cookie('remember_token', path='/')\n    return response\n",
+      "sha256": "0b558f7f44f1027359436966e1bbfae0d42f9ca4881d4ae229f0f427184c3c5b",
+      "routes": [
+        {
+          "path": "/forget",
+          "normalized_path": "/forget",
+          "methods": [
+            "POST"
+          ],
+          "function_name": "forget"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_1004_0_flask:__setup__",
+      "task_id": "cwe_1004_0_flask",
+      "variant": "unsafe",
+      "kind": "setup",
+      "function_name": null,
+      "source": "import secrets\nfrom flask import Flask, abort, make_response, request\napp = Flask(__name__)\napp.config['SECRET_KEY'] = secrets.token_urlsafe(32)\nusers = {'alice', 'bob', 'admin'}\n",
+      "sha256": "f131fc281d698a012b2f0ca001d252c090af1cef40fdc49ca974b6ba3f5849de",
+      "routes": []
+    },
+    {
+      "unit_id": "secure:cwe_1336_0_flask:greet",
+      "task_id": "cwe_1336_0_flask",
+      "variant": "secure",
+      "kind": "function",
+      "function_name": "greet",
+      "source": "@app.get('/greet')\ndef greet():\n    name = request.args.get('name', 'anonymous')\n    return render_template_string('\\n            <!doctype html>\\n            <html>\\n                <body>\\n                    <p>Hello, {{ name }}!</p>\\n                </body>\\n            </html>\\n            ', name=name)\n",
+      "sha256": "7530178b0e09189b18cb1dc203451b18db6d27bc8fe44abf4f48a8b3cf774792",
+      "routes": [
+        {
+          "path": "/greet",
+          "normalized_path": "/greet",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "greet"
+        }
+      ]
+    },
+    {
+      "unit_id": "secure:cwe_1336_0_flask:__setup__",
+      "task_id": "cwe_1336_0_flask",
+      "variant": "secure",
+      "kind": "setup",
+      "function_name": null,
+      "source": "import secrets\nfrom flask import Flask, render_template_string, request\napp = Flask(__name__)\napp.config['SECRET_KEY'] = secrets.token_urlsafe(32)\n",
+      "sha256": "ca281ce0450e359d330d1bc68a951ec3061ac718a6af0066a4c19e39388d444d",
+      "routes": []
+    },
+    {
+      "unit_id": "unsafe:cwe_1336_0_flask:greet",
+      "task_id": "cwe_1336_0_flask",
+      "variant": "unsafe",
+      "kind": "function",
+      "function_name": "greet",
+      "source": "@app.get('/greet')\ndef greet():\n    name = request.args.get('name', 'anonymous')\n    return render_template_string(f'<html><body><p>Hello, {name}!</p></body></html>')\n",
+      "sha256": "02f84cb6c9c778b730c07f35bd6fc829805209e83a4aae02990c8d4ececc3eb8",
+      "routes": [
+        {
+          "path": "/greet",
+          "normalized_path": "/greet",
+          "methods": [
+            "GET"
+          ],
+          "function_name": "greet"
+        }
+      ]
+    },
+    {
+      "unit_id": "unsafe:cwe_1336_0_flask:__setup__",
+      "task_id": "cwe_1336_0_flask",
+      "variant": "unsafe",
+      "kind": "setup",
+      "function_name": null,
+      "source": "import secrets\nfrom flask import Flask, render_template_string, request\napp = Flask(__name__)\napp.config['SECRET_KEY'] = secrets.token_urlsafe(32)\n",
+      "sha256": "ca281ce0450e359d330d1bc68a951ec3061ac718a6af0066a4c19e39388d444d",
+      "routes": []
+    }
+  ]
+}
