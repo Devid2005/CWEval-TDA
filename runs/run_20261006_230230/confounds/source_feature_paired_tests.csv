@@ -1,4 +1,0 @@
-feature,pair_count,secure_mean,secure_median,vulnerable_mean,vulnerable_median,mean_difference_vulnerable_minus_secure,median_difference_vulnerable_minus_secure,vulnerable_greater_pair_count,secure_greater_pair_count,equal_pair_count,bootstrap_95ci_low,bootstrap_95ci_high,wilcoxon_statistic,wilcoxon_p,paired_permutation_p,paired_cohen_dz,paired_rank_biserial
-source_token_count,20,552.55,534.5,387.2,363.0,-165.35,-111.5,1,19,0,-249.55125,-87.04875000000001,13.0,0.0005921076387645852,0.0002599948001039979,-0.8585405712849252,-0.8761904761904762
-source_chars,20,1273.95,1264.5,911.1,824.0,-362.85,-243.0,2,18,0,-548.0025,-197.09750000000003,10.0,8.20159912109375e-05,0.00011999760004799904,-0.87730847009019,-0.9047619047619048
-unit_count,20,3.95,4.0,3.5,3.5,-0.45,0.0,0,7,13,-0.75,-0.2,0.0,0.013874405883025447,0.015339693206135877,-0.6556586521631698,-1.0
