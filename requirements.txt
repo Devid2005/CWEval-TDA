@@ -1,0 +1,11 @@
+# Install these only if they are missing from the existing CWEval/TDA environment.
+numpy>=1.26
+scipy>=1.11
+torch>=2.2
+transformers>=4.40
+ripser>=0.6
+persim>=0.3
+scikit-learn>=1.4
+matplotlib>=3.8
+pytest>=8.0
+Flask>=3.0
