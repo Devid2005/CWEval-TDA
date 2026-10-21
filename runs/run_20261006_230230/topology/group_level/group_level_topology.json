@@ -1,0 +1,58 @@
+{
+  "secure_point_count": 20,
+  "vulnerable_point_count": 20,
+  "dimensions": {
+    "H0": {
+      "secure": {
+        "raw_count": 19,
+        "significant_count": 19,
+        "threshold": 0.01,
+        "total_persistence": 1.6367751322686672,
+        "mean_persistence": 0.08614605959308774,
+        "max_persistence": 0.15771837532520294,
+        "entropy": 2.895287043505578,
+        "finite_birth_max": 0.0,
+        "finite_death_max": 0.15771837532520294
+      },
+      "vulnerable": {
+        "raw_count": 19,
+        "significant_count": 19,
+        "threshold": 0.01,
+        "total_persistence": 1.7457806393504143,
+        "mean_persistence": 0.09188319154475864,
+        "max_persistence": 0.15256984531879425,
+        "entropy": 2.9158884310829554,
+        "finite_birth_max": 0.0,
+        "finite_death_max": 0.15256984531879425
+      },
+      "bottleneck": 0.01849474012851715,
+      "wasserstein": 0.2071072719991207
+    },
+    "H1": {
+      "secure": {
+        "raw_count": 5,
+        "significant_count": 0,
+        "threshold": 0.01,
+        "total_persistence": 0.0,
+        "mean_persistence": 0.0,
+        "max_persistence": 0.0,
+        "entropy": 0.0,
+        "finite_birth_max": 0.14102211594581604,
+        "finite_death_max": 0.1411273330450058
+      },
+      "vulnerable": {
+        "raw_count": 2,
+        "significant_count": 1,
+        "threshold": 0.01,
+        "total_persistence": 0.010878607630729675,
+        "mean_persistence": 0.010878607630729675,
+        "max_persistence": 0.010878607630729675,
+        "entropy": -1.110223024625156e-15,
+        "finite_birth_max": 0.16037879884243011,
+        "finite_death_max": 0.1634756326675415
+      },
+      "bottleneck": 0.005439303815364838,
+      "wasserstein": 0.01842570654843211
+    }
+  }
+}
