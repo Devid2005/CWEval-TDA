@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this research software or its data, please cite this repository and the upstream CWEval paper."
+title: "CWEval-TDA: Persistent Homology for Python/Flask Code Security"
+type: software
+authors:
+  - family-names: "Hernández Hernández"
+    given-names: "David Santiago"
+abstract: "CodeBERT and Vietoris-Rips persistent-homology analysis of 20 matched secure/vulnerable Python/Flask CWEval task pairs, with paired statistical inference, grouped classification, and source-length sensitivity analyses."
+keywords:
+  - persistent homology
+  - software security
+  - CodeBERT
+  - CWEval
+  - Python
+  - Flask
