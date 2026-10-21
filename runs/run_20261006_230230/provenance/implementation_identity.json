@@ -1,0 +1,6 @@
+{
+  "created_at_utc": "2026-10-07T05:02:30+00:00",
+  "experiment_schema": "tda-statistical-experiment-v2",
+  "run_experiment_sha256": "eabb7c0863d9afc1f43a86d8eea066839a08c77176114920eb9d2dddc66ccf30",
+  "config_source_sha256": "0051e444b0af44a5cc4036ec8c6ba47a77099f2aa30a8706ea4cccd4b50a6195"
+}
