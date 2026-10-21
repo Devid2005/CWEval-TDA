@@ -1,0 +1,18 @@
+[
+  {
+    "homology_dimension": 0,
+    "statistic": "bottleneck distance between 20-point secure and vulnerable package-embedding clouds",
+    "observed_bottleneck": 0.01849474012851715,
+    "paired_label_swap_permutation_p": 0.8355822088955522,
+    "permutations": 2000,
+    "pair_count": 20
+  },
+  {
+    "homology_dimension": 1,
+    "statistic": "bottleneck distance between 20-point secure and vulnerable package-embedding clouds",
+    "observed_bottleneck": 0.005439303815364838,
+    "paired_label_swap_permutation_p": 0.665167416291854,
+    "permutations": 2000,
+    "pair_count": 20
+  }
+]

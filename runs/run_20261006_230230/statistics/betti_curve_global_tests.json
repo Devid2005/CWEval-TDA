@@ -1,0 +1,18 @@
+[
+  {
+    "homology_dimension": 0,
+    "pair_count": 20,
+    "statistic": "RMS distance between mean paired Betti curves",
+    "observed": 0.7167894591251125,
+    "paired_signflip_permutation_p": 0.00749985000299994,
+    "permutations": 50000
+  },
+  {
+    "homology_dimension": 1,
+    "pair_count": 20,
+    "statistic": "RMS distance between mean paired Betti curves",
+    "observed": 0.09787342806294301,
+    "paired_signflip_permutation_p": 0.18957620847583048,
+    "permutations": 50000
+  }
+]

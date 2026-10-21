@@ -1,0 +1,130 @@
+[
+  {
+    "model": "logistic_regression",
+    "feature_set": "length_only",
+    "features": [
+      "source_token_count"
+    ],
+    "cross_validation": "5-fold GroupKFold by CWE pair; secure and vulnerable member of each pair stay in the same fold",
+    "accuracy": 0.75,
+    "balanced_accuracy": 0.75,
+    "f1": 0.75,
+    "roc_auc": 0.7325000000000002,
+    "paired_label_swap_permutation_p_balanced_accuracy": 0.002997002997002997,
+    "classifier_permutations": 1000,
+    "role": "confound_baseline"
+  },
+  {
+    "model": "linear_svm",
+    "feature_set": "length_only",
+    "features": [
+      "source_token_count"
+    ],
+    "cross_validation": "5-fold GroupKFold by CWE pair; secure and vulnerable member of each pair stay in the same fold",
+    "accuracy": 0.75,
+    "balanced_accuracy": 0.75,
+    "f1": 0.75,
+    "roc_auc": 0.7475,
+    "paired_label_swap_permutation_p_balanced_accuracy": 0.000999000999000999,
+    "classifier_permutations": 1000,
+    "role": "confound_baseline"
+  },
+  {
+    "model": "logistic_regression",
+    "feature_set": "topology_only",
+    "features": [
+      "h0_significant_count",
+      "h0_mean_persistence",
+      "h0_max_persistence",
+      "h0_entropy",
+      "h0_betti_auc",
+      "h1_significant_count",
+      "h1_mean_persistence",
+      "h1_max_persistence",
+      "h1_entropy",
+      "h1_betti_auc"
+    ],
+    "cross_validation": "5-fold GroupKFold by CWE pair; secure and vulnerable member of each pair stay in the same fold",
+    "accuracy": 0.575,
+    "balanced_accuracy": 0.575,
+    "f1": 0.5142857142857142,
+    "roc_auc": 0.5625,
+    "paired_label_swap_permutation_p_balanced_accuracy": 0.23576423576423577,
+    "classifier_permutations": 1000,
+    "role": "primary_exploratory_topology"
+  },
+  {
+    "model": "linear_svm",
+    "feature_set": "topology_only",
+    "features": [
+      "h0_significant_count",
+      "h0_mean_persistence",
+      "h0_max_persistence",
+      "h0_entropy",
+      "h0_betti_auc",
+      "h1_significant_count",
+      "h1_mean_persistence",
+      "h1_max_persistence",
+      "h1_entropy",
+      "h1_betti_auc"
+    ],
+    "cross_validation": "5-fold GroupKFold by CWE pair; secure and vulnerable member of each pair stay in the same fold",
+    "accuracy": 0.5,
+    "balanced_accuracy": 0.5,
+    "f1": 0.4117647058823529,
+    "roc_auc": 0.5249999999999999,
+    "paired_label_swap_permutation_p_balanced_accuracy": 0.5474525474525475,
+    "classifier_permutations": 1000,
+    "role": "primary_exploratory_topology"
+  },
+  {
+    "model": "logistic_regression",
+    "feature_set": "topology_plus_length",
+    "features": [
+      "h0_significant_count",
+      "h0_mean_persistence",
+      "h0_max_persistence",
+      "h0_entropy",
+      "h0_betti_auc",
+      "h1_significant_count",
+      "h1_mean_persistence",
+      "h1_max_persistence",
+      "h1_entropy",
+      "h1_betti_auc",
+      "source_token_count"
+    ],
+    "cross_validation": "5-fold GroupKFold by CWE pair; secure and vulnerable member of each pair stay in the same fold",
+    "accuracy": 0.575,
+    "balanced_accuracy": 0.575,
+    "f1": 0.5405405405405406,
+    "roc_auc": 0.59,
+    "paired_label_swap_permutation_p_balanced_accuracy": 0.23676323676323677,
+    "classifier_permutations": 1000,
+    "role": "exploratory_sensitivity_topology_plus_length"
+  },
+  {
+    "model": "linear_svm",
+    "feature_set": "topology_plus_length",
+    "features": [
+      "h0_significant_count",
+      "h0_mean_persistence",
+      "h0_max_persistence",
+      "h0_entropy",
+      "h0_betti_auc",
+      "h1_significant_count",
+      "h1_mean_persistence",
+      "h1_max_persistence",
+      "h1_entropy",
+      "h1_betti_auc",
+      "source_token_count"
+    ],
+    "cross_validation": "5-fold GroupKFold by CWE pair; secure and vulnerable member of each pair stay in the same fold",
+    "accuracy": 0.55,
+    "balanced_accuracy": 0.55,
+    "f1": 0.5263157894736842,
+    "roc_auc": 0.5625,
+    "paired_label_swap_permutation_p_balanced_accuracy": 0.34465534465534464,
+    "classifier_permutations": 1000,
+    "role": "exploratory_sensitivity_topology_plus_length"
+  }
+]
