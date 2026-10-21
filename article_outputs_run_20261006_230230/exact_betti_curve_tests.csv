@@ -1,3 +1,0 @@
-homology_dimension,pair_count,statistic,observed,exact_signflip_p,exact_permutations
-0,20,RMS distance between mean paired Betti curves,0.7167894591251125,0.0075588226318359375,1048576
-1,20,RMS distance between mean paired Betti curves,0.09787342806294301,0.19241714477539062,1048576
