@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0",
+  "tasks": {
+    "cwe_614_0_flask": {
+      "task_id": "cwe_614_0_flask",
+      "cwe": "CWE-614",
+      "factory_name": "create_secure_cookie_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_614_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_614_0_flask/secure.py",
+        "sha256": "403b2cc3a6c74caa292c6d53673ae0441b17bc1b01af357e233f3ac415a2e82a",
+        "routes": [
+          {
+            "path": "/login",
+            "normalized_path": "/login",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "login"
+          },
+          {
+            "path": "/account",
+            "normalized_path": "/account",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "account"
+          },
+          {
+            "path": "/logout",
+            "normalized_path": "/logout",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "logout"
+          }
+        ],
+        "nested_functions": [
+          "login",
+          "account",
+          "logout"
+        ],
+        "unit_ids": [
+          "secure:cwe_614_0_flask:login",
+          "secure:cwe_614_0_flask:account",
+          "secure:cwe_614_0_flask:logout",
+          "secure:cwe_614_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_614_0_flask_test.py",
+        "factory_name": "create_secure_cookie_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_614_0_flask/vulnerable.py",
+        "sha256": "75363ec7cc9eacb66b0563b653a05602b004dc2b6a2f65f3750bfea6ebddee23",
+        "routes": [
+          {
+            "path": "/login",
+            "normalized_path": "/login",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "login"
+          },
+          {
+            "path": "/account",
+            "normalized_path": "/account",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "account"
+          },
+          {
+            "path": "/logout",
+            "normalized_path": "/logout",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "logout"
+          }
+        ],
+        "nested_functions": [
+          "login",
+          "account",
+          "logout"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_614_0_flask:login",
+          "unsafe:cwe_614_0_flask:account",
+          "unsafe:cwe_614_0_flask:logout",
+          "unsafe:cwe_614_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    }
+  }
+}

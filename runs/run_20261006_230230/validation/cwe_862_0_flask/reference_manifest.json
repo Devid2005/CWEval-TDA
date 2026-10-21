@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0",
+  "tasks": {
+    "cwe_862_0_flask": {
+      "task_id": "cwe_862_0_flask",
+      "cwe": "CWE-862",
+      "factory_name": "create_admin_panel_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_862_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_862_0_flask/secure.py",
+        "sha256": "6519325d29b0ecd6a5db128fd60fde1c64371a83213ba0f3bb2c08627635554d",
+        "routes": [
+          {
+            "path": "/login",
+            "normalized_path": "/login",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "login"
+          },
+          {
+            "path": "/account",
+            "normalized_path": "/account",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "account"
+          },
+          {
+            "path": "/admin",
+            "normalized_path": "/admin",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "admin_panel"
+          }
+        ],
+        "nested_functions": [
+          "login",
+          "account",
+          "admin_panel"
+        ],
+        "unit_ids": [
+          "secure:cwe_862_0_flask:login",
+          "secure:cwe_862_0_flask:account",
+          "secure:cwe_862_0_flask:admin_panel",
+          "secure:cwe_862_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_862_0_flask_test.py",
+        "factory_name": "create_admin_panel_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_862_0_flask/vulnerable.py",
+        "sha256": "6c0926cf273ffdc14049134de03a1af7a6b0c1535fa4dc33ad45f3b721c806c4",
+        "routes": [
+          {
+            "path": "/login",
+            "normalized_path": "/login",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "login"
+          },
+          {
+            "path": "/account",
+            "normalized_path": "/account",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "account"
+          },
+          {
+            "path": "/admin",
+            "normalized_path": "/admin",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "admin_panel"
+          }
+        ],
+        "nested_functions": [
+          "login",
+          "account",
+          "admin_panel"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_862_0_flask:login",
+          "unsafe:cwe_862_0_flask:account",
+          "unsafe:cwe_862_0_flask:admin_panel",
+          "unsafe:cwe_862_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    }
+  }
+}

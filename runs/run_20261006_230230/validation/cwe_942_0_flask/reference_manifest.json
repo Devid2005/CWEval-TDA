@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0",
+  "tasks": {
+    "cwe_942_0_flask": {
+      "task_id": "cwe_942_0_flask",
+      "cwe": "CWE-942",
+      "factory_name": "create_cors_api_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_942_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_942_0_flask/secure.py",
+        "sha256": "10b868802d8160355b907dde1aa4abd70a829fb1a45185b76efab05b00440398",
+        "routes": [
+          {
+            "path": "/api/profile",
+            "normalized_path": "/api/profile",
+            "methods": [
+              "OPTIONS"
+            ],
+            "function_name": "profile_options"
+          },
+          {
+            "path": "/api/profile",
+            "normalized_path": "/api/profile",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "get_profile"
+          },
+          {
+            "path": "/api/profile",
+            "normalized_path": "/api/profile",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "update_profile"
+          }
+        ],
+        "nested_functions": [
+          "add_cors_headers",
+          "apply_cors",
+          "profile_options",
+          "get_profile",
+          "update_profile"
+        ],
+        "unit_ids": [
+          "secure:cwe_942_0_flask:add_cors_headers",
+          "secure:cwe_942_0_flask:apply_cors",
+          "secure:cwe_942_0_flask:profile_options",
+          "secure:cwe_942_0_flask:get_profile",
+          "secure:cwe_942_0_flask:update_profile",
+          "secure:cwe_942_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_942_0_flask_test.py",
+        "factory_name": "create_cors_api_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_942_0_flask/vulnerable.py",
+        "sha256": "57e5683b5cf02ecbb4a44f22c2de24de146b68e842c27ab9846f712b9be764b9",
+        "routes": [
+          {
+            "path": "/api/profile",
+            "normalized_path": "/api/profile",
+            "methods": [
+              "OPTIONS"
+            ],
+            "function_name": "profile_options"
+          },
+          {
+            "path": "/api/profile",
+            "normalized_path": "/api/profile",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "get_profile"
+          },
+          {
+            "path": "/api/profile",
+            "normalized_path": "/api/profile",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "update_profile"
+          }
+        ],
+        "nested_functions": [
+          "apply_cors",
+          "profile_options",
+          "get_profile",
+          "update_profile"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_942_0_flask:apply_cors",
+          "unsafe:cwe_942_0_flask:profile_options",
+          "unsafe:cwe_942_0_flask:get_profile",
+          "unsafe:cwe_942_0_flask:update_profile",
+          "unsafe:cwe_942_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    }
+  }
+}

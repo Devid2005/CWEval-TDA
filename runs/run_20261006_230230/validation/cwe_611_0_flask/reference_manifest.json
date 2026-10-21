@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "tasks": {
+    "cwe_611_0_flask": {
+      "task_id": "cwe_611_0_flask",
+      "cwe": "CWE-611",
+      "factory_name": "create_xml_profile_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_611_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_611_0_flask/secure.py",
+        "sha256": "799263aeb106822bdec528794a2222a6d9b43db2703b9288332c63d174e973da",
+        "routes": [
+          {
+            "path": "/xml/import",
+            "normalized_path": "/xml/import",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "import_xml_profile"
+          },
+          {
+            "path": "/profile",
+            "normalized_path": "/profile",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "get_profile"
+          }
+        ],
+        "nested_functions": [
+          "parse_xml_profile",
+          "import_xml_profile",
+          "get_profile"
+        ],
+        "unit_ids": [
+          "secure:cwe_611_0_flask:parse_xml_profile",
+          "secure:cwe_611_0_flask:import_xml_profile",
+          "secure:cwe_611_0_flask:get_profile",
+          "secure:cwe_611_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_611_0_flask_test.py",
+        "factory_name": "create_xml_profile_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_611_0_flask/vulnerable.py",
+        "sha256": "6bb59c2d862f030bda13208c87ea54693e05eaa9fa03a46d0e45023bb9acb2ce",
+        "routes": [
+          {
+            "path": "/xml/import",
+            "normalized_path": "/xml/import",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "import_xml_profile"
+          },
+          {
+            "path": "/profile",
+            "normalized_path": "/profile",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "get_profile"
+          }
+        ],
+        "nested_functions": [
+          "expand_external_entities",
+          "import_xml_profile",
+          "get_profile"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_611_0_flask:expand_external_entities",
+          "unsafe:cwe_611_0_flask:import_xml_profile",
+          "unsafe:cwe_611_0_flask:get_profile",
+          "unsafe:cwe_611_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    }
+  }
+}

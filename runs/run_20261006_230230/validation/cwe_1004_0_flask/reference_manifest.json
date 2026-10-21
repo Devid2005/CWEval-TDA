@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0",
+  "tasks": {
+    "cwe_1004_0_flask": {
+      "task_id": "cwe_1004_0_flask",
+      "cwe": "CWE-1004",
+      "factory_name": "create_http_only_remember_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_1004_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_1004_0_flask/secure.py",
+        "sha256": "d4bf524597fe3ec751e2ad8d3b8725a09288947a214c5f00510a384b1396d95d",
+        "routes": [
+          {
+            "path": "/remember",
+            "normalized_path": "/remember",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "remember"
+          },
+          {
+            "path": "/remembered-user",
+            "normalized_path": "/remembered-user",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "remembered_user"
+          },
+          {
+            "path": "/forget",
+            "normalized_path": "/forget",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "forget"
+          }
+        ],
+        "nested_functions": [
+          "remember",
+          "remembered_user",
+          "forget"
+        ],
+        "unit_ids": [
+          "secure:cwe_1004_0_flask:remember",
+          "secure:cwe_1004_0_flask:remembered_user",
+          "secure:cwe_1004_0_flask:forget",
+          "secure:cwe_1004_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_1004_0_flask_test.py",
+        "factory_name": "create_http_only_remember_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_1004_0_flask/vulnerable.py",
+        "sha256": "f09852cfb32a5e76f90b4d0f291157c2ae4180ebde24f946cda4491e4ee0a575",
+        "routes": [
+          {
+            "path": "/remember",
+            "normalized_path": "/remember",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "remember"
+          },
+          {
+            "path": "/remembered-user",
+            "normalized_path": "/remembered-user",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "remembered_user"
+          },
+          {
+            "path": "/forget",
+            "normalized_path": "/forget",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "forget"
+          }
+        ],
+        "nested_functions": [
+          "remember",
+          "remembered_user",
+          "forget"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_1004_0_flask:remember",
+          "unsafe:cwe_1004_0_flask:remembered_user",
+          "unsafe:cwe_1004_0_flask:forget",
+          "unsafe:cwe_1004_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    }
+  }
+}

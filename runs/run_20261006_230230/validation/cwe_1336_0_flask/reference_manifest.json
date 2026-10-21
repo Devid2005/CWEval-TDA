@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "tasks": {
+    "cwe_1336_0_flask": {
+      "task_id": "cwe_1336_0_flask",
+      "cwe": "CWE-1336",
+      "factory_name": "create_greeting_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_1336_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_1336_0_flask/secure.py",
+        "sha256": "608d410bffe94625fcc2459e77cbc1671fb0e48362fe10b954030c777879737c",
+        "routes": [
+          {
+            "path": "/greet",
+            "normalized_path": "/greet",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "greet"
+          }
+        ],
+        "nested_functions": [
+          "greet"
+        ],
+        "unit_ids": [
+          "secure:cwe_1336_0_flask:greet",
+          "secure:cwe_1336_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_1336_0_flask_test.py",
+        "factory_name": "create_greeting_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_1336_0_flask/vulnerable.py",
+        "sha256": "a96d5c3d83177ca9ab780ad4d97547afd9c9cdc25f7cd03eaa14090af38f631d",
+        "routes": [
+          {
+            "path": "/greet",
+            "normalized_path": "/greet",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "greet"
+          }
+        ],
+        "nested_functions": [
+          "greet"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_1336_0_flask:greet",
+          "unsafe:cwe_1336_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    }
+  }
+}

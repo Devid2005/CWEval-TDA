@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0",
+  "tasks": {
+    "cwe_639_0_flask": {
+      "task_id": "cwe_639_0_flask",
+      "cwe": "CWE-639",
+      "factory_name": "create_user_profile_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_639_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_639_0_flask/secure.py",
+        "sha256": "3c609b466dabe38f39642d4edec517665b9a86ff14da51fd16697ae6c6b1107a",
+        "routes": [
+          {
+            "path": "/login",
+            "normalized_path": "/login",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "login"
+          },
+          {
+            "path": "/users/<int:user_id>/profile",
+            "normalized_path": "/users/<user_id>/profile",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "get_profile"
+          },
+          {
+            "path": "/logout",
+            "normalized_path": "/logout",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "logout"
+          }
+        ],
+        "nested_functions": [
+          "login",
+          "get_profile",
+          "logout"
+        ],
+        "unit_ids": [
+          "secure:cwe_639_0_flask:login",
+          "secure:cwe_639_0_flask:get_profile",
+          "secure:cwe_639_0_flask:logout",
+          "secure:cwe_639_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_639_0_flask_test.py",
+        "factory_name": "create_user_profile_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_639_0_flask/vulnerable.py",
+        "sha256": "c2fddc783a3bd1de3743bac34a248bb5884409d3b2a7b8403e7c3f3f6787f067",
+        "routes": [
+          {
+            "path": "/login",
+            "normalized_path": "/login",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "login"
+          },
+          {
+            "path": "/users/<int:user_id>/profile",
+            "normalized_path": "/users/<user_id>/profile",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "get_profile"
+          },
+          {
+            "path": "/logout",
+            "normalized_path": "/logout",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "logout"
+          }
+        ],
+        "nested_functions": [
+          "login",
+          "get_profile",
+          "logout"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_639_0_flask:login",
+          "unsafe:cwe_639_0_flask:get_profile",
+          "unsafe:cwe_639_0_flask:logout",
+          "unsafe:cwe_639_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    }
+  }
+}

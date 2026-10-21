@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "status": "passed",
+  "interpretation": {
+    "secure_group": "Reference implementations pass ordinary functionality and security oracles.",
+    "unsafe_group": "Unsafe controls pass benchmark meta-tests that verify normal functionality and expected security failure."
+  },
+  "secure_references": {
+    "name": "secure_references",
+    "expression": "not unsafe",
+    "command": [
+      "/home/david.hernandezherna/envs/cweval/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "--tb=short",
+      "--disable-warnings",
+      "-k",
+      "not unsafe",
+      "--junitxml=/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/validation/cwe_614_0_flask/secure_references_junit.xml",
+      "cwe_614_0_flask_test.py"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "executed_successfully": true,
+    "passed": true,
+    "results": {
+      "tests": 4,
+      "passed": 4,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "stdout_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/validation/cwe_614_0_flask/secure_references_stdout.txt",
+    "stderr_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/validation/cwe_614_0_flask/secure_references_stderr.txt",
+    "junit_xml": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/validation/cwe_614_0_flask/secure_references_junit.xml"
+  },
+  "unsafe_controls": {
+    "name": "unsafe_controls",
+    "expression": "unsafe",
+    "command": [
+      "/home/david.hernandezherna/envs/cweval/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "--tb=short",
+      "--disable-warnings",
+      "-k",
+      "unsafe",
+      "--junitxml=/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/validation/cwe_614_0_flask/unsafe_controls_junit.xml",
+      "cwe_614_0_flask_test.py"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "executed_successfully": true,
+    "passed": true,
+    "results": {
+      "tests": 3,
+      "passed": 3,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "stdout_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/validation/cwe_614_0_flask/unsafe_controls_stdout.txt",
+    "stderr_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/validation/cwe_614_0_flask/unsafe_controls_stderr.txt",
+    "junit_xml": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/validation/cwe_614_0_flask/unsafe_controls_junit.xml"
+  },
+  "all_reference_controls_valid": true
+}

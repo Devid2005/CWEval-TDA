@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0",
+  "tasks": {
+    "cwe_915_0_flask": {
+      "task_id": "cwe_915_0_flask",
+      "cwe": "CWE-915",
+      "factory_name": "create_profile_update_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_915_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_915_0_flask/secure.py",
+        "sha256": "6c8cf0586edbf88fc3ab1613192adec4ef6589c36208ea4dd53620e37ea91d1f",
+        "routes": [
+          {
+            "path": "/login",
+            "normalized_path": "/login",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "login"
+          },
+          {
+            "path": "/profile",
+            "normalized_path": "/profile",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "get_profile"
+          },
+          {
+            "path": "/profile",
+            "normalized_path": "/profile",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "update_profile"
+          }
+        ],
+        "nested_functions": [
+          "current_user",
+          "login",
+          "get_profile",
+          "update_profile"
+        ],
+        "unit_ids": [
+          "secure:cwe_915_0_flask:current_user",
+          "secure:cwe_915_0_flask:login",
+          "secure:cwe_915_0_flask:get_profile",
+          "secure:cwe_915_0_flask:update_profile",
+          "secure:cwe_915_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_915_0_flask_test.py",
+        "factory_name": "create_profile_update_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_915_0_flask/vulnerable.py",
+        "sha256": "9f181bda98b78bcafca9acecdc6564efe34cf58e9c2867774f4a37fb362f1c3b",
+        "routes": [
+          {
+            "path": "/login",
+            "normalized_path": "/login",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "login"
+          },
+          {
+            "path": "/profile",
+            "normalized_path": "/profile",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "get_profile"
+          },
+          {
+            "path": "/profile",
+            "normalized_path": "/profile",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "update_profile"
+          }
+        ],
+        "nested_functions": [
+          "current_user",
+          "login",
+          "get_profile",
+          "update_profile"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_915_0_flask:current_user",
+          "unsafe:cwe_915_0_flask:login",
+          "unsafe:cwe_915_0_flask:get_profile",
+          "unsafe:cwe_915_0_flask:update_profile",
+          "unsafe:cwe_915_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    }
+  }
+}

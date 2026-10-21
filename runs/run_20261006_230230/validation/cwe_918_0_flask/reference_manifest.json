@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "tasks": {
+    "cwe_918_0_flask": {
+      "task_id": "cwe_918_0_flask",
+      "cwe": "CWE-918",
+      "factory_name": "create_url_fetch_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_918_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_918_0_flask/secure.py",
+        "sha256": "3e140b139acccc4a25b41dbe0fbcb0c5c156ccf70f66c7b5e268206ecf442125",
+        "routes": [
+          {
+            "path": "/fetch",
+            "normalized_path": "/fetch",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "fetch"
+          }
+        ],
+        "nested_functions": [
+          "default_fetcher",
+          "is_blocked_ip",
+          "validate_url",
+          "fetch"
+        ],
+        "unit_ids": [
+          "secure:cwe_918_0_flask:default_fetcher",
+          "secure:cwe_918_0_flask:is_blocked_ip",
+          "secure:cwe_918_0_flask:validate_url",
+          "secure:cwe_918_0_flask:fetch",
+          "secure:cwe_918_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_918_0_flask_test.py",
+        "factory_name": "create_url_fetch_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_918_0_flask/vulnerable.py",
+        "sha256": "b1a4daf9dd34759d695ec0c2cb4a630683db5ea4a95cd64d7a8429ea98ffb2b3",
+        "routes": [
+          {
+            "path": "/fetch",
+            "normalized_path": "/fetch",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "fetch"
+          }
+        ],
+        "nested_functions": [
+          "default_fetcher",
+          "fetch"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_918_0_flask:default_fetcher",
+          "unsafe:cwe_918_0_flask:fetch",
+          "unsafe:cwe_918_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    }
+  }
+}

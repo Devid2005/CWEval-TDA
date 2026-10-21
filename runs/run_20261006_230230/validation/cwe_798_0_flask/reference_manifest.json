@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "tasks": {
+    "cwe_798_0_flask": {
+      "task_id": "cwe_798_0_flask",
+      "cwe": "CWE-798",
+      "factory_name": "create_session_app",
+      "secure": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_798_0_flask_task.py",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_798_0_flask/secure.py",
+        "sha256": "d4af2e05b2efa462813dbc19f21063f3cb0f6712d93dd627db0b31177a238767",
+        "routes": [
+          {
+            "path": "/set-name",
+            "normalized_path": "/set-name",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "set_name"
+          },
+          {
+            "path": "/me",
+            "normalized_path": "/me",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "me"
+          }
+        ],
+        "nested_functions": [
+          "set_name",
+          "me"
+        ],
+        "unit_ids": [
+          "secure:cwe_798_0_flask:set_name",
+          "secure:cwe_798_0_flask:me",
+          "secure:cwe_798_0_flask:__setup__"
+        ]
+      },
+      "unsafe": {
+        "source_file": "/home/david.hernandezherna/mitacs_4/CWEval/benchmark/core/py/cwe_798_0_flask_test.py",
+        "factory_name": "create_session_app_unsafe",
+        "normalized_file": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/dataset/pairs/cwe_798_0_flask/vulnerable.py",
+        "sha256": "d41fb2a541487b32d11523033a9fe3451ba77c7364495f3c45b0351f48abfa0a",
+        "routes": [
+          {
+            "path": "/set-name",
+            "normalized_path": "/set-name",
+            "methods": [
+              "POST"
+            ],
+            "function_name": "set_name"
+          },
+          {
+            "path": "/me",
+            "normalized_path": "/me",
+            "methods": [
+              "GET"
+            ],
+            "function_name": "me"
+          }
+        ],
+        "nested_functions": [
+          "set_name",
+          "me"
+        ],
+        "unit_ids": [
+          "unsafe:cwe_798_0_flask:set_name",
+          "unsafe:cwe_798_0_flask:me",
+          "unsafe:cwe_798_0_flask:__setup__"
+        ]
+      },
+      "route_contract_consistent": true
+    }
+  }
+}
