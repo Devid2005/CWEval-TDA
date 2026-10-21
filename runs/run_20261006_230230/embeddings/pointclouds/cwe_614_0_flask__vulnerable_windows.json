@@ -1,0 +1,98 @@
+[
+  {
+    "point_index": 0,
+    "start_token": 0,
+    "stop_token": 32,
+    "token_count": 32
+  },
+  {
+    "point_index": 1,
+    "start_token": 26,
+    "stop_token": 58,
+    "token_count": 32
+  },
+  {
+    "point_index": 2,
+    "start_token": 51,
+    "stop_token": 83,
+    "token_count": 32
+  },
+  {
+    "point_index": 3,
+    "start_token": 77,
+    "stop_token": 109,
+    "token_count": 32
+  },
+  {
+    "point_index": 4,
+    "start_token": 103,
+    "stop_token": 135,
+    "token_count": 32
+  },
+  {
+    "point_index": 5,
+    "start_token": 128,
+    "stop_token": 160,
+    "token_count": 32
+  },
+  {
+    "point_index": 6,
+    "start_token": 154,
+    "stop_token": 186,
+    "token_count": 32
+  },
+  {
+    "point_index": 7,
+    "start_token": 180,
+    "stop_token": 212,
+    "token_count": 32
+  },
+  {
+    "point_index": 8,
+    "start_token": 205,
+    "stop_token": 237,
+    "token_count": 32
+  },
+  {
+    "point_index": 9,
+    "start_token": 231,
+    "stop_token": 263,
+    "token_count": 32
+  },
+  {
+    "point_index": 10,
+    "start_token": 257,
+    "stop_token": 289,
+    "token_count": 32
+  },
+  {
+    "point_index": 11,
+    "start_token": 282,
+    "stop_token": 314,
+    "token_count": 32
+  },
+  {
+    "point_index": 12,
+    "start_token": 308,
+    "stop_token": 340,
+    "token_count": 32
+  },
+  {
+    "point_index": 13,
+    "start_token": 334,
+    "stop_token": 366,
+    "token_count": 32
+  },
+  {
+    "point_index": 14,
+    "start_token": 359,
+    "stop_token": 391,
+    "token_count": 32
+  },
+  {
+    "point_index": 15,
+    "start_token": 385,
+    "stop_token": 417,
+    "token_count": 32
+  }
+]
