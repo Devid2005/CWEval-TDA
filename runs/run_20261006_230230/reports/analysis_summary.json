@@ -1,0 +1,600 @@
+{
+  "schema_version": "2.0",
+  "experiment_schema": "tda-statistical-experiment-v2",
+  "created_at_utc": "2026-10-07T05:22:36+00:00",
+  "dataset": {
+    "pairs": 20,
+    "samples": 40,
+    "secure": 20,
+    "vulnerable": 20,
+    "all_controls_valid": true,
+    "valid_pairs": 20
+  },
+  "pilot": {
+    "schema_version": "2.0",
+    "experiment_schema": "tda-statistical-experiment-v2",
+    "created_at_utc": "2026-10-07T05:04:44+00:00",
+    "pilot_sample_count": 10,
+    "pilot_cwes": [
+      79,
+      306,
+      639,
+      862,
+      915
+    ],
+    "h1_raw_nonempty_count": 10,
+    "h1_raw_nonempty_fraction": 1.0,
+    "h1_significant_nonempty_count": 7,
+    "h1_significant_nonempty_fraction": 0.7,
+    "h1_significant_viability_threshold": 0.4,
+    "h1_viable_for_primary_interpretation": true,
+    "geometry": {
+      "distance": "pairwise Euclidean on L2-normalized CodeBERT local-window vectors",
+      "ripser_input": "precomputed distance matrix"
+    },
+    "decision_rule_note": "The pilot viability decision uses only whether persistence-filtered H1 is non-empty. It does not test or inspect secure-vulnerable separation. No representation parameter is selected according to class outcomes.",
+    "records": [
+      {
+        "sample_id": "cwe_079_0_flask__secure",
+        "cwe": "CWE-79",
+        "class": "secure",
+        "source_token_count": 394,
+        "h0_raw_count": 15,
+        "h0_significant_count": 15,
+        "h1_raw_count": 2,
+        "h1_significant_count": 1,
+        "h1_raw_nonempty": true,
+        "h1_significant_nonempty": true
+      },
+      {
+        "sample_id": "cwe_079_0_flask__vulnerable",
+        "cwe": "CWE-79",
+        "class": "vulnerable",
+        "source_token_count": 218,
+        "h0_raw_count": 15,
+        "h0_significant_count": 15,
+        "h1_raw_count": 5,
+        "h1_significant_count": 3,
+        "h1_raw_nonempty": true,
+        "h1_significant_nonempty": true
+      },
+      {
+        "sample_id": "cwe_306_0_flask__secure",
+        "cwe": "CWE-306",
+        "class": "secure",
+        "source_token_count": 362,
+        "h0_raw_count": 15,
+        "h0_significant_count": 15,
+        "h1_raw_count": 4,
+        "h1_significant_count": 2,
+        "h1_raw_nonempty": true,
+        "h1_significant_nonempty": true
+      },
+      {
+        "sample_id": "cwe_306_0_flask__vulnerable",
+        "cwe": "CWE-306",
+        "class": "vulnerable",
+        "source_token_count": 321,
+        "h0_raw_count": 15,
+        "h0_significant_count": 15,
+        "h1_raw_count": 2,
+        "h1_significant_count": 2,
+        "h1_raw_nonempty": true,
+        "h1_significant_nonempty": true
+      },
+      {
+        "sample_id": "cwe_639_0_flask__secure",
+        "cwe": "CWE-639",
+        "class": "secure",
+        "source_token_count": 608,
+        "h0_raw_count": 15,
+        "h0_significant_count": 15,
+        "h1_raw_count": 5,
+        "h1_significant_count": 3,
+        "h1_raw_nonempty": true,
+        "h1_significant_nonempty": true
+      },
+      {
+        "sample_id": "cwe_639_0_flask__vulnerable",
+        "cwe": "CWE-639",
+        "class": "vulnerable",
+        "source_token_count": 537,
+        "h0_raw_count": 15,
+        "h0_significant_count": 15,
+        "h1_raw_count": 1,
+        "h1_significant_count": 0,
+        "h1_raw_nonempty": true,
+        "h1_significant_nonempty": false
+      },
+      {
+        "sample_id": "cwe_862_0_flask__secure",
+        "cwe": "CWE-862",
+        "class": "secure",
+        "source_token_count": 537,
+        "h0_raw_count": 15,
+        "h0_significant_count": 15,
+        "h1_raw_count": 1,
+        "h1_significant_count": 0,
+        "h1_raw_nonempty": true,
+        "h1_significant_nonempty": false
+      },
+      {
+        "sample_id": "cwe_862_0_flask__vulnerable",
+        "cwe": "CWE-862",
+        "class": "vulnerable",
+        "source_token_count": 429,
+        "h0_raw_count": 15,
+        "h0_significant_count": 15,
+        "h1_raw_count": 1,
+        "h1_significant_count": 0,
+        "h1_raw_nonempty": true,
+        "h1_significant_nonempty": false
+      },
+      {
+        "sample_id": "cwe_915_0_flask__secure",
+        "cwe": "CWE-915",
+        "class": "secure",
+        "source_token_count": 801,
+        "h0_raw_count": 15,
+        "h0_significant_count": 15,
+        "h1_raw_count": 3,
+        "h1_significant_count": 1,
+        "h1_raw_nonempty": true,
+        "h1_significant_nonempty": true
+      },
+      {
+        "sample_id": "cwe_915_0_flask__vulnerable",
+        "cwe": "CWE-915",
+        "class": "vulnerable",
+        "source_token_count": 730,
+        "h0_raw_count": 15,
+        "h0_significant_count": 15,
+        "h1_raw_count": 3,
+        "h1_significant_count": 2,
+        "h1_raw_nonempty": true,
+        "h1_significant_nonempty": true
+      }
+    ]
+  },
+  "primary_scalar_tests": {
+    "count": 10,
+    "fdr_significant_count": 0,
+    "fdr_significant_metrics": []
+  },
+  "betti_curve_global_tests": [
+    {
+      "homology_dimension": 0,
+      "pair_count": 20,
+      "statistic": "RMS distance between mean paired Betti curves",
+      "observed": 0.7167894591251125,
+      "paired_signflip_permutation_p": 0.00749985000299994,
+      "permutations": 50000
+    },
+    {
+      "homology_dimension": 1,
+      "pair_count": 20,
+      "statistic": "RMS distance between mean paired Betti curves",
+      "observed": 0.09787342806294301,
+      "paired_signflip_permutation_p": 0.18957620847583048,
+      "permutations": 50000
+    }
+  ],
+  "group_level_tda_permutation": [
+    {
+      "homology_dimension": 0,
+      "statistic": "bottleneck distance between 20-point secure and vulnerable package-embedding clouds",
+      "observed_bottleneck": 0.01849474012851715,
+      "paired_label_swap_permutation_p": 0.8355822088955522,
+      "permutations": 2000,
+      "pair_count": 20
+    },
+    {
+      "homology_dimension": 1,
+      "statistic": "bottleneck distance between 20-point secure and vulnerable package-embedding clouds",
+      "observed_bottleneck": 0.005439303815364838,
+      "paired_label_swap_permutation_p": 0.665167416291854,
+      "permutations": 2000,
+      "pair_count": 20
+    }
+  ],
+  "exploratory_classification": [
+    {
+      "model": "logistic_regression",
+      "feature_set": "length_only",
+      "features": [
+        "source_token_count"
+      ],
+      "cross_validation": "5-fold GroupKFold by CWE pair; secure and vulnerable member of each pair stay in the same fold",
+      "accuracy": 0.75,
+      "balanced_accuracy": 0.75,
+      "f1": 0.75,
+      "roc_auc": 0.7325000000000002,
+      "paired_label_swap_permutation_p_balanced_accuracy": 0.002997002997002997,
+      "classifier_permutations": 1000,
+      "role": "confound_baseline"
+    },
+    {
+      "model": "linear_svm",
+      "feature_set": "length_only",
+      "features": [
+        "source_token_count"
+      ],
+      "cross_validation": "5-fold GroupKFold by CWE pair; secure and vulnerable member of each pair stay in the same fold",
+      "accuracy": 0.75,
+      "balanced_accuracy": 0.75,
+      "f1": 0.75,
+      "roc_auc": 0.7475,
+      "paired_label_swap_permutation_p_balanced_accuracy": 0.000999000999000999,
+      "classifier_permutations": 1000,
+      "role": "confound_baseline"
+    },
+    {
+      "model": "logistic_regression",
+      "feature_set": "topology_only",
+      "features": [
+        "h0_significant_count",
+        "h0_mean_persistence",
+        "h0_max_persistence",
+        "h0_entropy",
+        "h0_betti_auc",
+        "h1_significant_count",
+        "h1_mean_persistence",
+        "h1_max_persistence",
+        "h1_entropy",
+        "h1_betti_auc"
+      ],
+      "cross_validation": "5-fold GroupKFold by CWE pair; secure and vulnerable member of each pair stay in the same fold",
+      "accuracy": 0.575,
+      "balanced_accuracy": 0.575,
+      "f1": 0.5142857142857142,
+      "roc_auc": 0.5625,
+      "paired_label_swap_permutation_p_balanced_accuracy": 0.23576423576423577,
+      "classifier_permutations": 1000,
+      "role": "primary_exploratory_topology"
+    },
+    {
+      "model": "linear_svm",
+      "feature_set": "topology_only",
+      "features": [
+        "h0_significant_count",
+        "h0_mean_persistence",
+        "h0_max_persistence",
+        "h0_entropy",
+        "h0_betti_auc",
+        "h1_significant_count",
+        "h1_mean_persistence",
+        "h1_max_persistence",
+        "h1_entropy",
+        "h1_betti_auc"
+      ],
+      "cross_validation": "5-fold GroupKFold by CWE pair; secure and vulnerable member of each pair stay in the same fold",
+      "accuracy": 0.5,
+      "balanced_accuracy": 0.5,
+      "f1": 0.4117647058823529,
+      "roc_auc": 0.5249999999999999,
+      "paired_label_swap_permutation_p_balanced_accuracy": 0.5474525474525475,
+      "classifier_permutations": 1000,
+      "role": "primary_exploratory_topology"
+    },
+    {
+      "model": "logistic_regression",
+      "feature_set": "topology_plus_length",
+      "features": [
+        "h0_significant_count",
+        "h0_mean_persistence",
+        "h0_max_persistence",
+        "h0_entropy",
+        "h0_betti_auc",
+        "h1_significant_count",
+        "h1_mean_persistence",
+        "h1_max_persistence",
+        "h1_entropy",
+        "h1_betti_auc",
+        "source_token_count"
+      ],
+      "cross_validation": "5-fold GroupKFold by CWE pair; secure and vulnerable member of each pair stay in the same fold",
+      "accuracy": 0.575,
+      "balanced_accuracy": 0.575,
+      "f1": 0.5405405405405406,
+      "roc_auc": 0.59,
+      "paired_label_swap_permutation_p_balanced_accuracy": 0.23676323676323677,
+      "classifier_permutations": 1000,
+      "role": "exploratory_sensitivity_topology_plus_length"
+    },
+    {
+      "model": "linear_svm",
+      "feature_set": "topology_plus_length",
+      "features": [
+        "h0_significant_count",
+        "h0_mean_persistence",
+        "h0_max_persistence",
+        "h0_entropy",
+        "h0_betti_auc",
+        "h1_significant_count",
+        "h1_mean_persistence",
+        "h1_max_persistence",
+        "h1_entropy",
+        "h1_betti_auc",
+        "source_token_count"
+      ],
+      "cross_validation": "5-fold GroupKFold by CWE pair; secure and vulnerable member of each pair stay in the same fold",
+      "accuracy": 0.55,
+      "balanced_accuracy": 0.55,
+      "f1": 0.5263157894736842,
+      "roc_auc": 0.5625,
+      "paired_label_swap_permutation_p_balanced_accuracy": 0.34465534465534464,
+      "classifier_permutations": 1000,
+      "role": "exploratory_sensitivity_topology_plus_length"
+    }
+  ],
+  "group_level_topology": {
+    "secure_point_count": 20,
+    "vulnerable_point_count": 20,
+    "dimensions": {
+      "H0": {
+        "secure": {
+          "raw_count": 19,
+          "significant_count": 19,
+          "threshold": 0.01,
+          "total_persistence": 1.6367751322686672,
+          "mean_persistence": 0.08614605959308774,
+          "max_persistence": 0.15771837532520294,
+          "entropy": 2.895287043505578,
+          "finite_birth_max": 0.0,
+          "finite_death_max": 0.15771837532520294
+        },
+        "vulnerable": {
+          "raw_count": 19,
+          "significant_count": 19,
+          "threshold": 0.01,
+          "total_persistence": 1.7457806393504143,
+          "mean_persistence": 0.09188319154475864,
+          "max_persistence": 0.15256984531879425,
+          "entropy": 2.9158884310829554,
+          "finite_birth_max": 0.0,
+          "finite_death_max": 0.15256984531879425
+        },
+        "bottleneck": 0.01849474012851715,
+        "wasserstein": 0.2071072719991207
+      },
+      "H1": {
+        "secure": {
+          "raw_count": 5,
+          "significant_count": 0,
+          "threshold": 0.01,
+          "total_persistence": 0.0,
+          "mean_persistence": 0.0,
+          "max_persistence": 0.0,
+          "entropy": 0.0,
+          "finite_birth_max": 0.14102211594581604,
+          "finite_death_max": 0.1411273330450058
+        },
+        "vulnerable": {
+          "raw_count": 2,
+          "significant_count": 1,
+          "threshold": 0.01,
+          "total_persistence": 0.010878607630729675,
+          "mean_persistence": 0.010878607630729675,
+          "max_persistence": 0.010878607630729675,
+          "entropy": -1.110223024625156e-15,
+          "finite_birth_max": 0.16037879884243011,
+          "finite_death_max": 0.1634756326675415
+        },
+        "bottleneck": 0.005439303815364838,
+        "wasserstein": 0.01842570654843211
+      }
+    }
+  },
+  "length_complexity_confound_analysis": {
+    "schema_version": "2.0",
+    "experiment_schema": "tda-statistical-experiment-v2",
+    "created_at_utc": "2026-10-07T05:18:14+00:00",
+    "purpose": "Sensitivity analysis for systematic source-length/complexity differences. These covariates do not alter the primary TDA representation or labels.",
+    "paired_source_feature_tests": [
+      {
+        "feature": "source_token_count",
+        "pair_count": 20,
+        "secure_mean": 552.55,
+        "secure_median": 534.5,
+        "vulnerable_mean": 387.2,
+        "vulnerable_median": 363.0,
+        "mean_difference_vulnerable_minus_secure": -165.35,
+        "median_difference_vulnerable_minus_secure": -111.5,
+        "vulnerable_greater_pair_count": 1,
+        "secure_greater_pair_count": 19,
+        "equal_pair_count": 0,
+        "bootstrap_95ci_low": -249.55125,
+        "bootstrap_95ci_high": -87.04875000000001,
+        "wilcoxon_statistic": 13.0,
+        "wilcoxon_p": 0.0005921076387645852,
+        "paired_permutation_p": 0.0002599948001039979,
+        "paired_cohen_dz": -0.8585405712849252,
+        "paired_rank_biserial": -0.8761904761904762
+      },
+      {
+        "feature": "source_chars",
+        "pair_count": 20,
+        "secure_mean": 1273.95,
+        "secure_median": 1264.5,
+        "vulnerable_mean": 911.1,
+        "vulnerable_median": 824.0,
+        "mean_difference_vulnerable_minus_secure": -362.85,
+        "median_difference_vulnerable_minus_secure": -243.0,
+        "vulnerable_greater_pair_count": 2,
+        "secure_greater_pair_count": 18,
+        "equal_pair_count": 0,
+        "bootstrap_95ci_low": -548.0025,
+        "bootstrap_95ci_high": -197.09750000000003,
+        "wilcoxon_statistic": 10.0,
+        "wilcoxon_p": 8.20159912109375e-05,
+        "paired_permutation_p": 0.00011999760004799904,
+        "paired_cohen_dz": -0.87730847009019,
+        "paired_rank_biserial": -0.9047619047619048
+      },
+      {
+        "feature": "unit_count",
+        "pair_count": 20,
+        "secure_mean": 3.95,
+        "secure_median": 4.0,
+        "vulnerable_mean": 3.5,
+        "vulnerable_median": 3.5,
+        "mean_difference_vulnerable_minus_secure": -0.45,
+        "median_difference_vulnerable_minus_secure": 0.0,
+        "vulnerable_greater_pair_count": 0,
+        "secure_greater_pair_count": 7,
+        "equal_pair_count": 13,
+        "bootstrap_95ci_low": -0.75,
+        "bootstrap_95ci_high": -0.2,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_p": 0.013874405883025447,
+        "paired_permutation_p": 0.015339693206135877,
+        "paired_cohen_dz": -0.6556586521631698,
+        "paired_rank_biserial": -1.0
+      }
+    ],
+    "token_length_summary": {
+      "feature": "source_token_count",
+      "pair_count": 20,
+      "secure_mean": 552.55,
+      "secure_median": 534.5,
+      "vulnerable_mean": 387.2,
+      "vulnerable_median": 363.0,
+      "mean_difference_vulnerable_minus_secure": -165.35,
+      "median_difference_vulnerable_minus_secure": -111.5,
+      "vulnerable_greater_pair_count": 1,
+      "secure_greater_pair_count": 19,
+      "equal_pair_count": 0,
+      "bootstrap_95ci_low": -249.55125,
+      "bootstrap_95ci_high": -87.04875000000001,
+      "wilcoxon_statistic": 13.0,
+      "wilcoxon_p": 0.0005921076387645852,
+      "paired_permutation_p": 0.0002599948001039979,
+      "paired_cohen_dz": -0.8585405712849252,
+      "paired_rank_biserial": -0.8761904761904762
+    },
+    "topology_correlations_with_token_length": [
+      {
+        "metric": "h0_significant_count",
+        "sample_count": 40,
+        "pair_count": 20,
+        "spearman_rho_tokens_vs_metric_all_samples": 0.0,
+        "spearman_p_tokens_vs_metric_all_samples": 1.0,
+        "spearman_rho_paired_delta_tokens_vs_delta_metric": 0.0,
+        "spearman_p_paired_delta_tokens_vs_delta_metric": 1.0,
+        "interpretation": "exploratory sensitivity analysis; not part of the primary FDR family",
+        "bh_q_tokens_vs_metric_all_samples": 1.0,
+        "bh_q_paired_delta_tokens_vs_delta_metric": 1.0
+      },
+      {
+        "metric": "h0_mean_persistence",
+        "sample_count": 40,
+        "pair_count": 20,
+        "spearman_rho_tokens_vs_metric_all_samples": 0.7544567593897236,
+        "spearman_p_tokens_vs_metric_all_samples": 1.882873036493275e-08,
+        "spearman_rho_paired_delta_tokens_vs_delta_metric": 0.467268755302595,
+        "spearman_p_paired_delta_tokens_vs_delta_metric": 0.03777444971728665,
+        "interpretation": "exploratory sensitivity analysis; not part of the primary FDR family",
+        "bh_q_tokens_vs_metric_all_samples": 9.414365182466375e-08,
+        "bh_q_paired_delta_tokens_vs_delta_metric": 0.2210368706126621
+      },
+      {
+        "metric": "h0_max_persistence",
+        "sample_count": 40,
+        "pair_count": 20,
+        "spearman_rho_tokens_vs_metric_all_samples": 0.4913679951404032,
+        "spearman_p_tokens_vs_metric_all_samples": 0.0012830703919850942,
+        "spearman_rho_paired_delta_tokens_vs_delta_metric": 0.4048157654634398,
+        "spearman_p_paired_delta_tokens_vs_delta_metric": 0.07664131976207197,
+        "interpretation": "exploratory sensitivity analysis; not part of the primary FDR family",
+        "bh_q_tokens_vs_metric_all_samples": 0.0042769013066169806,
+        "bh_q_paired_delta_tokens_vs_delta_metric": 0.25547106587357327
+      },
+      {
+        "metric": "h0_entropy",
+        "sample_count": 40,
+        "pair_count": 20,
+        "spearman_rho_tokens_vs_metric_all_samples": -0.0018765247093389466,
+        "spearman_p_tokens_vs_metric_all_samples": 0.9908310395286842,
+        "spearman_rho_paired_delta_tokens_vs_delta_metric": 0.11136195778548157,
+        "spearman_p_paired_delta_tokens_vs_delta_metric": 0.6402017518255437,
+        "interpretation": "exploratory sensitivity analysis; not part of the primary FDR family",
+        "bh_q_tokens_vs_metric_all_samples": 1.0,
+        "bh_q_paired_delta_tokens_vs_delta_metric": 0.9145739311793483
+      },
+      {
+        "metric": "h0_betti_auc",
+        "sample_count": 40,
+        "pair_count": 20,
+        "spearman_rho_tokens_vs_metric_all_samples": 0.7547621315015076,
+        "spearman_p_tokens_vs_metric_all_samples": 1.8442807904951684e-08,
+        "spearman_rho_paired_delta_tokens_vs_delta_metric": 0.4542717672133404,
+        "spearman_p_paired_delta_tokens_vs_delta_metric": 0.04420737412253242,
+        "interpretation": "exploratory sensitivity analysis; not part of the primary FDR family",
+        "bh_q_tokens_vs_metric_all_samples": 9.414365182466375e-08,
+        "bh_q_paired_delta_tokens_vs_delta_metric": 0.2210368706126621
+      },
+      {
+        "metric": "h1_significant_count",
+        "sample_count": 40,
+        "pair_count": 20,
+        "spearman_rho_tokens_vs_metric_all_samples": 0.07410932619544336,
+        "spearman_p_tokens_vs_metric_all_samples": 0.6494893928205555,
+        "spearman_rho_paired_delta_tokens_vs_delta_metric": -0.17462495907450737,
+        "spearman_p_paired_delta_tokens_vs_delta_metric": 0.461518585513248,
+        "interpretation": "exploratory sensitivity analysis; not part of the primary FDR family",
+        "bh_q_tokens_vs_metric_all_samples": 0.915170510640234,
+        "bh_q_paired_delta_tokens_vs_delta_metric": 0.9145739311793483
+      },
+      {
+        "metric": "h1_mean_persistence",
+        "sample_count": 40,
+        "pair_count": 20,
+        "spearman_rho_tokens_vs_metric_all_samples": -0.08084393204703405,
+        "spearman_p_tokens_vs_metric_all_samples": 0.6199638560405815,
+        "spearman_rho_paired_delta_tokens_vs_delta_metric": 0.06444425988564244,
+        "spearman_p_paired_delta_tokens_vs_delta_metric": 0.7872167823263366,
+        "interpretation": "exploratory sensitivity analysis; not part of the primary FDR family",
+        "bh_q_tokens_vs_metric_all_samples": 0.915170510640234,
+        "bh_q_paired_delta_tokens_vs_delta_metric": 0.9387402029169919
+      },
+      {
+        "metric": "h1_max_persistence",
+        "sample_count": 40,
+        "pair_count": 20,
+        "spearman_rho_tokens_vs_metric_all_samples": -0.05584870667983512,
+        "spearman_p_tokens_vs_metric_all_samples": 0.7321364085121872,
+        "spearman_rho_paired_delta_tokens_vs_delta_metric": 0.12964668753464537,
+        "spearman_p_paired_delta_tokens_vs_delta_metric": 0.5859097205716391,
+        "interpretation": "exploratory sensitivity analysis; not part of the primary FDR family",
+        "bh_q_tokens_vs_metric_all_samples": 0.915170510640234,
+        "bh_q_paired_delta_tokens_vs_delta_metric": 0.9145739311793483
+      },
+      {
+        "metric": "h1_entropy",
+        "sample_count": 40,
+        "pair_count": 20,
+        "spearman_rho_tokens_vs_metric_all_samples": 0.12371125755313662,
+        "spearman_p_tokens_vs_metric_all_samples": 0.4469337890820832,
+        "spearman_rho_paired_delta_tokens_vs_delta_metric": -0.22585839152641773,
+        "spearman_p_paired_delta_tokens_vs_delta_metric": 0.3383238933221791,
+        "interpretation": "exploratory sensitivity analysis; not part of the primary FDR family",
+        "bh_q_tokens_vs_metric_all_samples": 0.8938675781641663,
+        "bh_q_paired_delta_tokens_vs_delta_metric": 0.8458097333054477
+      },
+      {
+        "metric": "h1_betti_auc",
+        "sample_count": 40,
+        "pair_count": 20,
+        "spearman_rho_tokens_vs_metric_all_samples": -0.17107698100241345,
+        "spearman_p_tokens_vs_metric_all_samples": 0.291205001078593,
+        "spearman_rho_paired_delta_tokens_vs_delta_metric": -0.04673957002614261,
+        "spearman_p_paired_delta_tokens_vs_delta_metric": 0.8448661826252927,
+        "interpretation": "exploratory sensitivity analysis; not part of the primary FDR family",
+        "bh_q_tokens_vs_metric_all_samples": 0.7280125026964824,
+        "bh_q_paired_delta_tokens_vs_delta_metric": 0.9387402029169919
+      }
+    ]
+  },
+  "interpretation_guardrail": "This file reports computed evidence only. A non-significant p-value is not proof that secure and vulnerable code are identical; TDA remains complementary to the authoritative CWEval secure/unsafe control labels.",
+  "share_bundle": "/home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/results_to_share.zip"
+}
