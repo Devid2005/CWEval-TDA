@@ -1,0 +1,74 @@
+{
+  "schema_version": "2.0",
+  "experiment_schema": "tda-statistical-experiment-v2",
+  "dataset": {
+    "population": "all 20 Python/Flask tasks in the supplied CWEval task catalog",
+    "pairing": "secure reference vs unsafe control within the same CWEval task",
+    "formal_project_subset_cwes": [
+      79,
+      306,
+      639,
+      862,
+      915
+    ]
+  },
+  "embedding": {
+    "model_path": "/home/david.hernandezherna/models/codebert-base",
+    "device": "auto",
+    "max_tokens": 512,
+    "overlap_tokens": 64,
+    "allow_download": false
+  },
+  "point_cloud": {
+    "primary_method": "fixed_count_overlapping_local_codebert_windows",
+    "points_per_sample": 16,
+    "window_tokens": 32,
+    "reason": "Each program yields an equally sized local CodeBERT point cloud. Fixed point count prevents raw H0 interval count from becoming a direct code-length proxy."
+  },
+  "topology": {
+    "complex": "Vietoris-Rips via ripser",
+    "distance": "Explicit pairwise Euclidean distance matrix on L2-normalized CodeBERT local-window vectors",
+    "maxdim": 1,
+    "minimum_persistence_absolute": 0.01,
+    "minimum_persistence_fraction": 0.05,
+    "betti_grid_points": 101,
+    "pilot_h1_significant_viability_threshold": 0.4,
+    "ripser_input": "precomputed distance matrix (distance_matrix=True)"
+  },
+  "statistics": {
+    "paired_permutations": 50000,
+    "bootstrap_resamples": 10000,
+    "group_level_tda_permutations": 2000,
+    "classifier_permutations": 1000,
+    "random_seed": 20261006,
+    "multiple_testing": "Benjamini-Hochberg FDR on 10 prespecified scalar metrics",
+    "primary_metrics": [
+      "h0_significant_count",
+      "h0_mean_persistence",
+      "h0_max_persistence",
+      "h0_entropy",
+      "h0_betti_auc",
+      "h1_significant_count",
+      "h1_mean_persistence",
+      "h1_max_persistence",
+      "h1_entropy",
+      "h1_betti_auc"
+    ],
+    "confound_sensitivity": {
+      "source_features": [
+        "source_token_count",
+        "source_chars",
+        "unit_count"
+      ],
+      "classifier_feature_sets": [
+        "length_only",
+        "topology_only",
+        "topology_plus_length"
+      ],
+      "role": "secondary sensitivity analysis; does not alter the primary TDA representation"
+    }
+  },
+  "created_at_utc": "2026-10-07T05:02:30+00:00",
+  "project_root": "/home/david.hernandezherna/mitacs_4",
+  "script_sha256": "eabb7c0863d9afc1f43a86d8eea066839a08c77176114920eb9d2dddc66ccf30"
+}

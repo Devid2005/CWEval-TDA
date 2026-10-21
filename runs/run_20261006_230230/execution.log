@@ -1,0 +1,151 @@
+2026-10-06 23:02:30,764 | INFO | Created independent TDA statistical run: /home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230
+2026-10-06 23:02:30,765 | INFO | Original project artifacts will not be modified
+2026-10-06 23:02:30,788 | INFO | Extracting 20 secure/vulnerable Flask pairs from CWEval...
+2026-10-06 23:02:30,842 | INFO | Extracted cwe_022_0_flask (CWE-22): secure + vulnerable
+2026-10-06 23:02:30,892 | INFO | Extracted cwe_078_0_flask (CWE-78): secure + vulnerable
+2026-10-06 23:02:30,938 | INFO | Extracted cwe_079_0_flask (CWE-79): secure + vulnerable
+2026-10-06 23:02:30,985 | INFO | Extracted cwe_089_0_flask (CWE-89): secure + vulnerable
+2026-10-06 23:02:31,030 | INFO | Extracted cwe_200_0_flask (CWE-200): secure + vulnerable
+2026-10-06 23:02:31,068 | INFO | Extracted cwe_306_0_flask (CWE-306): secure + vulnerable
+2026-10-06 23:02:31,110 | INFO | Extracted cwe_307_0_flask (CWE-307): secure + vulnerable
+2026-10-06 23:02:31,139 | INFO | Extracted cwe_352_0_flask (CWE-352): secure + vulnerable
+2026-10-06 23:02:31,186 | INFO | Extracted cwe_434_0_flask (CWE-434): secure + vulnerable
+2026-10-06 23:02:31,226 | INFO | Extracted cwe_502_0_flask (CWE-502): secure + vulnerable
+2026-10-06 23:02:31,272 | INFO | Extracted cwe_611_0_flask (CWE-611): secure + vulnerable
+2026-10-06 23:02:31,308 | INFO | Extracted cwe_614_0_flask (CWE-614): secure + vulnerable
+2026-10-06 23:02:31,349 | INFO | Extracted cwe_639_0_flask (CWE-639): secure + vulnerable
+2026-10-06 23:02:31,372 | INFO | Extracted cwe_798_0_flask (CWE-798): secure + vulnerable
+2026-10-06 23:02:31,408 | INFO | Extracted cwe_862_0_flask (CWE-862): secure + vulnerable
+2026-10-06 23:02:31,470 | INFO | Extracted cwe_915_0_flask (CWE-915): secure + vulnerable
+2026-10-06 23:02:31,516 | INFO | Extracted cwe_918_0_flask (CWE-918): secure + vulnerable
+2026-10-06 23:02:31,551 | INFO | Extracted cwe_942_0_flask (CWE-942): secure + vulnerable
+2026-10-06 23:02:31,588 | INFO | Extracted cwe_1004_0_flask (CWE-1004): secure + vulnerable
+2026-10-06 23:02:31,615 | INFO | Extracted cwe_1336_0_flask (CWE-1336): secure + vulnerable
+2026-10-06 23:02:31,652 | INFO | Validating each of the 20 secure/vulnerable CWEval pairs...
+2026-10-06 23:02:38,543 | INFO | Validation cwe_022_0_flask: passed (secure=True unsafe=True)
+2026-10-06 23:02:41,700 | INFO | Validation cwe_078_0_flask: passed (secure=True unsafe=True)
+2026-10-06 23:02:44,854 | INFO | Validation cwe_079_0_flask: passed (secure=True unsafe=True)
+2026-10-06 23:02:47,863 | INFO | Validation cwe_089_0_flask: passed (secure=True unsafe=True)
+2026-10-06 23:02:50,685 | INFO | Validation cwe_200_0_flask: passed (secure=True unsafe=True)
+2026-10-06 23:02:53,856 | INFO | Validation cwe_306_0_flask: passed (secure=True unsafe=True)
+2026-10-06 23:02:56,947 | INFO | Validation cwe_307_0_flask: passed (secure=True unsafe=True)
+2026-10-06 23:02:59,902 | INFO | Validation cwe_352_0_flask: passed (secure=True unsafe=True)
+2026-10-06 23:03:03,104 | INFO | Validation cwe_434_0_flask: passed (secure=True unsafe=True)
+2026-10-06 23:03:06,142 | INFO | Validation cwe_502_0_flask: passed (secure=True unsafe=True)
+2026-10-06 23:03:08,912 | INFO | Validation cwe_611_0_flask: passed (secure=True unsafe=True)
+2026-10-06 23:03:12,096 | INFO | Validation cwe_614_0_flask: passed (secure=True unsafe=True)
+2026-10-06 23:03:14,806 | INFO | Validation cwe_639_0_flask: passed (secure=True unsafe=True)
+2026-10-06 23:03:17,721 | INFO | Validation cwe_798_0_flask: passed (secure=True unsafe=True)
+2026-10-06 23:03:23,604 | INFO | Validation cwe_862_0_flask: passed (secure=True unsafe=True)
+2026-10-06 23:03:26,552 | INFO | Validation cwe_915_0_flask: passed (secure=True unsafe=True)
+2026-10-06 23:03:29,681 | INFO | Validation cwe_918_0_flask: passed (secure=True unsafe=True)
+2026-10-06 23:03:32,439 | INFO | Validation cwe_942_0_flask: passed (secure=True unsafe=True)
+2026-10-06 23:03:36,285 | INFO | Validation cwe_1004_0_flask: passed (secure=True unsafe=True)
+2026-10-06 23:03:39,451 | INFO | Validation cwe_1336_0_flask: passed (secure=True unsafe=True)
+2026-10-06 23:03:39,483 | INFO | Loading CodeBERT/tokenizer from /home/david.hernandezherna/models/codebert-base
+2026-10-06 23:04:21,626 | INFO | Embedding 01/40 cwe_022_0_flask__secure
+2026-10-06 23:04:22,681 | INFO | Embedding 02/40 cwe_022_0_flask__vulnerable
+2026-10-06 23:04:23,329 | INFO | Embedding 03/40 cwe_078_0_flask__secure
+2026-10-06 23:04:23,916 | INFO | Embedding 04/40 cwe_078_0_flask__vulnerable
+2026-10-06 23:04:24,474 | INFO | Embedding 05/40 cwe_079_0_flask__secure
+2026-10-06 23:04:25,074 | INFO | Embedding 06/40 cwe_079_0_flask__vulnerable
+2026-10-06 23:04:25,547 | INFO | Embedding 07/40 cwe_089_0_flask__secure
+2026-10-06 23:04:26,040 | INFO | Embedding 08/40 cwe_089_0_flask__vulnerable
+2026-10-06 23:04:26,524 | INFO | Embedding 09/40 cwe_200_0_flask__secure
+2026-10-06 23:04:27,101 | INFO | Embedding 10/40 cwe_200_0_flask__vulnerable
+2026-10-06 23:04:27,820 | INFO | Embedding 11/40 cwe_306_0_flask__secure
+2026-10-06 23:04:28,323 | INFO | Embedding 12/40 cwe_306_0_flask__vulnerable
+2026-10-06 23:04:28,836 | INFO | Embedding 13/40 cwe_307_0_flask__secure
+2026-10-06 23:04:29,364 | INFO | Embedding 14/40 cwe_307_0_flask__vulnerable
+2026-10-06 23:04:29,828 | INFO | Embedding 15/40 cwe_352_0_flask__secure
+2026-10-06 23:04:30,356 | INFO | Embedding 16/40 cwe_352_0_flask__vulnerable
+2026-10-06 23:04:30,951 | INFO | Embedding 17/40 cwe_434_0_flask__secure
+2026-10-06 23:04:31,559 | INFO | Embedding 18/40 cwe_434_0_flask__vulnerable
+2026-10-06 23:04:32,063 | INFO | Embedding 19/40 cwe_502_0_flask__secure
+2026-10-06 23:04:32,650 | INFO | Embedding 20/40 cwe_502_0_flask__vulnerable
+2026-10-06 23:04:33,214 | INFO | Embedding 21/40 cwe_611_0_flask__secure
+2026-10-06 23:04:33,817 | INFO | Embedding 22/40 cwe_611_0_flask__vulnerable
+2026-10-06 23:04:34,438 | INFO | Embedding 23/40 cwe_614_0_flask__secure
+2026-10-06 23:04:35,039 | INFO | Embedding 24/40 cwe_614_0_flask__vulnerable
+2026-10-06 23:04:35,547 | INFO | Embedding 25/40 cwe_639_0_flask__secure
+2026-10-06 23:04:36,076 | INFO | Embedding 26/40 cwe_639_0_flask__vulnerable
+2026-10-06 23:04:36,580 | INFO | Embedding 27/40 cwe_798_0_flask__secure
+2026-10-06 23:04:37,048 | INFO | Embedding 28/40 cwe_798_0_flask__vulnerable
+2026-10-06 23:04:37,477 | INFO | Embedding 29/40 cwe_862_0_flask__secure
+2026-10-06 23:04:38,077 | INFO | Embedding 30/40 cwe_862_0_flask__vulnerable
+2026-10-06 23:04:38,579 | INFO | Embedding 31/40 cwe_915_0_flask__secure
+2026-10-06 23:04:39,250 | INFO | Embedding 32/40 cwe_915_0_flask__vulnerable
+2026-10-06 23:04:39,858 | INFO | Embedding 33/40 cwe_918_0_flask__secure
+2026-10-06 23:04:40,668 | INFO | Embedding 34/40 cwe_918_0_flask__vulnerable
+2026-10-06 23:04:41,157 | INFO | Embedding 35/40 cwe_942_0_flask__secure
+2026-10-06 23:04:41,709 | INFO | Embedding 36/40 cwe_942_0_flask__vulnerable
+2026-10-06 23:04:42,227 | INFO | Embedding 37/40 cwe_1004_0_flask__secure
+2026-10-06 23:04:42,734 | INFO | Embedding 38/40 cwe_1004_0_flask__vulnerable
+2026-10-06 23:04:43,209 | INFO | Embedding 39/40 cwe_1336_0_flask__secure
+2026-10-06 23:04:43,659 | INFO | Embedding 40/40 cwe_1336_0_flask__vulnerable
+2026-10-06 23:04:44,152 | INFO | Running topology pilot on the five formal-project CWEs (10 samples)...
+2026-10-06 23:04:44,228 | INFO | Pilot complete: raw H1 non-empty 10/10 (100.0%); significant H1 non-empty 7/10 (70.0%); viability=True
+2026-10-06 23:04:44,237 | INFO | Recorded source-length/complexity covariates for 40 samples
+2026-10-06 23:04:45,178 | INFO | Created auditable share bundle with 310 files: /home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/pilot_results_to_share.zip
+2026-10-06 23:18:07,990 | INFO | Continuing frozen run at analysis stage: /home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230
+2026-10-06 23:18:08,021 | INFO | Computing per-sample persistent homology for all 40 codes...
+2026-10-06 23:18:10,890 | INFO | Topology 01/40 cwe_022_0_flask__secure
+2026-10-06 23:18:10,901 | INFO | Topology 02/40 cwe_022_0_flask__vulnerable
+2026-10-06 23:18:10,911 | INFO | Topology 03/40 cwe_078_0_flask__secure
+2026-10-06 23:18:10,924 | INFO | Topology 04/40 cwe_078_0_flask__vulnerable
+2026-10-06 23:18:10,933 | INFO | Topology 05/40 cwe_079_0_flask__secure
+2026-10-06 23:18:10,941 | INFO | Topology 06/40 cwe_079_0_flask__vulnerable
+2026-10-06 23:18:10,952 | INFO | Topology 07/40 cwe_089_0_flask__secure
+2026-10-06 23:18:10,963 | INFO | Topology 08/40 cwe_089_0_flask__vulnerable
+2026-10-06 23:18:10,974 | INFO | Topology 09/40 cwe_200_0_flask__secure
+2026-10-06 23:18:10,987 | INFO | Topology 10/40 cwe_200_0_flask__vulnerable
+2026-10-06 23:18:10,999 | INFO | Topology 11/40 cwe_306_0_flask__secure
+2026-10-06 23:18:11,012 | INFO | Topology 12/40 cwe_306_0_flask__vulnerable
+2026-10-06 23:18:11,024 | INFO | Topology 13/40 cwe_307_0_flask__secure
+2026-10-06 23:18:11,040 | INFO | Topology 14/40 cwe_307_0_flask__vulnerable
+2026-10-06 23:18:11,055 | INFO | Topology 15/40 cwe_352_0_flask__secure
+2026-10-06 23:18:11,067 | INFO | Topology 16/40 cwe_352_0_flask__vulnerable
+2026-10-06 23:18:11,079 | INFO | Topology 17/40 cwe_434_0_flask__secure
+2026-10-06 23:18:11,089 | INFO | Topology 18/40 cwe_434_0_flask__vulnerable
+2026-10-06 23:18:11,101 | INFO | Topology 19/40 cwe_502_0_flask__secure
+2026-10-06 23:18:11,111 | INFO | Topology 20/40 cwe_502_0_flask__vulnerable
+2026-10-06 23:18:11,121 | INFO | Topology 21/40 cwe_611_0_flask__secure
+2026-10-06 23:18:11,131 | INFO | Topology 22/40 cwe_611_0_flask__vulnerable
+2026-10-06 23:18:11,144 | INFO | Topology 23/40 cwe_614_0_flask__secure
+2026-10-06 23:18:11,155 | INFO | Topology 24/40 cwe_614_0_flask__vulnerable
+2026-10-06 23:18:11,162 | INFO | Topology 25/40 cwe_639_0_flask__secure
+2026-10-06 23:18:11,168 | INFO | Topology 26/40 cwe_639_0_flask__vulnerable
+2026-10-06 23:18:11,178 | INFO | Topology 27/40 cwe_798_0_flask__secure
+2026-10-06 23:18:11,186 | INFO | Topology 28/40 cwe_798_0_flask__vulnerable
+2026-10-06 23:18:11,194 | INFO | Topology 29/40 cwe_862_0_flask__secure
+2026-10-06 23:18:11,203 | INFO | Topology 30/40 cwe_862_0_flask__vulnerable
+2026-10-06 23:18:11,212 | INFO | Topology 31/40 cwe_915_0_flask__secure
+2026-10-06 23:18:11,222 | INFO | Topology 32/40 cwe_915_0_flask__vulnerable
+2026-10-06 23:18:11,233 | INFO | Topology 33/40 cwe_918_0_flask__secure
+2026-10-06 23:18:11,247 | INFO | Topology 34/40 cwe_918_0_flask__vulnerable
+2026-10-06 23:18:11,260 | INFO | Topology 35/40 cwe_942_0_flask__secure
+2026-10-06 23:18:11,273 | INFO | Topology 36/40 cwe_942_0_flask__vulnerable
+2026-10-06 23:18:11,285 | INFO | Topology 37/40 cwe_1004_0_flask__secure
+2026-10-06 23:18:11,298 | INFO | Topology 38/40 cwe_1004_0_flask__vulnerable
+2026-10-06 23:18:11,313 | INFO | Topology 39/40 cwe_1336_0_flask__secure
+2026-10-06 23:18:11,323 | INFO | Topology 40/40 cwe_1336_0_flask__vulnerable
+2026-10-06 23:18:14,051 | INFO | Computed secure-vulnerable diagram distances for 20 CWE pairs
+2026-10-06 23:18:14,117 | INFO | Computed class-level TDA on 20 secure vs 20 vulnerable package embeddings
+2026-10-06 23:18:14,608 | INFO | Completed paired statistics for 14 topological metrics
+2026-10-06 23:18:14,768 | INFO | Completed source-length/complexity confound analysis
+2026-10-06 23:18:17,274 | INFO | Completed global paired permutation tests for Betti curves
+2026-10-06 23:18:22,862 | INFO | Group-level TDA permutation progress: 200/2000
+2026-10-06 23:18:28,418 | INFO | Group-level TDA permutation progress: 400/2000
+2026-10-06 23:18:33,993 | INFO | Group-level TDA permutation progress: 600/2000
+2026-10-06 23:18:39,517 | INFO | Group-level TDA permutation progress: 800/2000
+2026-10-06 23:18:45,128 | INFO | Group-level TDA permutation progress: 1000/2000
+2026-10-06 23:18:50,615 | INFO | Group-level TDA permutation progress: 1200/2000
+2026-10-06 23:18:56,061 | INFO | Group-level TDA permutation progress: 1400/2000
+2026-10-06 23:19:00,677 | INFO | Group-level TDA permutation progress: 1600/2000
+2026-10-06 23:19:05,345 | INFO | Group-level TDA permutation progress: 1800/2000
+2026-10-06 23:19:10,955 | INFO | Group-level TDA permutation progress: 2000/2000
+2026-10-06 23:19:10,976 | INFO | Completed group-level paired-label permutation test
+2026-10-06 23:22:29,420 | INFO | Completed exploratory classification: length-only, topology-only, and topology+length
+2026-10-06 23:22:36,034 | INFO | Generated analysis figures in /home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/figures
+2026-10-06 23:22:36,051 | INFO | Wrote final summary report
+2026-10-06 23:22:38,447 | INFO | Created auditable share bundle with 477 files: /home/david.hernandezherna/mitacs_4/tda_statistical_experiment/runs/run_20261006_230230/results_to_share.zip
