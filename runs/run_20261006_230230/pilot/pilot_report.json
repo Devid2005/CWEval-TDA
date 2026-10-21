@@ -1,0 +1,146 @@
+{
+  "schema_version": "2.0",
+  "experiment_schema": "tda-statistical-experiment-v2",
+  "created_at_utc": "2026-10-07T05:04:44+00:00",
+  "pilot_sample_count": 10,
+  "pilot_cwes": [
+    79,
+    306,
+    639,
+    862,
+    915
+  ],
+  "h1_raw_nonempty_count": 10,
+  "h1_raw_nonempty_fraction": 1.0,
+  "h1_significant_nonempty_count": 7,
+  "h1_significant_nonempty_fraction": 0.7,
+  "h1_significant_viability_threshold": 0.4,
+  "h1_viable_for_primary_interpretation": true,
+  "geometry": {
+    "distance": "pairwise Euclidean on L2-normalized CodeBERT local-window vectors",
+    "ripser_input": "precomputed distance matrix"
+  },
+  "decision_rule_note": "The pilot viability decision uses only whether persistence-filtered H1 is non-empty. It does not test or inspect secure-vulnerable separation. No representation parameter is selected according to class outcomes.",
+  "records": [
+    {
+      "sample_id": "cwe_079_0_flask__secure",
+      "cwe": "CWE-79",
+      "class": "secure",
+      "source_token_count": 394,
+      "h0_raw_count": 15,
+      "h0_significant_count": 15,
+      "h1_raw_count": 2,
+      "h1_significant_count": 1,
+      "h1_raw_nonempty": true,
+      "h1_significant_nonempty": true
+    },
+    {
+      "sample_id": "cwe_079_0_flask__vulnerable",
+      "cwe": "CWE-79",
+      "class": "vulnerable",
+      "source_token_count": 218,
+      "h0_raw_count": 15,
+      "h0_significant_count": 15,
+      "h1_raw_count": 5,
+      "h1_significant_count": 3,
+      "h1_raw_nonempty": true,
+      "h1_significant_nonempty": true
+    },
+    {
+      "sample_id": "cwe_306_0_flask__secure",
+      "cwe": "CWE-306",
+      "class": "secure",
+      "source_token_count": 362,
+      "h0_raw_count": 15,
+      "h0_significant_count": 15,
+      "h1_raw_count": 4,
+      "h1_significant_count": 2,
+      "h1_raw_nonempty": true,
+      "h1_significant_nonempty": true
+    },
+    {
+      "sample_id": "cwe_306_0_flask__vulnerable",
+      "cwe": "CWE-306",
+      "class": "vulnerable",
+      "source_token_count": 321,
+      "h0_raw_count": 15,
+      "h0_significant_count": 15,
+      "h1_raw_count": 2,
+      "h1_significant_count": 2,
+      "h1_raw_nonempty": true,
+      "h1_significant_nonempty": true
+    },
+    {
+      "sample_id": "cwe_639_0_flask__secure",
+      "cwe": "CWE-639",
+      "class": "secure",
+      "source_token_count": 608,
+      "h0_raw_count": 15,
+      "h0_significant_count": 15,
+      "h1_raw_count": 5,
+      "h1_significant_count": 3,
+      "h1_raw_nonempty": true,
+      "h1_significant_nonempty": true
+    },
+    {
+      "sample_id": "cwe_639_0_flask__vulnerable",
+      "cwe": "CWE-639",
+      "class": "vulnerable",
+      "source_token_count": 537,
+      "h0_raw_count": 15,
+      "h0_significant_count": 15,
+      "h1_raw_count": 1,
+      "h1_significant_count": 0,
+      "h1_raw_nonempty": true,
+      "h1_significant_nonempty": false
+    },
+    {
+      "sample_id": "cwe_862_0_flask__secure",
+      "cwe": "CWE-862",
+      "class": "secure",
+      "source_token_count": 537,
+      "h0_raw_count": 15,
+      "h0_significant_count": 15,
+      "h1_raw_count": 1,
+      "h1_significant_count": 0,
+      "h1_raw_nonempty": true,
+      "h1_significant_nonempty": false
+    },
+    {
+      "sample_id": "cwe_862_0_flask__vulnerable",
+      "cwe": "CWE-862",
+      "class": "vulnerable",
+      "source_token_count": 429,
+      "h0_raw_count": 15,
+      "h0_significant_count": 15,
+      "h1_raw_count": 1,
+      "h1_significant_count": 0,
+      "h1_raw_nonempty": true,
+      "h1_significant_nonempty": false
+    },
+    {
+      "sample_id": "cwe_915_0_flask__secure",
+      "cwe": "CWE-915",
+      "class": "secure",
+      "source_token_count": 801,
+      "h0_raw_count": 15,
+      "h0_significant_count": 15,
+      "h1_raw_count": 3,
+      "h1_significant_count": 1,
+      "h1_raw_nonempty": true,
+      "h1_significant_nonempty": true
+    },
+    {
+      "sample_id": "cwe_915_0_flask__vulnerable",
+      "cwe": "CWE-915",
+      "class": "vulnerable",
+      "source_token_count": 730,
+      "h0_raw_count": 15,
+      "h0_significant_count": 15,
+      "h1_raw_count": 3,
+      "h1_significant_count": 2,
+      "h1_raw_nonempty": true,
+      "h1_significant_nonempty": true
+    }
+  ]
+}

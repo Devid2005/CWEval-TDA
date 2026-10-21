@@ -1,0 +1,11 @@
+sample_id,cwe,class,source_token_count,h0_raw_count,h0_significant_count,h1_raw_count,h1_significant_count,h1_raw_nonempty,h1_significant_nonempty
+cwe_079_0_flask__secure,CWE-79,secure,394,15,15,2,1,True,True
+cwe_079_0_flask__vulnerable,CWE-79,vulnerable,218,15,15,5,3,True,True
+cwe_306_0_flask__secure,CWE-306,secure,362,15,15,4,2,True,True
+cwe_306_0_flask__vulnerable,CWE-306,vulnerable,321,15,15,2,2,True,True
+cwe_639_0_flask__secure,CWE-639,secure,608,15,15,5,3,True,True
+cwe_639_0_flask__vulnerable,CWE-639,vulnerable,537,15,15,1,0,True,False
+cwe_862_0_flask__secure,CWE-862,secure,537,15,15,1,0,True,False
+cwe_862_0_flask__vulnerable,CWE-862,vulnerable,429,15,15,1,0,True,False
+cwe_915_0_flask__secure,CWE-915,secure,801,15,15,3,1,True,True
+cwe_915_0_flask__vulnerable,CWE-915,vulnerable,730,15,15,3,2,True,True
